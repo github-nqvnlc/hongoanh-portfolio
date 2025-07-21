@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
-import { activeSkillProgress, fatchData } from "../utilits";
+import Image from "next/image";
+import { activeSkillProgress, fetchData } from "../utilits";
 
 const Skills = ({ dark }) => {
   const [data, setData] = useState({});
-  useEffect(async () => {
-    setData(await fatchData("/static/info.json"));
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/info.json");
+      setData(result);
+    }
+    loadData();
   }, []);
   useEffect(() => {
     window.addEventListener("scroll", activeSkillProgress);
@@ -55,7 +60,7 @@ const Skills = ({ dark }) => {
               </div>
             </div>
             <div className="right">
-              <img src={`img/skills/${dark ? 2 : 1}.jpg`} alt="image" />
+              <Image src={`/img/skills/${dark ? 2 : 1}.jpg`} alt="image" width={500} height={600} />
             </div>
           </div>
         </div>

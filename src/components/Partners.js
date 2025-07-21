@@ -1,9 +1,14 @@
 import { useEffect, useState } from "react";
-import { fatchData } from "../utilits";
+import Image from "next/image";
+import { fetchData } from "../utilits";
 const Partners = ({ dark }) => {
   const [data, setData] = useState([]);
-  useEffect(async () => {
-    setData(await fatchData("/static/partners.json"));
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/partners.json");
+      setData(result);
+    }
+    loadData();
   }, []);
   return (
     <div className="dizme_tm_section">
@@ -20,11 +25,13 @@ const Partners = ({ dark }) => {
                     data-wow-delay={`0.${i + 1 * 2}s`}
                   >
                     <div className="list_inner">
-                      <img
+                      <Image
                         src={img.logo && img.logo[dark ? "dark" : "light"]}
                         alt="image"
+                        width={120}
+                        height={60}
                       />
-                      <a className="dizme_tm_full_link" a="" href={img.link} />
+                      <a className="dizme_tm_full_link" href={img.link} />
                     </div>
                   </li>
                 ))}
@@ -32,7 +39,7 @@ const Partners = ({ dark }) => {
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/partners/1.png" alt="image" />
+          <Image src="/img/brushes/partners/1.png" alt="image" width={300} height={300} />
         </div>
       </div>
     </div>

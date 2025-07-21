@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
-import { aTagClick, fatchData } from "../utilits";
+import Image from "next/image";
+import { aTagClick, fetchData } from "../utilits";
 import BlogPopUp from "./popup/BlogPopUp";
 const News = () => {
   const [data, setData] = useState([]);
   const [popupData, setPopupData] = useState({});
   const [popup, setPopup] = useState(false);
-  useEffect(async () => {
-    setData(await fatchData("/static/blog.json"));
-    aTagClick();
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/blog.json");
+      setData(result);
+      aTagClick();
+    }
+    loadData();
   }, []);
   return (
     <div className="dizme_tm_section" id="blog">
@@ -25,7 +30,7 @@ const News = () => {
                   <li className="wow fadeInUp" data-wow-duration="1s" key={i}>
                     <div className="list_inner">
                       <div className="image">
-                        <img src="img/thumbs/42-29.jpg" alt="image" />
+                        <Image src="/img/thumbs/42-29.jpg" alt="image" width={420} height={290} />
                         <div
                           className="main"
                           data-img-url={blog && blog.img}
@@ -71,10 +76,10 @@ const News = () => {
           </div>
         </div>
         <div className="brush_1 wow zoomIn" data-wow-duration="1s">
-          <img src="img/brushes/news/1.png" alt="image" />
+          <Image src="/img/brushes/news/1.png" alt="image" width={300} height={300} />
         </div>
         <div className="brush_2 wow zoomIn" data-wow-duration="1s">
-          <img src="img/brushes/news/2.png" alt="image" />
+          <Image src="/img/brushes/news/2.png" alt="image" width={300} height={300} />
         </div>
       </div>
     </div>

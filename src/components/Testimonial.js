@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import SwiperCore, {
   Autoplay,
   EffectFade,
@@ -6,13 +7,17 @@ import SwiperCore, {
   Pagination,
 } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { fatchData } from "../utilits";
+import { fetchData } from "../utilits";
 SwiperCore.use([Pagination, Navigation, EffectFade, Autoplay]);
 
 const Testimonial = () => {
   const [data, setData] = useState([]);
-  useEffect(async () => {
-    setData(await fatchData("/static/testimonial.json"));
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/testimonial.json");
+      setData(result);
+    }
+    loadData();
   }, []);
   const props = {
     slidesPerView: 1,
@@ -83,25 +88,25 @@ const Testimonial = () => {
               <div
                 className="det_image one wow fadeIn"
                 data-wow-duration="1s"
-                data-img-url="img/testimonials/2.jpg"
+                data-img-url="/img/testimonials/2.jpg"
               />
               <div
                 className="det_image two wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.2s"
-                data-img-url="img/testimonials/1.jpg"
+                data-img-url="/img/testimonials/1.jpg"
               />
               <div
                 className="det_image three wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.4s"
-                data-img-url="img/testimonials/3.jpg"
+                data-img-url="/img/testimonials/3.jpg"
               />
               <div
                 className="det_image four wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.6s"
-                data-img-url="img/testimonials/4.jpg"
+                data-img-url="/img/testimonials/4.jpg"
               />
               <span className="circle green animPulse" />
               <span className="circle yellow animPulse" />
@@ -111,19 +116,19 @@ const Testimonial = () => {
               <div
                 className="det_image one wow fadeIn"
                 data-wow-duration="1s"
-                data-img-url="img/testimonials/5.jpg"
+                data-img-url="/img/testimonials/5.jpg"
               />
               <div
                 className="det_image two wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.2s"
-                data-img-url="img/testimonials/6.jpg"
+                data-img-url="/img/testimonials/6.jpg"
               />
               <div
                 className="det_image three wow fadeIn"
                 data-wow-duration="1s"
                 data-wow-delay="0.4s"
-                data-img-url="img/testimonials/7.jpg"
+                data-img-url="/img/testimonials/7.jpg"
               />
               <span className="circle yellow animPulse" />
               <span className="circle purple animPulse" />
@@ -132,7 +137,7 @@ const Testimonial = () => {
           </div>
         </div>
         <div className="brush_1 wow fadeInRight" data-wow-duration="1s">
-          <img src="img/brushes/testimonials/1.png" alt="image" />
+          <Image src="/img/brushes/testimonials/1.png" alt="image" width={300} height={300} />
         </div>
       </div>
     </div>

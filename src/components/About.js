@@ -1,11 +1,16 @@
 import Counter from "./Counter";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { fatchData } from "../utilits";
+import { fetchData } from "../utilits";
 
 const About = ({ dark }) => {
   const [data, setData] = useState({});
-  useEffect(async () => {
-    setData(await fatchData("/static/about.json"));
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/about.json");
+      setData(result);
+    }
+    loadData();
   }, []);
 
   return (
@@ -15,7 +20,7 @@ const About = ({ dark }) => {
           <div className="wrapper">
             <div className="left">
               <div className="image">
-                <img src={`img/about/${dark ? 2 : 1}.jpg`} alt="image" />
+                <Image src={`/img/about/${dark ? 2 : 1}.jpg`} alt="image" width={400} height={500} />
                 <div className="numbers year">
                   <div className="wrapper">
                     <h3>
@@ -64,10 +69,10 @@ const About = ({ dark }) => {
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/about/1.png" alt="image" />
+          <Image src="/img/brushes/about/1.png" alt="image" width={300} height={300} />
         </div>
         <div className="brush_2 wow fadeInRight" data-wow-duration="1s">
-          <img src="img/brushes/about/2.png" alt="image" />
+          <Image src="/img/brushes/about/2.png" alt="image" width={300} height={300} />
         </div>
       </div>
     </div>

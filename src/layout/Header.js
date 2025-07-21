@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const Header = ({ logo }) => {
   return (
     <div className="dizme_tm_header">
@@ -6,7 +8,7 @@ const Header = ({ logo }) => {
           <div className="logo">
             <a href="#">
               {logo && (
-                <img src={logo ? logo : "img/logo/logo.png"} alt="image" />
+                <Image src={logo ? logo : "/img/logo/logo.png"} alt="image" width={150} height={50} />
               )}
             </a>
           </div>
@@ -31,7 +33,7 @@ const Header = ({ logo }) => {
                 <a href="#contact">Contact</a>
               </li>
               <li className="download_cv">
-                <a href="img/cv/1.jpg" download="">
+                <a href="/img/cv/1.jpg" download="">
                   <span>Download CV</span>
                 </a>
               </li>

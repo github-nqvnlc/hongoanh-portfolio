@@ -1,11 +1,16 @@
 import parse from "html-react-parser";
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import { fatchData } from "../utilits";
+import { fetchData } from "../utilits";
 
 const Home = ({ dark }) => {
   const [data, setData] = useState({});
-  useEffect(async () => {
-    setData(await fatchData("/static/info.json"));
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/info.json");
+      setData(result);
+    }
+    loadData();
   }, []);
 
   return (
@@ -57,9 +62,11 @@ const Home = ({ dark }) => {
             </div>
             <div className="avatar">
               <div className="image">
-                <img
+                <Image
                   src={data && data.img ? data.img : "/img/slider/avatar.png"}
                   alt="image"
+                  width={600}
+                  height={750}
                 />
                 {data &&
                   data.skills &&

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 const MobileMenu = ({ logo }) => {
   const [toggle, setToggle] = useState(false);
   return (
@@ -7,7 +8,7 @@ const MobileMenu = ({ logo }) => {
         <div className="mobile_in">
           <div className="logo">
             <a href="#">
-              <img src={logo ? logo : "img/logo/logo.png"} alt="image" />
+              <Image src={logo ? logo : "/img/logo/logo.png"} alt="image" width={150} height={50} />
             </a>
           </div>
           <div className="trigger">
@@ -58,7 +59,7 @@ const MobileMenu = ({ logo }) => {
               </a>
             </li>
             <li className="download_cv">
-              <a href="img/cv/1.jpg" download="">
+              <a href="/img/cv/1.jpg" download="">
                 <span>Download CV</span>
               </a>
             </li>

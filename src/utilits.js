@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 const preloader_ = () => {
   let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
     navigator.userAgent
@@ -38,19 +37,17 @@ export const customCursor = () => {
     t = document.querySelector(".cursor-outer");
 
   function mouseEvent(element) {
-    ReactDOM.findDOMNode(element).addEventListener("mouseenter", function () {
+    element.addEventListener("mouseenter", () => {
       e.classList.add("cursor-hover"), t.classList.add("cursor-hover");
     });
-    ReactDOM.findDOMNode(element).addEventListener("mouseleave", function () {
+    element.addEventListener("mouseleave", () => {
       e.classList.remove("cursor-hover"), t.classList.remove("cursor-hover");
     });
   }
   if (myCursor.length) {
     if (document.body) {
-      let n,
-        i = 0,
-        o = !1;
-      (window.onmousemove = function (s) {
+      let n, i = 0, o = false;
+      (window.onmousemove = (s) => {
         // console.log(document.querySelector(this));
         o ||
           (t.style.transform =
@@ -94,7 +91,7 @@ export const aTagClick = () => {
   const aTag = document.querySelectorAll("[href='#']");
   for (let i = 0; i < aTag.length; i++) {
     const a = aTag[i];
-    ReactDOM.findDOMNode(a).addEventListener("click", (e) => {
+    a.addEventListener("click", (e) => {
       e.preventDefault();
     });
   }
@@ -184,7 +181,7 @@ export const scrollTop = () => {
   }
 };
 
-export const fatchData = async (url) => {
+export const fetchData = async (url) => {
   const res = await fetch(`${url}`);
   const data = await res.json();
   return data;

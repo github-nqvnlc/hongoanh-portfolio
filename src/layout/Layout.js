@@ -5,7 +5,7 @@ import VideoPopup from "../components/popup/VideoPopup";
 import {
   aTagClick,
   dataImage,
-  fatchData,
+  fetchData,
   scrollTop,
   scroll_,
   stickyNav,
@@ -19,9 +19,13 @@ import Progressbar from "./Progressbar";
 
 const Layout = ({ children, dark }) => {
   const [siteInfo, setSiteInfo] = useState({});
-  useEffect(async () => {
-    setSiteInfo(await fatchData("/static/siteSetting.json"));
-    dataImage();
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/siteSetting.json");
+      setSiteInfo(result);
+      dataImage();
+    }
+    loadData();
   }, []);
   useEffect(() => {
     wowJsAnimation();

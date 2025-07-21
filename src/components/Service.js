@@ -1,14 +1,19 @@
 import parse from "html-react-parser";
 import { useEffect, useState } from "react";
-import { fatchData } from "../utilits";
+import Image from "next/image";
+import { fetchData } from "../utilits";
 import ServicePopup from "./popup/ServicePopup";
 
 const Service = ({ dark }) => {
   const [data, setData] = useState([]);
   const [popupdata, setPopupdata] = useState({});
   const [popup, setPopup] = useState(false);
-  useEffect(async () => {
-    setData(await fatchData("/static/service.json"));
+  useEffect(() => {
+    async function loadData() {
+      const result = await fetchData("/static/service.json");
+      setData(result);
+    }
+    loadData();
     setTimeout(() => {
       let VanillaTilt = require("vanilla-tilt");
       VanillaTilt.init(document.querySelectorAll(".tilt-effect"), {
@@ -60,16 +65,20 @@ const Service = ({ dark }) => {
                           <span className="icon">
                             {parse(data.icon.svg)}
                             {dark ? (
-                              <img
+                              <Image
                                 className="back"
                                 src={data.icon.iconBgDark}
                                 alt="image"
+                                width={80}
+                                height={80}
                               />
                             ) : (
-                              <img
+                              <Image
                                 className="back"
                                 src={data.icon.iconBg}
                                 alt="image"
+                                width={80}
+                                height={80}
                               />
                             )}
                           </span>
@@ -83,10 +92,12 @@ const Service = ({ dark }) => {
                             <p>{data.shortDec}</p>
                           </div>
                           <a className="dizme_tm_full_link" href="#" />
-                          <img
+                          <Image
                             className="popup_service_image"
-                            src="img/service/1.jpg"
+                            src="/img/service/1.jpg"
                             alt="image"
+                            width={400}
+                            height={300}
                           />
                         </div>
                       </li>
@@ -96,10 +107,10 @@ const Service = ({ dark }) => {
           </div>
         </div>
         <div className="brush_1 wow fadeInLeft" data-wow-duration="1s">
-          <img src="img/brushes/service/5.png" alt="image" />
+          <Image src="/img/brushes/service/5.png" alt="image" width={300} height={300} />
         </div>
         <div className="brush_2 wow zoomIn" data-wow-duration="1s">
-          <img src="img/brushes/service/6.png" alt="image" />
+          <Image src="/img/brushes/service/6.png" alt="image" width={300} height={300} />
         </div>
       </div>
     </div>

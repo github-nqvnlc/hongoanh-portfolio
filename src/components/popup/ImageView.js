@@ -1,4 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
+import Image from "next/image";
 import useClickOutside from "../../useClickOutside";
 
 const ImgViews = ({ close, src }) => {
@@ -26,7 +27,7 @@ const ImgViews = ({ close, src }) => {
               >
                 ×
               </button> */}
-              <img className="mfp-img" src={src} />
+              <Image className="mfp-img" src={src} alt="image" width={800} height={600} />
             </div>
           </div>
           <div className="mfp-preloader">Loading...</div>
@@ -44,7 +45,7 @@ const ImageView = () => {
     setTimeout(() => {
       const a = document.querySelectorAll("a");
       a.forEach((a) => {
-        if (a.href.includes("img/")) {
+        if (a.href.includes("/img/")) {
           if (a.getAttribute("download") === null) {
             a.addEventListener("click", (e) => {
               e.preventDefault();

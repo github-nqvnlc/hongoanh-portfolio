@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const ServicePopup = ({ data, open, close }) => {
   return (
     <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
@@ -11,7 +13,7 @@ const ServicePopup = ({ data, open, close }) => {
           <div className="description_wrap">
             <div className="service_popup_informations">
               <div className="image">
-                <img src="img/thumbs/4-2.jpg" alt="image" />
+                <Image src="/img/thumbs/4-2.jpg" alt="image" width={400} height={200} />
                 <div
                   className="main"
                   data-img-url={data && data.img}
