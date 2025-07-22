@@ -8,7 +8,7 @@ const Intro = () => {
   return (
     <Fragment>
       <Head>
-        <title>Dizme | Intro</title>
+        <title>Hong Oanh | Intro</title>
       </Head>
       <PreLoader />
       <div className="dizme_tm_all_wrap" data-magic-cursor="show">
@@ -23,7 +23,7 @@ const Intro = () => {
           </div>
           <div className="short_info">
             <Image src="/img/logo/logo.png" alt="image" width={150} height={50} />
-            <h3>Personal Portfolio Template</h3>
+            <h3>Hong Oanh Portfolio</h3>
           </div>
           <span className="intro_line" />
           <span className="intro_line_2" />
@@ -32,14 +32,14 @@ const Intro = () => {
             <div className="left">
               <div className="desc">
                 <Image src="/img/intro/light.png" alt="image" width={300} height={200} />
-                <h3 className="title">Light Demo</h3>
+                <h3 className="title">Light Version</h3>
               </div>
               <a className="intro_link" href="/" target="_blank" />
             </div>
             <div className="right">
               <div className="desc">
                 <Image src="/img/intro/dark.png" alt="image" width={300} height={200} />
-                <h3 className="title">Dark Demo</h3>
+                <h3 className="title">Dark Version</h3>
               </div>
               <a className="intro_link" href="index-dark" target="_blank" />
             </div>
