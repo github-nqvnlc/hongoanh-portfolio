@@ -1,9 +1,9 @@
 {
-  "name": "Hồng Oanh",
-  "address": "Đà Nẵng, Việt Nam",
-  "bio": "Tôi là chuyên viên Marketing tại Đà Nẵng, rất đam mê và tận tâm với công việc của mình.",
-  "mainSkill": "Chuyên viên Marketing",
-  "img": "/img/slider/avatar.png",
+  "name": "Hong Oanh",
+  "address": "Da Nang, Viet Nam",
+  "bio": "I'm marketing executive based in Da Nang, and I'm very passionate and dedicated to my work.",
+  "mainSkill": "Marketing Executive",
+  "/img": "/img/slider/avatar.png",
   "skills": [
     {
       "name": "illustrator",
@@ -47,8 +47,8 @@
     }
   ],
   "contact": {
-    "address": "K1/27 Phan Hành Sơn, Đà Nẵng, Việt Nam",
+    "address": "K1/27 Phan Hanh Son st. Da Nang, Viet Nam",
     "email": "nguyenthihongoanh03@gmail.com",
     "phn": "0916 513 203"
   }
-} 
+}

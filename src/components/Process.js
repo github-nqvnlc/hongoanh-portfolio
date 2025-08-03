@@ -1,19 +1,17 @@
 import parse from "html-react-parser";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { fetchData } from "../utilits";
+import { useLocalizedData } from "../hooks/useLocalizedData";
 const Process = ({ dark }) => {
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    async function loadData() {
-      const result = await fetchData("/static/workProcess.json");
-      setData(result);
-    }
-    loadData();
-  }, []);
+  const { data, loading, error } = useLocalizedData("workProcess"); 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  if (error) {
+    console.error('Error loading process data:', error);
+  }
   return (
-    <div className="dizme_tm_section" id="process">
-      <div className="dizme_tm_process">
+    <div className="hongoanh_tm_section" id="process">
+      <div className="hongoanh_tm_process">
         <div className="container">
           <div className="list">
             <ul>
@@ -32,7 +30,7 @@ const Process = ({ dark }) => {
                             width={80}
                             height={80}
                           />
-                          {parse(data.icons[dark ? "dark" : "light"])}
+                                                     {data.icons && parse(data.icons[dark ? "dark" : "light"])}
                         </span>
                       </div>
                       <div className="title">

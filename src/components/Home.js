@@ -1,21 +1,15 @@
 import parse from "html-react-parser";
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { fetchData } from "../utilits";
+import { useLanguage } from "../context/LanguageContext";
+import { useLocalizedData } from "../hooks/useLocalizedData";
 
 const Home = ({ dark }) => {
-  const [data, setData] = useState({});
-  useEffect(() => {
-    async function loadData() {
-      const result = await fetchData("/static/info.json");
-      setData(result);
-    }
-    loadData();
-  }, []);
+  const { t } = useLanguage();
+  const { data, loading, error } = useLocalizedData("info");
 
   return (
-    <div className="dizme_tm_section" id="home">
-      <div className="dizme_tm_hero">
+    <div className="hongoanh_tm_section" id="home">
+      <div className="hongoanh_tm_hero">
         <div
           className="background"
           data-img-url={`img/slider/${dark ? 2 : 1}.jpg`}
@@ -25,34 +19,35 @@ const Home = ({ dark }) => {
           <div className="content">
             <div className="details">
               <div className="hello">
-                <h3 className="orangeText">{`Hello, I'm`}</h3>
+                <h3 className="orangeText">{t("hero.hello")}</h3>
               </div>
               <div className="name">
                 <h3>{data && data.name ? data.name : "name"}</h3>
               </div>
               <div className="job">
                 <p>
-                  A <span className="greenText">{data && data.mainSkill}</span>{" "}
-                  From <span className="purpleText">{data.address}</span>
+                  {t("hero.a")} <span className="greenText">{data && data.mainSkill}</span>{" "}
+                  {t("hero.from")} <span className="purpleText">{data && data.address}</span>
                 </p>
               </div>
               <div className="text">
-                <p>{data.bio}</p>
+                <p>{data && data.bio}</p>
               </div>
               <div className="button">
-                <div className="dizme_tm_button">
+                <div className="hongoanh_tm_button">
                   <a className="anchor" href="#about">
-                    <span>About Me</span>
+                    <span>{t("nav.about")}</span>
                   </a>
                 </div>
                 <div className="social">
                   <ul>
-                    {data &&
-                      data.social &&
-                      data.social.map((social, i) => (
+                      {data &&
+                       data.social &&
+                       data.social.length > 0 &&
+                       data.social.map((social, i) => (
                         <li key={i}>
-                          <a href="#">
-                            <i className={social.icon} />
+                          <a href={social.url} target="_blank" rel="noopener noreferrer">
+                            {parse(social.icon)}
                           </a>
                         </li>
                       ))}
@@ -68,9 +63,10 @@ const Home = ({ dark }) => {
                   width={600}
                   height={750}
                 />
-                {data &&
-                  data.skills &&
-                  data.skills.map(
+                   {data &&
+                   data.skills &&
+                   data.skills.length > 0 &&
+                   data.skills.map(
                     (skill, i) =>
                       skill.icon && (
                         <span
@@ -85,7 +81,7 @@ const Home = ({ dark }) => {
             </div>
           </div>
         </div>
-        <div className="dizme_tm_down">
+        <div className="hongoanh_tm_down">
           <a className="anchor" href="#process">
             <svg
               width="26px"

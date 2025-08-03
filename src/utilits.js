@@ -123,7 +123,7 @@ export const activeSkillProgress = () => {
 };
 // Data image
 export const dataImage = () => {
-  let d = document.querySelectorAll("[data-img-url");
+  let d = document.querySelectorAll("[data-img-url]");
   for (let i = 0; i < d.length; i++) {
     const element = d[i];
     element.style.backgroundImage = `url(${element.getAttribute(
@@ -133,7 +133,7 @@ export const dataImage = () => {
 };
 
 export const scroll_ = () => {
-  const sections = document.querySelectorAll(".dizme_tm_section");
+  const sections = document.querySelectorAll(".hongoanh_tm_section");
   const navLi = document.querySelectorAll(".anchor_nav li");
   let current = "";
   sections.forEach((section) => {
@@ -146,14 +146,15 @@ export const scroll_ = () => {
 
   navLi.forEach((li) => {
     li.classList.remove("current");
-    if (li.getElementsByTagName("a")[0].getAttribute("href") == `#${current}`) {
+    const anchor = li.getElementsByTagName("a")[0];
+    if (anchor && anchor.getAttribute("href") == `#${current}`) {
       li.classList.add("current");
     }
   });
 };
 export const stickyNav = () => {
   let offset = window.scrollY;
-  const stickys = document.querySelectorAll(".dizme_tm_header");
+  const stickys = document.querySelectorAll(".hongoanh_tm_header");
   stickys.forEach((sticky) => {
     if (sticky) {
       if (offset > 100) {
@@ -168,6 +169,9 @@ export const stickyNav = () => {
 export const scrollTop = () => {
   var bar = document.querySelector(".progressbar");
   var line = document.querySelector(".progressbar .line");
+  
+  if (!bar || !line) return;
+  
   var documentHeight = document.documentElement.scrollHeight;
   var windowHeight = window.innerHeight;
   var winScroll = window.scrollY;
@@ -188,28 +192,35 @@ export const fetchData = async (url) => {
 };
 
 export const portfolioHover = () => {
-  const dizme_tm_portfolio_animation_wrap = document.querySelectorAll(
-      ".dizme_tm_portfolio_animation_wrap"
+  const hongoanh_tm_portfolio_animation_wrap = document.querySelectorAll(
+      ".hongoanh_tm_portfolio_animation_wrap"
     ),
-    dizme_tm_portfolio_titles = document.querySelector(
-      ".dizme_tm_portfolio_titles"
+    hongoanh_tm_portfolio_titles = document.querySelector(
+      ".hongoanh_tm_portfolio_titles"
     );
-  dizme_tm_portfolio_animation_wrap.forEach((element) => {
+  
+  if (!hongoanh_tm_portfolio_titles) return;
+  
+  // Add document mousemove listener once
+  document.addEventListener("mousemove", (e) => {
+    if (hongoanh_tm_portfolio_titles.classList.contains("visible")) {
+      hongoanh_tm_portfolio_titles.style.left = `${e.clientX - 10}px`;
+      hongoanh_tm_portfolio_titles.style.top = `${e.clientY + 25}px`;
+    }
+  });
+  
+  hongoanh_tm_portfolio_animation_wrap.forEach((element) => {
     element.addEventListener("mousemove", () => {
       let title = element.getAttribute("data-title"),
         category = element.getAttribute("data-category");
       if (title) {
-        dizme_tm_portfolio_titles.classList.add("visible");
-        dizme_tm_portfolio_titles.innerHTML =
+        hongoanh_tm_portfolio_titles.classList.add("visible");
+        hongoanh_tm_portfolio_titles.innerHTML =
           title + '<span class="work__cat">' + category + "</span>";
       }
-      document.addEventListener("mousemove", (e) => {
-        dizme_tm_portfolio_titles.style.left = `${e.clientX - 10}px`;
-        dizme_tm_portfolio_titles.style.top = `${e.clientY + 25}px`;
-      });
     });
     element.addEventListener("mouseleave", () => {
-      dizme_tm_portfolio_titles.classList.remove("visible");
+      hongoanh_tm_portfolio_titles.classList.remove("visible");
     });
   });
 };

@@ -11,8 +11,8 @@ const Partners = ({ dark }) => {
     loadData();
   }, []);
   return (
-    <div className="dizme_tm_section">
-      <div className="dizme_tm_partners">
+    <div className="hongoanh_tm_section">
+      <div className="hongoanh_tm_partners">
         <div className="container">
           <div className="partners_inner">
             <ul>
@@ -25,13 +25,13 @@ const Partners = ({ dark }) => {
                     data-wow-delay={`0.${i + 1 * 2}s`}
                   >
                     <div className="list_inner">
-                      <Image
-                        src={img.logo && img.logo[dark ? "dark" : "light"]}
-                        alt="image"
-                        width={120}
-                        height={60}
-                      />
-                      <a className="dizme_tm_full_link" href={img.link} />
+                                             <Image
+                         src={img && img.logo && img.logo[dark ? "dark" : "light"]}
+                         alt="image"
+                         width={120}
+                         height={60}
+                       />
+                       <a className="hongoanh_tm_full_link" href={img && img.link} />
                     </div>
                   </li>
                 ))}

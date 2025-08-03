@@ -2,7 +2,9 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import About from "../src/components/About";
 import Contact from "../src/components/Contact";
+import Experience from "../src/components/Experience";
 import Home from "../src/components/Home";
+import LanguageTest from "../src/components/LanguageTest";
 import News from "../src/components/News";
 import Newsletter from "../src/components/Newsletter";
 import Partners from "../src/components/Partners";
@@ -22,6 +24,7 @@ const Index = () => {
       <Head>
         <title>Hong Oanh | Portfolio</title>
       </Head>
+      {/* <LanguageTest /> */}
       <Home />
       {/* HERO */}
       {/* PROCESS */}
@@ -30,6 +33,9 @@ const Index = () => {
       {/* ABOUT */}
       <About />
       {/* /ABOUT */}
+      {/* EXPERIENCE */}
+      <Experience />
+      {/* /EXPERIENCE */}
       {/* PORTFOLIO */}
       <Portfolio />
       {/* /PORTFOLIO */}

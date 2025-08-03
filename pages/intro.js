@@ -11,9 +11,9 @@ const Intro = () => {
         <title>Hong Oanh | Intro</title>
       </Head>
       <PreLoader />
-      <div className="dizme_tm_all_wrap" data-magic-cursor="show">
-        <div className="dizme_tm_intro">
-          <div className="dizme_tm_intro_fixed_price">
+      <div className="hongoanh_tm_all_wrap" data-magic-cursor="show">
+        <div className="hongoanh_tm_intro">
+          <div className="hongoanh_tm_intro_fixed_price">
             <span className="anim" />
             <span className="anim" />
             <span className="anim" />

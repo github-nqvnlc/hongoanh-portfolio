@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "experience": "Experience",
+    "portfolio": "Portfolio",
+    "service": "Service",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "hero": {
+    "hello": "Hello, I'm",
+    "name": "Hong Oanh",
+    "job": "Marketing Specialist",
+    "description": "Marketing professional with 3+ years of experience in Digital Marketing, SEO and Content Marketing. Passionate about content creation and customer experience optimization.",
+    "download_cv": "Download CV",
+    "a": "A",
+    "from": "From"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "About Me",
+    "description": "I am a Marketing professional with experience in developing marketing strategies, content management and SEO optimization. I have the ability to work independently and in teams, always exploring and learning to improve my skills.",
+    "years": "Years of Experience",
+    "projects": "Completed Projects",
+    "education": "Education",
+    "school": "School",
+    "major": "Major",
+    "graduation_year": "Graduation Year",
+    "contact_now": "Hire Me",
+    "years_of_experience": "Years of Experience",
+    "successful_projects": "Successful Projects"
+  },
+  "experience": {
+    "title": "Work Experience",
+    "subtitle": "Experience",
+    "description": "Career journey and accumulated experiences",
+    "responsibilities": "Responsibilities",
+    "achievements": "Achievements",
+    "technologies": "Skills & Tools"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Portfolio",
+    "description": "Projects I have completed",
+    "all": "All",
+    "web": "Website",
+    "mobile": "Mobile App",
+    "design": "Design"
+  },
+  "service": {
+    "title": "Services",
+    "subtitle": "Service",
+    "description": "Services I provide",
+    "marketing": "Digital Marketing",
+    "seo": "SEO Optimization",
+    "content": "Content Marketing",
+    "social": "Social Media Management"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "I Want To Hear From You",
+    "description": "Please fill out the form on this section to contact with me. Or call between 9:00 a.m. and 8:00 p.m. ET, Monday through Friday",
+    "address_label": "Address",
+    "email_label": "Email",
+    "phone_label": "Phone",
+    "required_fields": "Please Fill Required Fields",
+    "name_placeholder": "Your Name",
+    "email_placeholder": "Your Email",
+    "phone_placeholder": "Your Phone",
+    "subject_placeholder": "Subject",
+    "message_placeholder": "Write your message here",
+    "submit_button": "Submit Now"
+  },
+  "footer": {
+    "copyright": "© 2024 Hong Oanh. All rights reserved.",
+    "made_with": "Made with ❤️"
+  }
+} 

@@ -15,11 +15,11 @@ const News = () => {
     loadData();
   }, []);
   return (
-    <div className="dizme_tm_section" id="blog">
+    <div className="hongoanh_tm_section" id="blog">
       <BlogPopUp open={popup} data={popupData} close={() => setPopup(false)} />
-      <div className="dizme_tm_news">
+      <div className="hongoanh_tm_news">
         <div className="container">
-          <div className="dizme_tm_main_title" data-align="center">
+          <div className="hongoanh_tm_main_title" data-align="center">
             <span>From My Blog</span>
             <h3>{`Our Recent Updates, Blog, Tips, Tricks & More`}</h3>
           </div>
@@ -43,7 +43,7 @@ const News = () => {
                           <span>{blog && blog.date && blog.date.month}</span>
                         </div>
                         <a
-                          className="dizme_tm_full_link"
+                          className="hongoanh_tm_full_link"
                           href="#"
                           onClick={() => {
                             setPopupData(blog && blog);
@@ -51,24 +51,24 @@ const News = () => {
                           }}
                         />
                       </div>
-                      <div className="details">
-                        <span className="category">
-                          <a href="#">{blog.category}</a>
-                        </span>
-                        <h3 className="title">
-                          <a href="#">{blog.title}</a>
-                        </h3>
-                      </div>
-                      <div className="news_hidden_details">
-                        <div className="news_popup_informations">
-                          <div className="text">
-                            {blog.details &&
-                              blog.details.map((details, i) => (
-                                <p key={i}>{details}</p>
-                              ))}
-                          </div>
-                        </div>
-                      </div>
+                                             <div className="details">
+                         <span className="category">
+                           <a href="#">{blog && blog.category}</a>
+                         </span>
+                         <h3 className="title">
+                           <a href="#">{blog && blog.title}</a>
+                         </h3>
+                       </div>
+                       <div className="news_hidden_details">
+                         <div className="news_popup_informations">
+                           <div className="text">
+                             {blog && blog.details &&
+                               blog.details.map((details, i) => (
+                                 <p key={i}>{details}</p>
+                               ))}
+                           </div>
+                         </div>
+                       </div>
                     </div>
                   </li>
                 ))}

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const BlogPopUp = ({ data, open, close }) => {
   return (
-    <div className={`dizme_tm_modalbox ${open ? "opened" : ""}`}>
+    <div className={`hongoanh_tm_modalbox ${open ? "opened" : ""}`}>
       {data && (
         <div className="box_inner">
           <div className="close">

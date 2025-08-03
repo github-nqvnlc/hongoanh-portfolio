@@ -16,13 +16,13 @@ const Skills = ({ dark }) => {
   }, []);
 
   return (
-    <div className="dizme_tm_section">
-      <div className="dizme_tm_skills">
+    <div className="hongoanh_tm_section">
+      <div className="hongoanh_tm_skills">
         <div className="container">
           <div className="wrapper">
             <div className="left">
               <div
-                className="dizme_tm_main_title wow fadeInUp"
+                className="hongoanh_tm_main_title wow fadeInUp"
                 data-wow-duration="1s"
                 data-align="left"
               >

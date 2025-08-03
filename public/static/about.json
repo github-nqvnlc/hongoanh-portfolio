@@ -1,8 +1,11 @@
 {
   "skill": "Marketing Executive",
-  "title": "I Help Brands Stand Out and Connect",
-  "bio": "Hi there! I’m a passionate marketing professional with a strong desire to learn and grow through every project. With 18 years of hands-on experience, I've contributed to campaigns in content creation, social media, and brand promotion. I enjoy crafting messages that resonate with audiences and support long-term brand development. Let's create marketing that makes a difference!",
-  "totalProjectInThousand": "9",
-  "experience": 18
-}
-  
+  "graduation": "Đại học Kinh tế Đà Nẵng - Đại học Đà Nẵng",
+  "graduationYear": "15 - 07 - 2025",
+  "graduationMajor": "Digital Marketing",
+  "graduationDescription": "Tôi đã tốt nghiệp chuyên ngành Digital Marketing tại Đại học Kinh tế Đà Nẵng, nơi tôi được trang bị kiến thức toàn diện về các chiến lược marketing hiện đại, phân tích hành vi người tiêu dùng và quản lý chiến dịch kỹ thuật số. Nền tảng học thuật đã mang lại cho tôi cả lý thuyết và hiểu biết thực tế về bối cảnh marketing kỹ thuật số đang phát triển.",
+  "title": "Tôi Giúp Thương Hiệu Nổi Bật Và Kết Nối",
+  "bio": "Xin chào! Tôi là một chuyên gia marketing đam mê với mong muốn mạnh mẽ học hỏi và phát triển qua mỗi dự án. Với 3 năm kinh nghiệm thực tế, tôi đã đóng góp vào các chiến dịch trong việc tạo nội dung, mạng xã hội và quảng bá thương hiệu. Tôi thích tạo ra những thông điệp có sức lan tỏa với khán giả và hỗ trợ phát triển thương hiệu dài hạn. Hãy cùng tạo ra marketing tạo nên sự khác biệt!",
+  "totalProjectInThousand": "100",
+  "experience": "3"
+} 

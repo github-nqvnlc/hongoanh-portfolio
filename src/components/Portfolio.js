@@ -47,11 +47,11 @@ const Portfolio = () => {
   const [popup, setPopup] = useState(false);
 
   return (
-    <div className="dizme_tm_section" id="portfolio">
+    <div className="hongoanh_tm_section" id="portfolio">
       <DetailsPopup open={popup} close={() => setPopup(false)} />
-      <div className="dizme_tm_portfolio">
+      <div className="hongoanh_tm_portfolio">
         <div className="container">
-          <div className="dizme_tm_main_title" data-align="center">
+          <div className="hongoanh_tm_main_title" data-align="center">
             <span>Portfolio</span>
             <h3>My Amazing Works</h3>
             <p>
@@ -111,13 +111,13 @@ const Portfolio = () => {
               </li>
             </ul>
           </div>
-          <div className="dizme_tm_portfolio_titles" />
+          <div className="hongoanh_tm_portfolio_titles" />
           <div className="portfolio_list wow fadeInUp" data-wow-duration="1s">
             <ul className="gallery_zoom grid">
               <li className="youtube grid-item">
                 <div className="inner">
                   <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
+                    className="entry hongoanh_tm_portfolio_animation_wrap"
                     data-title="Mockup Shape"
                     data-category="Youtube"
                   >
@@ -141,7 +141,7 @@ const Portfolio = () => {
               <li className="vimeo grid-item">
                 <div className="inner">
                   <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
+                    className="entry hongoanh_tm_portfolio_animation_wrap"
                     data-title="Ave Bottle"
                     data-category="Vimeo"
                   >
@@ -165,7 +165,7 @@ const Portfolio = () => {
               <li className="soundcloud grid-item">
                 <div className="inner">
                   <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
+                    className="entry hongoanh_tm_portfolio_animation_wrap"
                     data-title="Magic Art"
                     data-category="Soundcloud"
                   >
@@ -189,7 +189,7 @@ const Portfolio = () => {
               <li className="popup grid-item">
                 <div className="inner">
                   <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
+                    className="entry hongoanh_tm_portfolio_animation_wrap"
                     data-title="Scott Felix"
                     data-category="Popup"
                   >
@@ -210,7 +210,7 @@ const Portfolio = () => {
               <li className="popup grid-item">
                 <div className="inner">
                   <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
+                    className="entry hongoanh_tm_portfolio_animation_wrap"
                     data-title="Art Stone"
                     data-category="Popup"
                   >
@@ -232,7 +232,7 @@ const Portfolio = () => {
               <li className="detail grid-item" onClick={() => setPopup(true)}>
                 <div className="inner">
                   <div
-                    className="entry dizme_tm_portfolio_animation_wrap"
+                    className="entry hongoanh_tm_portfolio_animation_wrap"
                     data-title="Global Evolution"
                     data-category="Detail"
                   >

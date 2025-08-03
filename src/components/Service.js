@@ -6,7 +6,7 @@ import ServicePopup from "./popup/ServicePopup";
 
 const Service = ({ dark }) => {
   const [data, setData] = useState([]);
-  const [popupdata, setPopupdata] = useState({});
+  const [popupData, setPopupData] = useState({});
   const [popup, setPopup] = useState(false);
   useEffect(() => {
     async function loadData() {
@@ -27,19 +27,19 @@ const Service = ({ dark }) => {
 
   const onClick = (index) => {
     setPopup(true);
-    setPopupdata(data && data[index]);
+    setPopupData(data && data[index]);
   };
 
   return (
-    <div className="dizme_tm_section" id="service">
+    <div className="hongoanh_tm_section" id="service">
       <ServicePopup
-        data={popupdata}
+        data={popupData}
         open={popup}
         close={() => setPopup(false)}
       />
-      <div className="dizme_tm_services">
+      <div className="hongoanh_tm_services">
         <div className="container">
-          <div className="dizme_tm_main_title" data-align="center">
+          <div className="hongoanh_tm_main_title" data-align="center">
             <span>Services</span>
             <h3>What I Do for Clients</h3>
             <p>
@@ -52,7 +52,7 @@ const Service = ({ dark }) => {
               {data &&
                 data.map(
                   (data, i) =>
-                    data && (
+                    data && data.icon && data.icon.iconBg && (
                       <li
                         className={`wow ${
                           (i * 1) % 2 === 0 ? "fadeInLeft" : "fadeInRight"
@@ -64,23 +64,13 @@ const Service = ({ dark }) => {
                         <div className="list_inner tilt-effect">
                           <span className="icon">
                             {parse(data.icon.svg)}
-                            {dark ? (
-                              <Image
-                                className="back"
-                                src={data.icon.iconBgDark}
-                                alt="image"
-                                width={80}
-                                height={80}
-                              />
-                            ) : (
-                              <Image
-                                className="back"
-                                src={data.icon.iconBg}
-                                alt="image"
-                                width={80}
-                                height={80}
-                              />
-                            )}
+                            <Image
+                              className="back"
+                              src={dark && data.icon.iconBgDark ? data.icon.iconBgDark : data.icon.iconBg}
+                              alt="image"
+                              width={80}
+                              height={80}
+                            />
                           </span>
                           <div className="title">
                             <h3>{data.title}</h3>
@@ -91,7 +81,7 @@ const Service = ({ dark }) => {
                           <div className="text">
                             <p>{data.shortDec}</p>
                           </div>
-                          <a className="dizme_tm_full_link" href="#" />
+                          <a className="hongoanh_tm_full_link" href="#" />
                           <Image
                             className="popup_service_image"
                             src="/img/service/1.jpg"

@@ -3,8 +3,8 @@ import { Fragment } from "react";
 const Newsletter = () => {
   return (
     <Fragment>
-      <div className="dizme_tm_section">
-        <div className="dizme_tm_subscribe">
+      <div className="hongoanh_tm_section">
+        <div className="hongoanh_tm_subscribe">
           <div className="container">
             <div className="inner">
               <div className="background">

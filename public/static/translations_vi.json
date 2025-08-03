@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "experience": "Kinh nghiệm",
+    "portfolio": "Portfolio",
+    "service": "Dịch vụ",
+    "blog": "Blog",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "hello": "Xin chào, tôi là",
+    "name": "Hồng Oanh",
+    "job": "Marketing Specialist",
+    "description": "Chuyên viên Marketing với 3+ năm kinh nghiệm trong lĩnh vực Digital Marketing, SEO và Content Marketing. Đam mê sáng tạo nội dung và tối ưu hóa trải nghiệm khách hàng.",
+    "download_cv": "Download CV",
+    "a": " ",
+    "from": "Tại"
+  },
+  "about": {
+    "title": "Giới thiệu",
+    "subtitle": "Về tôi",
+    "description": "Tôi là một chuyên viên Marketing với kinh nghiệm trong việc phát triển chiến lược marketing, quản lý nội dung và tối ưu hóa SEO. Tôi có khả năng làm việc độc lập và theo nhóm, luôn tìm tòi học hỏi để nâng cao kỹ năng.",
+    "years": "Năm kinh nghiệm",
+    "projects": "Dự án hoàn thành",
+    "education": "Học vấn",
+    "school": "Trường",
+    "major": "Chuyên ngành",
+    "graduation_year": "Năm tốt nghiệp",
+    "contact_now": "Liên Hệ Ngay",
+    "years_of_experience": "Năm Kinh Nghiệm",
+    "successful_projects": "Dự Án Thành Công"
+  },
+  "experience": {
+    "title": "Kinh nghiệm làm việc",
+    "subtitle": "Experience",
+    "description": "Hành trình nghề nghiệp và những kinh nghiệm tích lũy",
+    "responsibilities": "Công việc đã thực hiện",
+    "achievements": "Kết quả đạt được",
+    "technologies": "Kỹ năng & Công cụ"
+  },
+  "portfolio": {
+    "title": "Dự án",
+    "subtitle": "Portfolio",
+    "description": "Những dự án tôi đã thực hiện",
+    "all": "Tất cả",
+    "web": "Website",
+    "mobile": "Mobile App",
+    "design": "Design"
+  },
+  "service": {
+    "title": "Dịch vụ",
+    "subtitle": "Service",
+    "description": "Những dịch vụ tôi cung cấp",
+    "marketing": "Digital Marketing",
+    "seo": "SEO Optimization",
+    "content": "Content Marketing",
+    "social": "Social Media Management"
+  },
+  "contact": {
+    "title": "Liên Hệ Tôi",
+    "subtitle": "Tôi Muốn Nghe Từ Bạn",
+    "description": "Vui lòng điền form bên dưới để liên hệ với tôi. Hoặc gọi điện từ 9:00 sáng đến 8:00 tối, từ thứ Hai đến thứ Sáu",
+    "address_label": "Địa chỉ",
+    "email_label": "Email",
+    "phone_label": "Điện thoại",
+    "required_fields": "Vui lòng điền đầy đủ thông tin",
+    "name_placeholder": "Họ và tên của bạn",
+    "email_placeholder": "Email của bạn",
+    "phone_placeholder": "Số điện thoại của bạn",
+    "subject_placeholder": "Tiêu đề",
+    "message_placeholder": "Viết tin nhắn của bạn tại đây",
+    "submit_button": "Gửi Ngay"
+  },
+  "footer": {
+    "copyright": "© 2024 Hồng Oanh. All rights reserved.",
+    "made_with": "Được tạo với ❤️"
+  }
+} 

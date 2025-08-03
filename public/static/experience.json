@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "position": "Nhân viên Marketing Full Time",
+    "company": "DANAWATCH",
+    "duration": "T3/2025 - Nay",
+    "responsibilities": [
+      "Tiếp tục thực hiện các công việc như khi còn là nhân viên part-time",
+      "Đảm nhận thêm 2 fanpage DANAWATCH CHI NHÁNH 2 (thị trường Hội An): Trung bình đăng tải 8 bài/ngày/page, bao gồm: giới thiệu sản phẩm, CTKM, ảnh feedback khách, tips chọn đồng hồ,...",
+      "Quản lý đội nhóm part-time (3–6 người)",
+      "Thiết kế các ấn phẩm offline cho cửa hàng: Poster, banner, bảng hiệu mini, bảng quote trưng bày, hashtag cầm tay, standee,...",
+      "Làm việc với bộ phận in ấn để đảm bảo file đúng kích thước, màu sắc chuẩn, đúng tiến độ"
+    ],
+    "achievements": [
+      "Đảm bảo khối lượng công việc được giao: đăng tải 16 bài/ngày, giữ tương tác ổn định và đồng đều giữa các kênh",
+      "Đóng góp hơn 100+ bài SEO chất lượng, giúp tăng trưởng đáng kể lưu lượng truy cập organic cho website DANAWATCH",
+      "Quản lý hiệu quả đội SEO 3 cộng tác viên, đảm bảo chất lượng và tiến độ bài viết theo kế hoạch",
+      "Thiết kế & triển khai các ấn phẩm offline đúng yêu cầu, đúng tiến độ giúp các cửa hàng của Danawatch nâng cao nhận diện và tăng tính chuyên nghiệp trong trưng bày"
+    ],
+    "technologies": ["Facebook Ads", "Canva", "Photoshop", "SEO", "Content Marketing", "Team Management"]
+  },
+  {
+    "id": 2,
+    "position": "Nhân viên Marketing Part Time",
+    "company": "DANAWATCH",
+    "duration": "T3/2023 - T2/2025",
+    "responsibilities": [
+      "Quản lý nội dung fanpage:",
+      "Lên kế hoạch nội dung cho fanpage DANAWATCH theo từng dòng sản phẩm (BST Casio, Seiko, Orient...), các chiến dịch ưu đãi và dịp lễ trong năm (Tết, 8/3, Trung Thu...)",
+      "Viết caption hấp dẫn, đúng tệp khách hàng mục tiêu, kết hợp storytelling và CTA thúc đẩy tương tác & chuyển đổi",
+      "Viết nội dung quảng cáo (Facebook Ads) với nhiều thông điệp khác nhau: ưu đãi, giới thiệu BST,...",
+      "Thiết kế bài đăng truyền thông (Facebook) bằng Canva, Photoshop",
+      "Quản lý nội dung website:",
+      "Nghiên cứu từ khóa và biên tập bài viết chuẩn SEO cho: Danh mục sản phẩm (đồng hồ Casio, Seiko, Orient, Saga, Sunrise...); Các bài blog chia sẻ kiến thức về chọn đồng hồ, phối đồ, mẹo sử dụng, bảo quản,…",
+      "Tối ưu onpage cho từng bài viết và trang sản phẩm: Viết tiêu đề hấp dẫn, đúng từ khóa; Cấu trúc nội dung với các thẻ H1, H2 rõ ràng; Soạn meta description chuẩn SEO; Xây dựng liên kết nội bộ (internal link) để tăng trải nghiệm người đọc và hiệu quả SEO;...",
+      "Đăng sản phẩm lên website: Viết mô tả, thông số kỹ thuật, thêm hình ảnh và gắn tag sản phẩm phù hợp",
+      "Thiết kế hình ảnh mô tả cho bài SEO",
+      "Quản lý đội nhóm viết SEO (3 cộng tác viên): Giao từ khóa, brief bài viết theo kế hoạch SEO; Kiểm tra chất lượng nội dung và tính chuẩn SEO; Theo dõi deadline và hiệu suất làm việc của cộng tác viên"
+    ],
+    "technologies": ["Facebook Marketing", "SEO", "Content Writing", "Canva", "Photoshop", "Team Management", "Keyword Research", "On-page SEO"]
+  },
+  {
+    "id": 3,
+    "position": "Cộng tác viên Content SEO",
+    "company": "BRANDO Agency",
+    "duration": "T2/2022 - T1/2023",
+    "responsibilities": [
+      "Viết bài chuẩn SEO cho website thuộc nhiều lĩnh vực: du lịch, F&B, phần mềm, giáo dục, Xây dựng/ thiết kế/ thi công,...",
+      "Thực hiện các dạng bài phổ biến như:",
+      "Toplist (Top 10 quán ăn ngon tại Đà Nẵng, Top 10 trung tâm học IELTS...)",
+      "Báo giá dịch vụ (Báo giá nội thất, Báo giá chạy quảng cáo Google...)",
+      "Bài chia sẻ kiến thức (Hướng dẫn, mẹo vặt,...)",
+      "Phối hợp với leader để chỉnh sửa tiêu đề, thẻ heading, meta description, liên kết nội bộ,..."
+    ],
+    "achievements": [
+      "100% bài viết được duyệt & đăng tải chính thức trên các website dự án",
+      "Đáp ứng tốt yêu cầu về chuẩn SEO và deadline, được leader đánh giá cao về thái độ và chất lượng nội dung"
+    ],
+    "technologies": ["SEO Writing", "Content Marketing", "Keyword Research", "Meta Description", "Internal Linking"]
+  }
+]

@@ -29,9 +29,9 @@ const Testimonial = () => {
   };
 
   return (
-    <div className="dizme_tm_section">
-      <div className="dizme_tm_testimonials">
-        <div className="dizme_tm_main_title" data-align="center">
+    <div className="hongoanh_tm_section">
+      <div className="hongoanh_tm_testimonials">
+        <div className="hongoanh_tm_main_title" data-align="center">
           <span>Testimonials</span>
           <h3>What My Clients Say</h3>
           <p>
@@ -67,18 +67,18 @@ const Testimonial = () => {
                           </g>
                         </svg>
                       </div>
-                      <div className="text">
-                        <p>{data.details}</p>
-                      </div>
-                      <div className="short">
-                        <div className="image">
-                          <div className="main" data-img-url={data.img} />
-                        </div>
-                        <div className="detail">
-                          <h3>{data.name}</h3>
-                          <span>{data.profession}</span>
-                        </div>
-                      </div>
+                                             <div className="text">
+                         <p>{data && data.details}</p>
+                       </div>
+                       <div className="short">
+                         <div className="image">
+                           <div className="main" data-img-url={data && data.img} />
+                         </div>
+                         <div className="detail">
+                           <h3>{data && data.name}</h3>
+                           <span>{data && data.profession}</span>
+                         </div>
+                       </div>
                     </SwiperSlide>
                   ))}
               </Swiper>

@@ -1,5 +1,5 @@
 {
-  "name": "dizme",
+  "name": "hongoanh",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,7 +15,6 @@
     "react": "17.0.2",
     "react-countup": "^6.1.1",
     "react-dom": "17.0.2",
-    "react-visibility-sensor": "^5.1.1",
     "swiper": "^8.0.7",
     "vanilla-tilt": "^1.7.2",
     "wowjs": "^1.1.3"

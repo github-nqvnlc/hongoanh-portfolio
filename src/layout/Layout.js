@@ -39,7 +39,7 @@ const Layout = ({ children, dark }) => {
       <PreLoader />
       <ImageView />
       <VideoPopup />
-      <div className="dizme_tm_all_wrap" data-magic-cursor="show">
+      <div className="hongoanh_tm_all_wrap" data-magic-cursor="show">
         <MobileMenu
           logo={
             siteInfo && siteInfo.logo && siteInfo.logo[dark ? "dark" : "light"]

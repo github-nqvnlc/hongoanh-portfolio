@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "position": "Full-time Marketing Staff",
+    "company": "DANAWATCH",
+    "duration": "Mar 2025 - Present",
+    "responsibilities": [
+      "Continue performing tasks as when working as a part-time employee",
+      "Take on 2 additional DANAWATCH BRANCH 2 fanpages (Hoi An market): Average 8 posts/day/page, including: product introductions, promotions, customer feedback photos, watch selection tips,...",
+      "Manage part-time team (3-6 people)",
+      "Design offline materials for stores: Posters, banners, mini signs, display quote boards, hashtag handouts, standees,...",
+      "Work with printing department to ensure files are correct size, standard colors, on schedule"
+    ],
+    "achievements": [
+      "Ensure assigned workload: posting 16 articles/day, maintaining stable and even engagement across channels",
+      "Contribute over 100+ quality SEO articles, helping significantly increase organic traffic for DANAWATCH website",
+      "Effectively manage SEO team of 3 collaborators, ensuring quality and progress of articles according to plan",
+      "Design & implement offline materials according to requirements, on schedule helping Danawatch stores enhance brand recognition and increase professionalism in display"
+    ],
+    "technologies": ["Facebook Ads", "Canva", "Photoshop", "SEO", "Content Marketing", "Team Management"]
+  },
+  {
+    "id": 2,
+    "position": "Part-time Marketing Staff",
+    "company": "DANAWATCH",
+    "duration": "Mar 2023 - Feb 2025",
+    "responsibilities": [
+      "Manage fanpage content:",
+      "Plan content for DANAWATCH fanpage by product lines (Casio, Seiko, Orient collections...), promotional campaigns and holidays throughout the year (Tet, 8/3, Mid-Autumn...)",
+      "Write engaging captions, targeting the right customer segment, combining storytelling and CTA to drive engagement & conversion",
+      "Write advertising content (Facebook Ads) with different messages: promotions, collection introductions,...",
+      "Design social media posts (Facebook) using Canva, Photoshop",
+      "Manage website content:",
+      "Research keywords and edit SEO-standard articles for: Product categories (Casio, Seiko, Orient, Saga, Sunrise watches...); Blog articles sharing knowledge about watch selection, styling, usage tips, maintenance,…",
+      "Optimize onpage for each article and product page: Write engaging titles with correct keywords; Structure content with clear H1, H2 tags; Write SEO-standard meta descriptions; Build internal links to enhance reader experience and SEO effectiveness;...",
+      "Upload products to website: Write descriptions, technical specifications, add images and tag products appropriately",
+      "Design descriptive images for SEO articles",
+      "Manage SEO writing team (3 collaborators): Assign keywords, brief articles according to SEO plan; Check content quality and SEO standards; Monitor deadlines and collaborator performance"
+    ],
+    "technologies": ["Facebook Marketing", "SEO", "Content Writing", "Canva", "Photoshop", "Team Management", "Keyword Research", "On-page SEO"]
+  },
+  {
+    "id": 3,
+    "position": "Content SEO Collaborator",
+    "company": "BRANDO Agency",
+    "duration": "Feb 2022 - Jan 2023",
+    "responsibilities": [
+      "Write SEO-standard articles for websites in various fields: tourism, F&B, software, education, Construction/ design/ construction,...",
+      "Implement common article types such as:",
+      "Toplists (Top 10 best restaurants in Da Nang, Top 10 IELTS learning centers...)",
+      "Service quotes (Interior design quotes, Google advertising quotes...)",
+      "Knowledge sharing articles (Guides, tips,...)",
+      "Coordinate with leader to edit titles, heading tags, meta descriptions, internal links,..."
+    ],
+    "achievements": [
+      "100% of articles approved & officially published on project websites",
+      "Meet SEO standards and deadline requirements well, highly rated by leader for attitude and content quality"
+    ],
+    "technologies": ["SEO Writing", "Content Marketing", "Keyword Research", "Meta Description", "Internal Linking"]
+  }
+] 

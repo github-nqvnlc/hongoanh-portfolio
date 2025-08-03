@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import About from "../src/components/About";
 import Contact from "../src/components/Contact";
+import Experience from "../src/components/Experience";
 import Home from "../src/components/Home";
 import News from "../src/components/News";
 import Newsletter from "../src/components/Newsletter";
@@ -25,7 +26,7 @@ const Index = () => {
   return (
     <Layout dark>
       <Head>
-        <title>Dizme | Home</title>
+        <title>Hong Oanh | Portfolio</title>
       </Head>
       <Home dark />
       {/* HERO */}
@@ -35,6 +36,9 @@ const Index = () => {
       {/* ABOUT */}
       <About dark />
       {/* /ABOUT */}
+      {/* EXPERIENCE */}
+      <Experience dark />
+      {/* /EXPERIENCE */}
       {/* PORTFOLIO */}
       <Portfolio />
       {/* /PORTFOLIO */}

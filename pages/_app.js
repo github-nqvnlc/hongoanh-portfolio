@@ -1,11 +1,12 @@
 import { Fragment } from "react";
 import "../styles/globals.css";
+import { LanguageProvider } from "../src/context/LanguageContext";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Fragment>
+    <LanguageProvider>
       <Component {...pageProps} />
-    </Fragment>
+    </LanguageProvider>
   );
 }
 

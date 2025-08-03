@@ -1,9 +1,14 @@
 import { useState } from "react";
 import Image from "next/image";
+import { useLanguage } from "../context/LanguageContext";
+import ToggleGroup from "../components/ToggleGroup";
+
 const MobileMenu = ({ logo }) => {
   const [toggle, setToggle] = useState(false);
+  const { t } = useLanguage();
+
   return (
-    <div className="dizme_tm_mobile_menu">
+    <div className="hongoanh_tm_mobile_menu">
       <div className="mobile_menu_inner">
         <div className="mobile_in">
           <div className="logo">
@@ -30,37 +35,45 @@ const MobileMenu = ({ logo }) => {
           <ul className="anchor_nav">
             <li className="current">
               <a href="#home" onClick={() => setToggle(false)}>
-                Home
+                {t("nav.home")}
               </a>
             </li>
             <li>
               <a onClick={() => setToggle(false)} href="#about">
-                About
+                {t("nav.about")}
+              </a>
+            </li>
+            <li>
+              <a onClick={() => setToggle(false)} href="#experience">
+                {t("nav.experience")}
               </a>
             </li>
             <li>
               <a onClick={() => setToggle(false)} href="#portfolio">
-                Portfolio
+                {t("nav.portfolio")}
               </a>
             </li>
             <li>
               <a onClick={() => setToggle(false)} href="#service">
-                Service
+                {t("nav.service")}
               </a>
             </li>
             <li>
               <a onClick={() => setToggle(false)} href="#blog">
-                Blog
+                {t("nav.blog")}
               </a>
             </li>
             <li>
               <a onClick={() => setToggle(false)} href="#contact">
-                Contact
+                {t("nav.contact")}
               </a>
             </li>
+            <li className="toggle_group_container">
+              <ToggleGroup />
+            </li>
             <li className="download_cv">
-              <a href="/img/cv/1.jpg" download="">
-                <span>Download CV</span>
+              <a href="/img/cv/1.jpg" download="Hong_Oanh_CV.jpg">
+                <span>{t("hero.download_cv")}</span>
               </a>
             </li>
           </ul>
