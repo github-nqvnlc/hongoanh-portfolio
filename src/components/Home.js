@@ -58,7 +58,7 @@ const Home = ({ dark }) => {
             <div className="avatar">
               <div className="image">
                 <Image
-                  src={data && data.img ? data.img : "/img/slider/avatar.png"}
+                  src={data && data.img ? data.img : "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/slider/avatar.png"}
                   alt="image"
                   width={600}
                   height={750}

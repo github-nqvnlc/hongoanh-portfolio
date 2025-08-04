@@ -8,7 +8,7 @@ const CopyRight = ({ brandName }) => {
               <p>
                 Developed with love by{" "}
                 <a
-                  href="https://themeforest.net/user/codeefly"
+                  href="https://github.com/github-nqvnlc"
                   target="_blank"
                   rel="noreferrer"
                 >

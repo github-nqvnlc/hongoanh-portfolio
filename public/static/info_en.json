@@ -3,7 +3,7 @@
   "address": "Da Nang, Viet Nam",
   "bio": "I'm marketing executive based in Da Nang, and I'm very passionate and dedicated to my work.",
   "mainSkill": "Marketing Executive",
-  "/img": "/img/slider/avatar.png",
+  "/img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/slider/avatar.png",
   "skills": [
     {
       "name": "illustrator",

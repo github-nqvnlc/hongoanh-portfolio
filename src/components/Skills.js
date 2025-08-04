@@ -60,7 +60,7 @@ const Skills = ({ dark }) => {
               </div>
             </div>
             <div className="right">
-              <Image src={`/img/skills/${dark ? 2 : 1}.jpg`} alt="image" width={531} height={801} />
+              <Image src={`https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/skills/${dark ? 2 : 1}.jpg`} alt="image" width={531} height={801} />
             </div>
           </div>
         </div>

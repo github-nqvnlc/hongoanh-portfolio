@@ -2,8 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost', 'hongoanhportfolio.vercel.app'],
-    unoptimized: true,
+    domains: [
+      "localhost",
+      "hongoanhportfolio.vercel.app",
+      "lxbsypbe5na5ujep.public.blob.vercel-storage.com",
+    ],
     remotePatterns: [
       {
         protocol: "https",
@@ -16,7 +19,7 @@ const nextConfig = {
         hostname: "**",
         port: "",
         pathname: "/**",
-      }
+      },
     ],
   },
   logging: {
@@ -24,6 +27,6 @@ const nextConfig = {
       fullUrl: true,
     },
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

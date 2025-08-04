@@ -17,7 +17,7 @@ const About = ({ dark }) => {
             <div className="left">
               <div className="image">
                 <Image
-                  src={`/img/about/${dark ? 2 : 1}.jpg`}
+                  src={`https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/about/${dark ? 2 : 1}.jpg`}
                   alt="image"
                   width={691}
                   height={681}
@@ -76,16 +76,11 @@ const About = ({ dark }) => {
                   <h4 className="education_title">
                     <span className="education_icon">
                       <Image
-                        src={`/img/about/graduation.jpg`}
+                        src={`https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/about/graduation.jpg`}
                         alt="Education Icon"
                         width={150}
                         height={150}
-                        style={{
-                          borderRadius: "50%",
-                          objectFit: "cover",
-                          border: "3px solid #ff6b9d",
-                          boxShadow: "0 4px 8px rgba(255, 107, 157, 0.3)",
-                        }}
+                        className="graduation-icon"
                       />
                     </span>
                     {t("about.education")}
@@ -158,4 +153,5 @@ const About = ({ dark }) => {
     </div>
   );
 };
+
 export default About;

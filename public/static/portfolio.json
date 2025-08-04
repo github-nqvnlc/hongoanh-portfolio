@@ -11,8 +11,8 @@
       "labelCategory": "Sự kiện",
       "date": "25/04/2022",
       "type": "detail",
-      "img": "/img/portfolio/event/1.jpg",
-      "thumb": "/img/portfolio/event/1.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1-1.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1.jpg",
       "dimensions": {
         "width": 420,
         "height": 560
@@ -34,12 +34,12 @@
         "Marketing Strategy"
       ],
       "gallery": [
-        "/img/portfolio/event/1-1.jpg",
-        "/img/portfolio/event/1-2.jpg",
-        "/img/portfolio/event/1-3.jpg",
-        "/img/portfolio/event/1-4.jpg",
-        "/img/portfolio/event/1-5.jpg",
-        "/img/portfolio/event/1-6.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1-3.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1-4.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1-5.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/1-6.jpg"
       ],
       "link": "https://www.facebook.com/share/p/1CcM9BroKK"
     },
@@ -51,8 +51,8 @@
       "labelCategory": "Sự kiện",
       "date": "26/04/2022",
       "type": "detail",
-      "img": "/img/portfolio/event/2.jpg",
-      "thumb": "/img/portfolio/event/2.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/2.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/2.jpg",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -61,9 +61,9 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/2-1.jpg",
-        "/img/portfolio/event/2-2.jpg",
-        "/img/portfolio/event/2-3.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/2-1.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/2-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/2-3.jpg"
       ],
       "link": "https://www.facebook.com/share/p/19NLT2mvud"
     },
@@ -74,8 +74,8 @@
       "category": "event",
       "labelCategory": "Sự kiện",
       "type": "detail",
-      "img": "/img/portfolio/event/3.jpg",
-      "thumb": "/img/portfolio/event/3.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/3.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/3.jpg",
       "dimensions": {
         "width": 420,
         "height": 560
@@ -84,9 +84,9 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/3-1.jpg",
-        "/img/portfolio/event/3-2.jpg",
-        "/img/portfolio/event/3-3.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/3-1.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/3-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/3-3.jpg"
       ],
       "link": "https://www.facebook.com/share/p/16hyS7NHwR/"
     },
@@ -98,8 +98,8 @@
       "labelCategory": "Sự kiện",
       "date": "27/04/2023",
       "type": "detail",
-      "img": "/img/portfolio/event/4.jpg",
-      "thumb": "/img/portfolio/event/4.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/4.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/4.jpg",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -108,9 +108,9 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/4-1.jpg",
-        "/img/portfolio/event/4-2.jpg",
-        "/img/portfolio/event/4-3.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/4-1.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/4-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/4-3.jpg"
       ],
       "link": "https://www.facebook.com/share/p/1EkzovC5uP"
     },
@@ -122,8 +122,8 @@
       "labelCategory": "Sự kiện",
       "date": "2023",
       "type": "detail",
-      "img": "/img/portfolio/event/5.jpeg",
-      "thumb": "/img/portfolio/event/5.jpeg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5.JPEG",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5.JPEG",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -132,12 +132,12 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/5-1.jpg",
-        "/img/portfolio/event/5-2.jpg",
-        "/img/portfolio/event/5-3.jpg",
-        "/img/portfolio/event/5-4.jpg",
-        "/img/portfolio/event/5-5.jpg",
-        "/img/portfolio/event/5-6.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5-1.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5-3.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5-4.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5-5.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/5-6.jpg"
       ],
       "link": "https://www.facebook.com/StartupRunwayDUE"
     },
@@ -149,8 +149,8 @@
       "labelCategory": "Sự kiện",
       "date": "2024",
       "type": "detail",
-      "img": "/img/portfolio/event/6.jpg",
-      "thumb": "/img/portfolio/event/6.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6.jpg",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -159,12 +159,12 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/6-1.jpg",
-        "/img/portfolio/event/6-2.jpg",
-        "/img/portfolio/event/6-3.jpg",
-        "/img/portfolio/event/6-4.jpg",
-        "/img/portfolio/event/6-5.jpg",
-        "/img/portfolio/event/6-6.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6-1.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6-3.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6-4.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6-5.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/6-6.jpg"
       ],
       "link": "https://www.facebook.com/share/p/16CKc8eKuN"
     },
@@ -176,8 +176,8 @@
       "labelCategory": "Hoạt động",
       "date": "2021 - 2024",
       "type": "detail",
-      "img": "/img/portfolio/event/7.jpg",
-      "thumb": "/img/portfolio/event/7.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/7.JPG",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/7.JPG",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -186,8 +186,8 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/7-1.jpg",
-        "/img/portfolio/event/7-4.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/7-1.JPG",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/7-4.JPG"
       ],
       "link": "https://www.facebook.com/bandoanvu.dhkt"
     },
@@ -199,8 +199,8 @@
       "labelCategory": "Thành tích",
       "date": "23/12/2023",
       "type": "detail",
-      "img": "/img/portfolio/event/8.jpg",
-      "thumb": "/img/portfolio/event/8.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/8.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/8.jpg",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -209,7 +209,7 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/8-1.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/8-1.jpg"
       ],
       "link": "https://www.facebook.com/share/p/19JyTew6gS"
     },
@@ -221,8 +221,8 @@
       "labelCategory": "Thành tích",
       "date": "25/12/2023",
       "type": "detail",
-      "img": "/img/portfolio/event/9.jpg",
-      "thumb": "/img/portfolio/event/9.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/9.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/9.jpg",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -231,10 +231,10 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/9-1.jpg",
-        "/img/portfolio/event/9-2.jpg",
-        "/img/portfolio/event/9-3.jpg",
-        "/img/portfolio/event/9-4.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/9-1.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/9-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/9-3.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/9-4.jpg"
       ],
       "link": "https://www.facebook.com/share/p/1FQnUzTvV7"
     },
@@ -246,8 +246,8 @@
       "labelCategory": "Thành tích",
       "date": "09/12/2024",
       "type": "detail",
-      "img": "/img/portfolio/event/10.jpg",
-      "thumb": "/img/portfolio/event/10.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/10.jpg",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/10.jpg",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -256,10 +256,10 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/10-1.jpg",
-        "/img/portfolio/event/10-2.jpg",
-        "/img/portfolio/event/10-3.jpg",
-        "/img/portfolio/event/10-4.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/10-1.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/10-2.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/10-3.jpg",
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/10-4.jpg"
       ],
       "link": "https://www.facebook.com/share/p/1AkwvLeRCV"
     },
@@ -271,8 +271,8 @@
       "labelCategory": "Thành tích",
       "date": "5/12/2023",
       "type": "detail",
-      "img": "/img/portfolio/event/11.jpg",
-      "thumb": "/img/portfolio/event/11.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/11.JPG",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/11.JPG",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -291,8 +291,8 @@
       "labelCategory": "Thành tích",
       "date": "2021 - 2024",
       "type": "detail",
-      "img": "/img/portfolio/event/12.jpg",
-      "thumb": "/img/portfolio/event/12.jpg",
+      "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/12.JPG",
+      "thumb": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/12.JPG",
       "dimensions": {
         "width": 420,
         "height": 340
@@ -301,7 +301,7 @@
       "details": [],
       "technologies": [],
       "gallery": [
-        "/img/portfolio/event/12-1.jpg"
+        "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/portfolio/events/12-1.JPG"
       ],
       "link": "https://www.facebook.com/share/p/1G1rK8HUs9"
     }

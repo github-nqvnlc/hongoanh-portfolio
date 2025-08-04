@@ -3,7 +3,7 @@
   "address": "Đà Nẵng, Việt Nam",
   "bio": "Tôi là chuyên viên Marketing tại Đà Nẵng, rất đam mê và tận tâm với công việc của mình.",
   "mainSkill": "Chuyên viên Marketing",
-  "img": "/img/slider/avatar.png",
+  "img": "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/hongoanh-portfolio/slider/avatar.png",
   "skills": [
     {
       "name": "illustrator",

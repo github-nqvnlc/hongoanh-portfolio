@@ -1249,6 +1249,13 @@ h6 {
   font-weight: bold;
 }
 
+.graduation-icon {
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  border: 0.5px solid #ff6b9d !important;
+  box-shadow: 0 4px 8px rgba(255, 107, 157, 0.3) !important;
+}
+
 .hongoanh_tm_education .education_details {
   color: #666;
 }
@@ -1272,15 +1279,15 @@ h6 {
 }
 
 .hongoanh_tm_education .education_dot.school {
-  background: #ff8ea8;
+  background: #21af28;
 }
 
 .hongoanh_tm_education .education_dot.major {
-  background: #ff6b9d;
+  background: #c7d325;
 }
 
 .hongoanh_tm_education .education_dot.year {
-  background: #8067f0;
+  background: #1160c9;
 }
 
 .hongoanh_tm_education .education_label {
@@ -4162,5 +4169,83 @@ input[type="number"] {
     line-height: 1.6;
     margin-bottom: 6px;
     padding-left: 18px;
+  }
+}
+
+/* Image Preview Popup Styles */
+.image-preview-overlay {
+  position: fixed ;
+  top: 0 ;
+  left: 0 ;
+  width: 100vw ;
+  height: 100vh ;
+  background-color: rgba(0, 0, 0, 0.95) ;
+  z-index: 99999 ;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.image-preview-content {
+  position: relative ;
+  max-width: 65vw ;
+  max-height: 75vh ;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+}
+
+.image-preview-img {
+  max-width: 100% ;
+  max-height: 100% ;
+  object-fit: contain ;
+  border-radius: 8px ;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) ;
+  animation: zoomIn 0.3s ease-in-out;
+}
+
+.image-preview-close {
+  position: absolute ;
+  top: -50px ;
+  right: 0 ;
+  background: rgba(255, 255, 255, 0.1) ;
+  border: none ;
+  color: white ;
+  font-size: 24px ;
+  cursor: pointer ;
+  padding: 10px ;
+  border-radius: 50% ;
+  transition: all 0.3s ease ;
+  z-index: 100000 ;
+  width: 50px ;
+  height: 50px ;
+  display: flex ;
+  align-items: center ;
+  justify-content: center ;
+}
+
+.image-preview-close:hover {
+  background-color: rgba(255, 255, 255, 0.2) ;
+  transform: scale(1.1) ;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
   }
 }
