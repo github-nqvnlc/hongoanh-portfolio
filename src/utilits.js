@@ -46,7 +46,9 @@ export const customCursor = () => {
   }
   if (myCursor.length) {
     if (document.body) {
-      let n, i = 0, o = false;
+      let n,
+        i = 0,
+        o = false;
       (window.onmousemove = (s) => {
         // console.log(document.querySelector(this));
         o ||
@@ -169,9 +171,9 @@ export const stickyNav = () => {
 export const scrollTop = () => {
   var bar = document.querySelector(".progressbar");
   var line = document.querySelector(".progressbar .line");
-  
+
   if (!bar || !line) return;
-  
+
   var documentHeight = document.documentElement.scrollHeight;
   var windowHeight = window.innerHeight;
   var winScroll = window.scrollY;
@@ -198,9 +200,9 @@ export const portfolioHover = () => {
     hongoanh_tm_portfolio_titles = document.querySelector(
       ".hongoanh_tm_portfolio_titles"
     );
-  
+
   if (!hongoanh_tm_portfolio_titles) return;
-  
+
   // Add document mousemove listener once
   document.addEventListener("mousemove", (e) => {
     if (hongoanh_tm_portfolio_titles.classList.contains("visible")) {
@@ -208,7 +210,7 @@ export const portfolioHover = () => {
       hongoanh_tm_portfolio_titles.style.top = `${e.clientY + 25}px`;
     }
   });
-  
+
   hongoanh_tm_portfolio_animation_wrap.forEach((element) => {
     element.addEventListener("mousemove", () => {
       let title = element.getAttribute("data-title"),
@@ -216,7 +218,10 @@ export const portfolioHover = () => {
       if (title) {
         hongoanh_tm_portfolio_titles.classList.add("visible");
         hongoanh_tm_portfolio_titles.innerHTML =
-          title + '<span class="work__cat">' + category + "</span>";
+          title.toUpperCase() +
+          '<span class="work__cat" style="text-transform: uppercase; font-size: 14px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; padding: 5px 10px;">' +
+          category +
+          "</span>";
       }
     });
     element.addEventListener("mouseleave", () => {

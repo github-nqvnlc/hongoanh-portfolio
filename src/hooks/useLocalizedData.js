@@ -9,23 +9,38 @@ export const useLocalizedData = (basePath) => {
   const { language } = useLanguage();
 
   useEffect(() => {
+    let isMounted = true;
+    
     const loadData = async () => {
+      if (!isMounted) return;
+      
       setLoading(true);
       setError(null);
       
       try {
         const path = language === 'en' ? `${basePath}_en` : basePath;
         const result = await fetchData(`/static/${path}.json`);
-        setData(result);
+        
+        if (isMounted) {
+          setData(result);
+        }
       } catch (err) {
         console.error(`Error loading ${basePath} data:`, err);
-        setError(err);
+        if (isMounted) {
+          setError(err);
+        }
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     };
 
     loadData();
+    
+    return () => {
+      isMounted = false;
+    };
   }, [basePath, language]);
 
   return { data, loading, error };

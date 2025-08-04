@@ -1504,8 +1504,9 @@ body.dark .hongoanh_tm_education .education_description p {
 .hongoanh_tm_portfolio_titles {
   white-space: nowrap;
   background: #ffffff;
-  font-size: 21px;
-  padding: 7px 15px;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: #000;
@@ -1781,10 +1782,10 @@ body.dark .hongoanh_tm_education .education_description p {
   list-style-type: none;
 }
 .hongoanh_tm_modalbox .additional_images ul li {
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 20px 0px;
   float: left;
   width: 50%;
-  padding-left: 30px;
+  padding-left: 20px;
 }
 .hongoanh_tm_modalbox .additional_images ul li:nth-child(3n-2) {
   width: 100%;
