@@ -14,7 +14,7 @@ const Home = () => {
               <h6>
                 <span>Hello.</span>
               </h6>
-              <h1>Hong Oanh
+              <h1 className="cherry-bomb-one-regular tw:text-[90px]! md:tw:!text-[110px] tw:leading-[1.05]!">Hong Oanh
                 <br />
                 Content & SEO
               </h1>
