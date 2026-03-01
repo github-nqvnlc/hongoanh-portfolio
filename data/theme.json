@@ -1,0 +1,18 @@
+{
+  "theme": {
+    "--color-primary": "#acc2d9",
+    "--color-primary-light": "#b8daef",
+    "--color-text-main": "#476e96",
+    "--color-text-dark": "#000000",
+    "--color-text-white": "#ffffff",
+    "--color-bg": "#ffffff",
+    "--color-surface": "#ffffff",
+    "--color-border": "#476e96",
+    "--color-link": "#476e96",
+    "--color-link-hover": "#35597e",
+    "--color-muted": "#476e96",
+    "--color-section-bg": "#eef6fb",
+    "--color-shadow": "#476e96",
+    "--color-danger": "#ff0000"
+  }
+}

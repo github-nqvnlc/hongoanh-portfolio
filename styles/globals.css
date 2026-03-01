@@ -1,0 +1,197 @@
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/scrollbar";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* image popup */
+img.mfp-img {
+  box-shadow: 0 0 8px rgb(0 0 0 / 60%);
+  position: absolute;
+  /* max-height: 392px; */
+  padding: 0 !important;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mfp-img-container .mfp-content {
+  /* max-width: 400px !important; */
+}
+.mfp-img-container .mfp-close {
+  top: -110px;
+  right: -24px;
+}
+
+.contact-form .form-group .form-control.invalid {
+  border-color: var(--color-danger, #ff0000);
+}
+
+/*
+  Theme system
+  - Mặc định là blue-white theo yêu cầu
+  - Có thể đổi màu bằng cách sửa biến trong :root
+  - Có thể gán data-theme vào thẻ html/body để mở rộng nhiều theme
+*/
+:root,
+[data-theme="blue-white"] {
+  --color-primary: #acc2d9;
+  --color-primary-light: #b8daef;
+  --color-text-main: #476e96;
+  --color-text-dark: #000000;
+  --color-text-white: #ffffff;
+
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-border: #476e96;
+  --color-link: #476e96;
+  --color-link-hover: #35597e;
+  --color-muted: #476e96;
+  --color-section-bg: #eef6fb;
+  --color-shadow: #476e96;
+  --color-danger: #ff0000;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+a {
+  color: var(--color-link) !important;
+}
+
+a:hover {
+  color: var(--color-link-hover) !important;
+}
+
+.main-header {
+  background: var(--color-surface) !important;
+  border-bottom: 2px solid var(--color-border) !important;
+}
+
+.main-header .navbar-nav > li > .nav-link {
+  color: var(--color-text-main) !important;
+}
+
+.main-header .navbar-nav > li > .nav-link.active span,
+.main-header .navbar-nav > li > .nav-link:hover span {
+  background: var(--color-primary-light) !important;
+  color: var(--color-text-main) !important;
+}
+
+@media (max-width: 991px) {
+  .main-header .navbar-toggler span {
+    background: var(--color-text-main) !important;
+  }
+
+  .main-header .navbar-collapse {
+    background: var(--color-surface) !important;
+    border-top: 2px solid var(--color-border) !important;
+    border-bottom: 2px solid var(--color-border) !important;
+  }
+}
+
+.px-btn.px-btn-theme,
+.px-btn.px-btn-theme2 {
+  background: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-text-white) !important;
+}
+
+.px-btn.px-btn-theme:hover,
+.px-btn.px-btn-theme2:hover {
+  background: var(--color-text-main) !important;
+  border-color: var(--color-text-main) !important;
+  color: var(--color-text-white) !important;
+}
+
+.bg-gray {
+  background: var(--color-section-bg) !important;
+}
+
+.section-heading h6 span,
+.home-section .home-intro h6 span {
+  border-color: var(--color-primary) !important;
+  color: var(--color-text-main) !important;
+}
+
+.section-heading h3,
+.home-section .home-intro h1,
+.skill-box h3,
+.experience-box h3,
+.feature-box-01 .number,
+.feature-box-01 h5,
+.feature-box-02 h6,
+.experience-box li h6,
+.experience-box li .eb-right h5,
+.portfolio-box .portfolio-info h6,
+.feature-box-03 .feature-content h6,
+.contact-form h6,
+.contact-infos p {
+  color: var(--color-text-main) !important;
+}
+
+.feature-box-01,
+.feature-box-02,
+.portfolio-box,
+.feature-box-03,
+.contact-form,
+.experience-box li,
+.portfolio-box .portfolio-info,
+.contact-infos li + li:after,
+.footer {
+  border-color: var(--color-border) !important;
+}
+
+.feature-box-01,
+.feature-box-02,
+.portfolio-box,
+.feature-box-03 {
+  box-shadow: 0 0 0 0 var(--color-shadow) !important;
+}
+
+.feature-box-01:hover {
+  box-shadow: 5px 5px 0 0 var(--color-shadow) !important;
+}
+
+.feature-box-02:hover,
+.portfolio-box:hover,
+.feature-box-03:hover {
+  box-shadow: 3px 3px 0 0 var(--color-shadow) !important;
+}
+
+.feature-box-01 .icon,
+.feature-box-03 .feature-content .icons,
+.experience-user .avatar {
+  background: var(--color-primary-light) !important;
+  color: var(--color-text-main) !important;
+}
+
+.feature-box-02 .icon,
+.portfolio-box .portfolio-info a,
+.contact-infos .icon {
+  background: var(--color-primary) !important;
+  color: var(--color-text-white) !important;
+}
+
+.contact-form .form-control {
+  border-color: var(--color-border) !important;
+  color: var(--color-text-main) !important;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(172, 194, 217, 0.35) !important;
+}
+
+.footer .nav a,
+.footer p {
+  color: var(--color-text-main) !important;
+}
+
+.footer .nav a:hover {
+  color: var(--color-link-hover) !important;
+}
