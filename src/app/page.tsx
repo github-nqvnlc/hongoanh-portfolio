@@ -104,7 +104,7 @@ function HomeH() {
               title="Content SEO & Website Management"
               description="Có khả năng xây dựng outline, viết và tối ưu bài viết chuẩn SEO trên WordPress, góp phần tăng traffic và hỗ trợ mục tiêu chuyển đổi cho website."
               header={
-                <SkeletonOne src="/images/element/seo.png" />
+                <SkeletonOne src="/images/element/SEO.png" />
               }
               className={cn("[&>p:text-lg] text-center")}
             />
