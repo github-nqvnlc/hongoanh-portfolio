@@ -14,7 +14,7 @@ export const FullScreenV2 = ({
     <div
       className={cn(
         className,
-        "w-full min-h-[100vh] flex items-center justify-center overflow-x-hidden"
+        "w-full min-h-screen flex items-center justify-center overflow-x-hidden"
       )}
     >
       {children}

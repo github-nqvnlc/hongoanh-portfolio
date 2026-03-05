@@ -51,6 +51,8 @@
     transform: rotate(calc(var(--angle) * 1deg + 360deg)) translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 360deg));}}}
 
 @theme inline {
+  --color-main: #1365b6;
+  --color-sub: #ffd0e5;
   --animate-wiggle: wiggle 5s ease-in-out infinite;
   --animate-float: float 4s ease-in-out infinite;
   --animate-glow-pulse: glow-pulse 2.4s ease-in-out infinite;

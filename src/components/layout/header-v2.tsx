@@ -94,119 +94,22 @@ export const HeaderV2 = () => {
     <>
       <header
         className={cn(
-          "top-2 z-50",
-          !isDisableHeaderScroll && "sticky"
+          "z-50 fixed top-0 left-0 right-0",
         )}
       >
         <div
           className={cn(
-            "mx-auto flex justify-between gap-10 items-center transition-all duration-300 p-4 z-50 ",
-            isScrolled
-              ? "bg-white/80 backdrop-blur-md md:p-6 dark:bg-zinc-900/80 xl:w-[90%] shadow -translate-y-8 md:rounded-3xl"
-              : "bg-transparent w-full xl:w-[90%]"
+            "mx-auto flex justify-between gap-10 items-center transition-all duration-300 p-4 z-50 w-full xl:w-[90%]",
           )}
         >
           <div className="flex items-center gap-2">
-            {/* <Logo className="size-14" /> */}
-            <Image 
-              src={currentTheme === "light" ? "/images/logo-locnv-light.png" : "/images/logo-locnv.png"} 
-              alt="logo" 
-              width={50} 
-              height={50} 
-            />
+            
           </div>
           <div className="flex-1 items-center gap-3 justify-center hidden sm:flex">
-            {links.map((link) => (
-              <HeaderLink
-                key={link.title}
-                title={link.title}
-                href={link.href}
-              />
-            ))}
+            
           </div>
-          <div className="flex items-center gap-2">
-            {/* <iframe
-              className="hidden sm:block"
-              src="https://github.com/sponsors/github-nqvnlc/button"
-              title="Sponsor locnv14"
-              height="32"
-              width="114"
-              style={{ border: "0", borderRadius: "6px" }}
-            ></iframe> */}
-            {/* <a
-              href={"https://github.com/github-nqvnlc"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border p-2 rounded-2xl hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-300"
-            >
-              <IconBrandGithub />
-            </a> */}
+          <div className="flex items-center gap-2 py-2">
             <ModeToggle />
-
-            <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
-              <DrawerTrigger asChild>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  className="border size-10 rounded-xl p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-300 sm:hidden"
-                >
-                  <IconMenu2 />
-                  <span className="sr-only">Menu</span>
-                </Button>
-              </DrawerTrigger>
-              <DrawerContent className="min-h-dvh">
-                <DrawerHeader className="flex justify-between">
-                  <DrawerTitle className="flex items-center gap-2">
-                    <Image 
-                      src={currentTheme === "dark" ? "/images/logo-locnv.png" : "/images/logo-locnv-light.png"} 
-                      alt="logo" 
-                      width={56} 
-                      height={56} 
-                    />
-                    locnv.vercel.app
-                  </DrawerTitle>
-                  <DrawerClose
-                    asChild
-                    className="self-end -translate-y-14 z-50"
-                  >
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      asChild
-                      className="size-8"
-                    >
-                      <IconX />
-                    </Button>
-                  </DrawerClose>
-                </DrawerHeader>
-
-                <div className="px-6 flex flex-col gap-4">
-                  {links.map((link) => (
-                    <Link
-                      key={link.title}
-                      href={link.href}
-                      className="flex items-center gap-2 font-medium text-xl"
-                      onClick={() => setIsDrawerOpen(false)}
-                    >
-                      {link.title}
-                      {link.isComingSoon && (
-                        <span className="text-sm bg-blue-300/10 text-blue-500 px-2 py-1 rounded-full">
-                          Coming Soon
-                        </span>
-                      )}
-                    </Link>
-                  ))}
-                  <Separator />
-                  {/* <iframe
-                    src="https://github.com/sponsors/github-nqvnlc/button"
-                    title="Sponsor locnv"
-                    height="32"
-                    width="114"
-                    style={{ border: "0", borderRadius: "6px" }}
-                  ></iframe> */}
-                </div>
-              </DrawerContent>
-            </Drawer>
           </div>
         </div>
       </header>

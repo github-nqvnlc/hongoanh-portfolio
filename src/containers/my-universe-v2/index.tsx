@@ -38,7 +38,7 @@ const SocialNetworkV2 = () => {
             rel="noopener noreferrer"
             className="border p-2 rounded-xl sm:rounded-2xl hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-300"
           >
-            <network.icon className="size-5 sm:size-6 md:size-7 lg:size-8 text-[#1365b6]" />
+            <network.icon className="size-5 sm:size-6 md:size-7 lg:size-8 text-main" />
           </a>
         ))}
         <a
@@ -76,13 +76,9 @@ export const MyUniverseV2 = () => {
   }, [])
 
   return (
-    <div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-20 px-2 md:px-6">
+    <div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-0 px-2 md:px-6">
       <div className="flex-1 w-full lg:w-auto">
         <div className="flex-1 relative w-full lg:w-auto">
-          <div className="flex flex-row gap-4 items-center justify-center sm:justify-start my-4 lg:my-0 lg:block">
-            <Title />
-          </div>
-
           {/* Responsive positioning for floating elements */}
           <div className="pacifico-regular px-3 py-2 hidden sm:block absolute -top-2 left-16 sm:left-50 bg-teal-500/20 rounded-[6px] w-max font-medium dark:text-teal-300 text-teal-500 border border-teal-500/20 animate-wiggle duration-1000">
             SEO Specialist
@@ -94,6 +90,10 @@ export const MyUniverseV2 = () => {
 
           <div className="pacifico-regular px-3 py-2 hidden sm:block absolute bottom-10 right-2 sm:right-40 bg-yellow-500/20 rounded-[6px] w-max font-medium dark:text-yellow-300 text-yellow-500 border border-yellow-500/20 animate-float-x duration-1000">
             Canva Designer
+          </div>
+
+          <div className="flex flex-row gap-4 items-center justify-center my-4 lg:my-0">
+            <Title />
           </div>
 
           <div className="flex items-center justify-center md:justify-start">
@@ -108,7 +108,7 @@ export const MyUniverseV2 = () => {
                 animation={currentAnimation}
                 by="character"
                 startOnView={false}
-                className="break-words cursor-pointer"
+                className="wrap-break-word cursor-pointer"
               >
                 {currentText}
               </TextAnimate>
@@ -120,8 +120,8 @@ export const MyUniverseV2 = () => {
           <SocialNetworkV2 />
         </div>
       </div>
-      <div className="flex-1 flex justify-center lg:justify-end w-full mt-8 lg:mt-0">
-        {/* <CompareDemo /> */}
+      <div className="flex-1 flex justify-center w-full mt-8 lg:mt-0">
+          <Image src="/images/me/ho-ava-1.png" alt="Me" width={500} height={500} />
       </div>
     </div>
   )
@@ -145,7 +145,7 @@ export function CompareDemo() {
 export const Title = memo(() => {
   return (
     <h1 className="text-6xl xl:text-9xl font-bold tracking-tight sm:my-6 dark:text-zinc-300 text-zinc-700 cursor-pointer">
-      <Cover className="text-[#1365b6] dark:text-[#ffd0e5] cherry-bomb-one-regular hover:text-[#ffd0e5] hover:dark:text-[#1365b6]">Hồng Oanh</Cover>
+      <Cover className="text-main dark:text-sub cherry-bomb-one-regular hover:text-sub hover:dark:text-main">Hồng Oanh</Cover>
     </h1>
   )
 })
