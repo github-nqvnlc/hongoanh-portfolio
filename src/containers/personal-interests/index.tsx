@@ -12,6 +12,7 @@ import { SpotifyPlaylist } from "./spotify-playlist"
 import { StackCloud } from "./stack-cloud"
 import { BlurImage } from "@/components/ui/apple-cards-carousel"
 import { LEARNING_RESOURCES } from "@/data/learning-resource"
+import Image from "next/image"
 
 export function PersonalInterests() {
   const [mounted, setMounted] = useState(false)
@@ -42,7 +43,7 @@ export function PersonalInterests() {
   )
 }
 
-const SkeletonOne = () => {
+export const SkeletonOne = ({ src }: { src?: string }) => {
   return (
     <motion.div
       initial="initial"
@@ -51,14 +52,9 @@ const SkeletonOne = () => {
     >
       <EvervaultCard
         text={
-          <a
-            href="/files/vanloc_resume.pdf"
-            download
-            className="flex flex-col items-center justify-center"
-          >
-            Resume
-            <div className="text-sm text-gray-500">(Click to download)</div>
-          </a>
+          <div className='h-full flex items-center justify-center'>
+            <Image src={src || ""} alt="about" width={150} height={150} />
+          </div>
         }
       />
 

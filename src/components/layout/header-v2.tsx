@@ -4,77 +4,77 @@ import { cn } from "@/lib/utils"
 import {
   IconArrowUp,
   // IconBrandGithub,
-  IconMenu2,
-  IconX,
+  // IconMenu2,
+  // IconX,
 } from "@tabler/icons-react"
-import Link from "next/link"
+// import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { useTheme } from "next-themes"
+// import { useTheme } from "next-themes"
 import { ModeToggle } from "../mode-toggle"
 import { Button } from "../ui/button"
-import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerTrigger,
-} from "../ui/drawer"
-import { Separator } from "@radix-ui/react-dropdown-menu"
-import Image from "next/image"
+// import {
+//   Drawer, 
+//   DrawerClose,
+//   DrawerContent,
+//   DrawerHeader,
+//   DrawerTitle,
+//   DrawerTrigger,
+// } from "../ui/drawer"
+// import { Separator } from "@radix-ui/react-dropdown-menu"
+// import Image from "next/image"
 
-const links = [
-  {
-    title: "Home",
-    href: "/",
-  },
-  {
-    title: "Experience",
-    href: "/experience",
-  },
-  {
-    title: "Projects",
-    href: "/projects",
-  },
-  {
-    title: "About",
-    href: "/about",
-    isComingSoon: true,
-  },
-  // {
-  //   title: "Sponsors",
-  //   href: "/sponsors",
-  // },
-]
+// const links = [
+//   {
+//     title: "Home",
+//     href: "/",
+//   },
+//   {
+//     title: "Experience",
+//     href: "/experience",
+//   },
+//   {
+//     title: "Projects",
+//     href: "/projects",
+//   },
+//   {
+//     title: "About",
+//     href: "/about",
+//     isComingSoon: true,
+//   },
+//   // {
+//   //   title: "Sponsors",
+//   //   href: "/sponsors",
+//   // },
+// ]
 
 const pathNameDisableHeaderScroll = [""]
 
 export const HeaderV2 = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
+  // const [isScrolled, setIsScrolled] = useState(false)
   const lastScrollY = useRef(0)
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
-  const { theme, systemTheme } = useTheme()
+  // const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+  // const { theme, systemTheme } = useTheme()
 
   const pathname = usePathname()
 
   const isDisableHeaderScroll = pathNameDisableHeaderScroll.includes(pathname)
   
   // Determine current theme
-  const currentTheme = theme === "system" ? systemTheme : theme
+  // const currentTheme = theme === "system" ? systemTheme : theme
 
   const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY
 
     if (isDisableHeaderScroll) {
-      setIsScrolled(false)
+      // setIsScrolled(false)
       return
     }
 
     if (currentScrollY === 0) {
-      setIsScrolled(false)
+      // setIsScrolled(false)
     } else if (currentScrollY > 0) {
-      setIsScrolled(true)
+      // setIsScrolled(true)
     }
 
     lastScrollY.current = currentScrollY
@@ -153,19 +153,19 @@ const ScrollToTopButton = () => {
   )
 }
 
-const HeaderLink = ({ title, href }: { title: string; href: string }) => {
-  const pathname = usePathname() || "/"
-  const isActive = href === pathname
-  return (
-    <div
-      className={cn(
-        "flex items-center gap-2 px-3 py-2 rounded-full transition-colors",
-        isActive
-          ? "dark:bg-white dark:text-black bg-zinc-900 text-white"
-          : "dark:hover:bg-zinc-800 hover:bg-zinc-100"
-      )}
-    >
-      <Link href={href}>{title}</Link>
-    </div>
-  )
-}
+// const HeaderLink = ({ title, href }: { title: string; href: string }) => {
+//   const pathname = usePathname() || "/"
+//   const isActive = href === pathname
+//   return (
+//     <div
+//       className={cn(
+//         "flex items-center gap-2 px-3 py-2 rounded-full transition-colors",
+//         isActive
+//           ? "dark:bg-white dark:text-black bg-zinc-900 text-white"
+//           : "dark:hover:bg-zinc-800 hover:bg-zinc-100"
+//       )}
+//     >
+//       <Link href={href}>{title}</Link>
+//     </div>
+//   )
+// }

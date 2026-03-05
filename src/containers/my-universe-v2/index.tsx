@@ -80,15 +80,15 @@ export const MyUniverseV2 = () => {
       <div className="flex-1 w-full lg:w-auto">
         <div className="flex-1 relative w-full lg:w-auto">
           {/* Responsive positioning for floating elements */}
-          <div className="pacifico-regular px-3 py-2 hidden sm:block absolute -top-2 left-16 sm:left-50 bg-teal-500/20 rounded-[6px] w-max font-medium dark:text-teal-300 text-teal-500 border border-teal-500/20 animate-wiggle duration-1000">
+          <div className="pacifico-regular px-3 py-2 sm:block absolute -top-10 sm:-top-2 left-2 sm:left-20 md:left-10 lg:left-20 xl:left-50 bg-teal-500/20 rounded-[6px] w-max font-medium dark:text-teal-300 text-teal-500 border border-teal-500/20 animate-wiggle duration-1000">
             SEO Specialist
           </div>
 
-          <div className="pacifico-regular px-3 py-2 hidden sm:block absolute -top-6 right-2 sm:-right-15 bg-blue-500/20 rounded-[6px] w-max font-medium dark:text-blue-300 text-blue-500 border border-blue-500/20 animate-ripple duration-1000">
+          <div className="pacifico-regular px-3 py-2 sm:block absolute -top-12 sm:-top-6 -right-12 sm:-right-15 bg-blue-500/20 rounded-[6px] w-max font-medium dark:text-blue-300 text-blue-500 border border-blue-500/20 animate-ripple duration-1000">
             Content Writing
           </div>
 
-          <div className="pacifico-regular px-3 py-2 hidden sm:block absolute bottom-10 right-2 sm:right-40 bg-yellow-500/20 rounded-[6px] w-max font-medium dark:text-yellow-300 text-yellow-500 border border-yellow-500/20 animate-float-x duration-1000">
+          <div className="pacifico-regular px-3 py-2 sm:block absolute bottom-10 right-2 sm:right-40 bg-yellow-500/20 rounded-[6px] w-max font-medium dark:text-yellow-300 text-yellow-500 border border-yellow-500/20 animate-float-x duration-1000">
             Canva Designer
           </div>
 
@@ -121,7 +121,7 @@ export const MyUniverseV2 = () => {
         </div>
       </div>
       <div className="flex-1 flex justify-center w-full mt-8 lg:mt-0">
-          <Image src="/images/me/ho-ava-1.png" alt="Me" width={500} height={500} />
+          <Image src="/images/me/ho-ava-1.png" alt="Me" width={600} height={600} />
       </div>
     </div>
   )
@@ -144,7 +144,7 @@ export function CompareDemo() {
 
 export const Title = memo(() => {
   return (
-    <h1 className="text-6xl xl:text-9xl font-bold tracking-tight sm:my-6 dark:text-zinc-300 text-zinc-700 cursor-pointer">
+    <h1 className="text-[calc(100vw*0.15)] lg:text-7xl xl:text-8xl 2xl:text-[150px] font-bold tracking-tight sm:my-6 dark:text-zinc-300 text-zinc-700 cursor-pointer">
       <Cover className="text-main dark:text-sub cherry-bomb-one-regular hover:text-sub hover:dark:text-main">Hồng Oanh</Cover>
     </h1>
   )
