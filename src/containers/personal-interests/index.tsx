@@ -48,12 +48,12 @@ export const SkeletonOne = ({ src }: { src?: string }) => {
     <motion.div
       initial="initial"
       whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
+      className="flex flex-1 w-full h-full md:min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
     >
       <EvervaultCard
         text={
           <div className='h-full flex items-center justify-center'>
-            <Image src={src || ""} alt="about" width={150} height={150} />
+            <Image src={src || ""} alt="about" width={900} height={900} />
           </div>
         }
       />

@@ -7,6 +7,7 @@ import { SkeletonOne } from '@/containers/personal-interests'
 import { cn } from '@/lib/utils'
 import { IconPoint } from '@tabler/icons-react'
 import Image from 'next/image'
+import { PortfolioGallery } from '@/components/portfolio-gallery'
 import { ExperienceTimelineV2 } from './experience/containers/experience-timeline-v2'
 
 function HomeH() {
@@ -19,6 +20,12 @@ function HomeH() {
           </div>
           <div className="px-3 py-2 hidden sm:block absolute bottom-0 right-16 sm:right-5 w-max animate-wiggle duration-2000">
             <Image src="/images/element/e8.png" alt="logo" width={200} height={200} />
+          </div>
+          <div className="hidden sm:block absolute bottom-0 -left-1 right-0 sm:right-0 w-screen duration-700 animate-float-x">
+            <Image src="/images/element/wavy-line.png" alt="logo" width={1200} height={1200} />
+          </div>
+          <div className="hidden sm:block absolute rotate-180 top-0 left-0 right-0 sm:right-0 w-screen duration-700 animate-float-x">
+            <Image src="/images/element/wavy-line.png" alt="logo" width={1200} height={1200} />
           </div>
           <MyUniverseV2 />
         </FullScreenV2>
@@ -128,12 +135,26 @@ function HomeH() {
         </div>
       </div>
 
+      {/* KINH NGHIỆM LÀM VIỆC */}
       <FullScreenV2 className="mx-auto p-2 mt-10">
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex w-full flex-col gap-10 items-center justify-center">
               <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">Kinh nghiệm làm việc</h1>
               <ExperienceTimelineV2 />
+            </div>
+          </div>
+        </div>
+      </FullScreenV2>
+
+      {/* Portfolio */}
+      <FullScreenV2 className="mx-auto p-2 mt-10">
+        <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
+          <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
+            <div className="flex w-full flex-col gap-10 items-center justify-center">
+              <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">Portfolio</h1>
+
+              <PortfolioGallery />
             </div>
           </div>
         </div>

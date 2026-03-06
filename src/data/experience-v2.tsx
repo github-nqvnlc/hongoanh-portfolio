@@ -359,7 +359,42 @@ export const EXPERIENCE_TIMELINE_V2 = [
 
         <div className="grid md:grid-cols-3 grid-cols-1 gap-4">
           <BlurImage
-            src="/images/brando/brando-1.jpg"
+            src="/images/danawatch/danawatch-1.jpg"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-full w-fit shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <BlurImage
+            src="/images/danawatch/danawatch-2.jpg"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-full w-fit shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <BlurImage
+            src="/images/danawatch/danawatch-3.jpg"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-full w-fit shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <BlurImage
+            src="/images/danawatch/danawatch-4.jpg"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-full w-fit shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <BlurImage
+            src="/images/danawatch/danawatch-5.jpg"
+            alt="startup template"
+            width={500}
+            height={500}
+            className="rounded-lg object-cover h-full w-fit shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+          />
+          <BlurImage
+            src="/images/danawatch/danawatch-6.jpg"
             alt="startup template"
             width={500}
             height={500}
