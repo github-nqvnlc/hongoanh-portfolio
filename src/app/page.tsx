@@ -9,6 +9,7 @@ import { IconPoint } from '@tabler/icons-react'
 import Image from 'next/image'
 import { PortfolioGallery } from '@/components/portfolio-gallery'
 import { ExperienceTimelineV2 } from './experience/containers/experience-timeline-v2'
+import { portfolioItems } from '@/data/portfolio-items'
 
 function HomeH() {
   return (
@@ -33,9 +34,9 @@ function HomeH() {
 
       <VelocityScroll
         numRows={1}
-        className="!text-xl md:!text-3xl opacity-50 my-6"
+        className="!text-xl md:!text-3xl opacity-50 my-6 font-normal"
       >
-        ⭐ Hồng Oanh ⭐ SEO Specialist ⭐ Content Writing ⭐ Canva Designer
+        - Hồng Oanh - SEO Specialist - Content Writing - Canva Designer
       </VelocityScroll>
       <div id="about-me" className="relative">
         <FullScreenV2 className="max-w-7xl mx-auto p-2">
@@ -106,7 +107,7 @@ function HomeH() {
       {/* GIỚI THIỆU KỸ NĂNG */}
       <div className="max-w-7xl mx-auto p-2 mt-10">
         <div className="relative rounded-2xl w-full">
-          <BentoGrid className="w-full mx-auto md:auto-rows-[20rem]">
+          <BentoGrid className="w-full mx-auto md:auto-rows-[25rem]">
             <BentoGridItem
               title="Content SEO & Website Management"
               description="Có khả năng xây dựng outline, viết và tối ưu bài viết chuẩn SEO trên WordPress, góp phần tăng traffic và hỗ trợ mục tiêu chuyển đổi cho website."
@@ -148,13 +149,15 @@ function HomeH() {
       </FullScreenV2>
 
       {/* Portfolio */}
-      <FullScreenV2 className="mx-auto p-2 mt-10">
+      <FullScreenV2 className="max-w-7xl mx-auto p-2 mt-10">
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex w-full flex-col gap-10 items-center justify-center">
-              <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">Portfolio</h1>
-
-              <PortfolioGallery />
+              <div className="flex flex-col gap-2 items-center justify-center">
+                <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">Portfolio</h1>
+                <p className="text-base lg:text-xl text-justify">Những dự án marketing và nội dung tôi đã thực hiện trong quá trình làm việc</p>
+              </div>
+              <PortfolioGallery portfolioItems={portfolioItems} />
             </div>
           </div>
         </div>
