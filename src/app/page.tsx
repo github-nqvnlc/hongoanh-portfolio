@@ -10,6 +10,9 @@ import Image from 'next/image'
 import { PortfolioGallery } from '@/components/portfolio-gallery'
 import { ExperienceTimelineV2 } from './experience/containers/experience-timeline-v2'
 import { portfolioItems } from '@/data/portfolio-items'
+import { eventsData } from '@/data/event-data'
+import { awardsData } from '@/data/awards-data'
+import { EventsSection } from '@/components/event-section'
 
 function HomeH() {
   return (
@@ -105,7 +108,7 @@ function HomeH() {
       </div>
 
       {/* GIỚI THIỆU KỸ NĂNG */}
-      <div className="max-w-7xl mx-auto p-2 mt-10">
+      <div id="skills" className="max-w-7xl mx-auto p-2 mt-10">
         <div className="relative rounded-2xl w-full">
           <BentoGrid className="w-full mx-auto md:auto-rows-[25rem]">
             <BentoGridItem
@@ -137,7 +140,7 @@ function HomeH() {
       </div>
 
       {/* KINH NGHIỆM LÀM VIỆC */}
-      <FullScreenV2 className="mx-auto p-2 mt-10">
+      <FullScreenV2 id="experience" className="mx-auto p-2 mt-10">
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex w-full flex-col gap-10 items-center justify-center">
@@ -149,7 +152,7 @@ function HomeH() {
       </FullScreenV2>
 
       {/* Portfolio */}
-      <FullScreenV2 className="max-w-7xl mx-auto p-2 mt-10">
+      <FullScreenV2 id="portfolio" className="mx-auto px-40 mt-10">
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex w-full flex-col gap-10 items-center justify-center">
@@ -158,6 +161,54 @@ function HomeH() {
                 <p className="text-base lg:text-xl text-justify">Những dự án marketing và nội dung tôi đã thực hiện trong quá trình làm việc</p>
               </div>
               <PortfolioGallery portfolioItems={portfolioItems} />
+            </div>
+          </div>
+        </div>
+      </FullScreenV2>
+
+      {/* Events */}
+      <FullScreenV2 id="events" className="mx-auto px-40 mt-10">
+        <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
+          <div className="relative flex h-full flex-col justify-between gap-12 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
+            <div className="flex w-full flex-col gap-4 items-center justify-start text-center">
+              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">Events & Leadership</h1>
+              <p className="max-w-3xl text-sm md:text-base lg:text-lg">
+                Những sự kiện tiêu biểu tôi tham gia tổ chức, cùng vai trò và ảnh hưởng cụ thể ở từng dự án.
+              </p>
+            </div>
+
+            <EventsSection events={eventsData} />
+          </div>
+        </div>
+      </FullScreenV2>
+
+      {/* Awards */}
+      <FullScreenV2 id="awards" className="mx-auto px-40 mt-10">
+        <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
+          <div className="relative flex h-full flex-col justify-between gap-12 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
+            <div className="flex flex-col gap-4 items-center justify-start text-center">
+              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">Awards & Recognition</h1>
+              <p className="max-w-3xl text-sm md:text-base lg:text-lg text-main/80 dark:text-sub/80">
+                Những thành tựu nổi bật thể hiện tư duy chiến lược, khả năng sáng tạo và đóng góp bền bỉ.
+              </p>
+            </div>
+
+            <EventsSection events={awardsData} />
+
+            <div className="rounded-3xl border border-main/10 bg-background/80 p-6 md:p-8">
+              <h2 className="text-2xl font-semibold text-main dark:text-sub">What these achievements represent</h2>
+              <ul className="mt-4 grid gap-3 text-sm text-main/80 dark:text-sub/80 md:grid-cols-2">
+                {[
+                  'Tôi không chỉ làm Marketing — tôi làm đến nơi đến chốn.',
+                  'Tôi không chỉ sáng tạo — tôi sáng tạo có chiến lược.',
+                  'Tôi không chỉ tham gia — tôi tạo ra giá trị và được ghi nhận.'
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <span className="size-2 rounded-full bg-main" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
