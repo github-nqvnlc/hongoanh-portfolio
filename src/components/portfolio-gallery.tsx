@@ -61,7 +61,7 @@ function getVideoEmbedUrl(videoUrl?: string) {
 }
 
 function getItemTitle(item: PortfolioItem) {
-  return item.title || (item.videoUrl ? 'Video portfolio' : 'Chi tiết dự án')
+  return item.title || (item.videoUrl ? 'Video portfolio' : '')
 }
 
 function getItemDescription(item: PortfolioItem) {
@@ -131,7 +131,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
   const upcomingItems = portfolioItems.filter((item) => item.tag === activeTag)
   const loadingPlaceholderCount = Math.min(Math.max(upcomingItems.length || 4, 4), 8)
   const selectedEmbedUrl = getVideoEmbedUrl(selectedItem?.videoUrl)
-  const selectedTitle = selectedItem ? getItemTitle(selectedItem) : 'Chi tiết portfolio'
+  const selectedTitle = selectedItem ? getItemTitle(selectedItem) : ''
 
   return (
     <Dialog.Root
@@ -197,7 +197,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                 <h3 className="mt-3 text-2xl font-semibold text-main dark:text-sub">Chưa có nội dung cho tab này</h3>
                 <p className="mx-auto mt-3 max-w-2xl text-sm text-main/70 dark:text-sub/80">
                   {visibleTag === VIDEO_TAG
-                    ? 'Các video đã sẵn sàng. Bạn chỉ cần thêm item có tag Video cùng videoUrl từ YouTube hoặc Vimeo vào dữ liệu portfolio.'
+                    ? 'Các video đã sẵn sàng. Đợi một chút tôi sẽ cập nhật thêm video vào portfolio.'
                     : 'Tôi chưa bổ sung nội dung cho tab này.'}
                 </p>
               </div>
@@ -275,14 +275,14 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
       </div>
 
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm" />
-        <Dialog.Content className="fixed left-1/2 top-1/2 z-50 grid max-h-[90vh] w-[calc(100vw-1.5rem)] max-w-7xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-main/15 bg-background/95 shadow-2xl outline-none lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.65fr)]">
+        <Dialog.Overlay className="fixed inset-0 z-50 bg-main/15 backdrop-blur-sm" />
+        <Dialog.Content className={`fixed left-1/2 top-1/2 z-50 grid max-h-[90vh] w-[calc(100vw-1.5rem)]  -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-main/15 bg-background/95 shadow-2xl outline-none ${selectedItem && selectedTitle ? 'lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.35fr)]' : 'lg:grid-cols-[minmax(0,1.35fr)]'}`}>
           <Dialog.Close className="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/50 text-white transition-colors duration-300 hover:bg-black/70">
             <IconX className="h-5 w-5" />
             <span className="sr-only">Đóng</span>
           </Dialog.Close>
 
-          <div className="relative min-h-[320px] bg-black/90 lg:min-h-[80vh]">
+          <div className={`relative min-h-[320px] ${selectedItem && selectedTitle ? 'bg-black/50' : 'bg-background/95'} lg:min-h-[90vh]`}>
             {selectedItem ? (
               selectedEmbedUrl ? (
                 <iframe
@@ -299,6 +299,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                   src={selectedItem.src}
                   alt={selectedTitle}
                   fill
+                  objectFit="contain"
                   sizes="(min-width: 1024px) 70vw, 100vw"
                   className="object-contain"
                 />
@@ -310,64 +311,67 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
             ) : null}
           </div>
 
-          <div className="flex max-h-[90vh] flex-col overflow-y-auto p-6 lg:p-8">
-            <Dialog.Title className="text-2xl font-semibold text-main dark:text-sub lg:text-4xl">
-              {selectedTitle}
-            </Dialog.Title>
-            <Dialog.Description className="sr-only">
-              {selectedItem ? getItemDescription(selectedItem) : 'Chi tiết portfolio'}
-            </Dialog.Description>
+          {
+            selectedItem && selectedTitle && (
+              <div className="flex max-h-[90vh] flex-col overflow-y-auto p-6 lg:p-8">
+                {selectedItem && (
+                  <div className="mt-6 flex flex-1 flex-col">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
 
-            {selectedItem && (
-              <div className="mt-6 flex flex-1 flex-col">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="rounded-full border border-main/15 bg-main/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-main dark:text-sub">
-                    {selectedItem.tag}
-                  </span>
-                  {selectedItem.videoUrl && (
-                    <span className="rounded-full border border-main/15 bg-background px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-main/70 dark:text-sub/80">
-                      Video embed
-                    </span>
-                  )}
-                </div>
+                      <span className="rounded-full border border-main/15 bg-main/10 px-3 py-1 text-xs font-medium uppercase text-main dark:text-sub">
+                        {selectedItem.tag}
+                      </span>
+                      {selectedItem.videoUrl && (
+                        <span className="rounded-full border border-main/15 bg-background px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-main/70 dark:text-sub/80">
+                          Video
+                        </span>
+                      )}
 
-                <div className="mt-6 rounded-2xl border border-main/10 bg-main/5 p-5">
-                  <p className="text-xs uppercase tracking-[0.25em] text-main/60 dark:text-sub/70">Nội dung</p>
-                  <p className="mt-3 whitespace-pre-line text-sm leading-7 text-main/80 dark:text-sub/85 lg:text-base">
-                    {getItemDescription(selectedItem)}
-                  </p>
-                </div>
+                      <Dialog.Title className="text-lg font-semibold text-main dark:text-sub lg:text-2xl">
+                        {selectedTitle}
+                      </Dialog.Title>
+                    </div>
 
-                <div className="mt-6 space-y-3">
-                  <p className="text-xs uppercase tracking-[0.25em] text-main/60 dark:text-sub/70">Liên kết</p>
-                  <div className="flex flex-wrap gap-3">
-                    {selectedItem.link && (
-                      <a
-                        href={selectedItem.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full border border-main/15 bg-background px-4 py-2 text-sm font-medium text-main transition-colors duration-300 hover:border-main/35 hover:bg-main/5 dark:text-sub"
-                      >
-                        Xem nguồn
-                        <IconArrowRight className="h-4 w-4" />
-                      </a>
+                    {selectedItem.content && (
+                      <div className="mt-6 rounded-2xl border border-main/10 bg-main/5 p-5">
+                        <p className="text-xs uppercase tracking-[0.25em] text-main/60 dark:text-sub/70">Nội dung</p>
+                        <p className="mt-3 whitespace-pre-line text-sm leading-7 text-main/80 dark:text-sub/85 lg:text-base">
+                          {getItemDescription(selectedItem)}
+                        </p>
+                      </div>
                     )}
-                    {selectedItem.videoUrl && selectedItem.videoUrl !== selectedItem.link && (
-                      <a
-                        href={selectedItem.videoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-full border border-main/15 bg-background px-4 py-2 text-sm font-medium text-main transition-colors duration-300 hover:border-main/35 hover:bg-main/5 dark:text-sub"
-                      >
-                        Mở video gốc
-                        <IconArrowRight className="h-4 w-4" />
-                      </a>
-                    )}
+
+                    <div className="mt-6 space-y-3">
+                      <div className="flex flex-wrap gap-3">
+                        {selectedItem.link && (
+                          <a
+                            href={selectedItem.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full border border-main/15 bg-background px-4 py-2 text-sm font-medium text-main transition-colors duration-300 hover:border-main/35 hover:bg-main/5 dark:text-sub"
+                          >
+                            Xem chi tiết
+                            <IconArrowRight className="h-4 w-4" />
+                          </a>
+                        )}
+                        {selectedItem.videoUrl && selectedItem.videoUrl !== selectedItem.link && (
+                          <a
+                            href={selectedItem.videoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 rounded-full border border-main/15 bg-background px-4 py-2 text-sm font-medium text-main transition-colors duration-300 hover:border-main/35 hover:bg-main/5 dark:text-sub"
+                          >
+                            Mở video gốc
+                            <IconArrowRight className="h-4 w-4" />
+                          </a>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
-            )}
-          </div>
+            )
+          }
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

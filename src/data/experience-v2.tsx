@@ -1,7 +1,5 @@
 import ButtonVisit from "@/components/button-visit";
 import { BlurImage } from "@/components/ui/apple-cards-carousel";
-import { BentoGridItem } from "@/components/ui/bento-grid";
-import { cn } from "@/lib/utils";
 import {
   IconHexagonNumber1,
   IconHexagonNumber2,
@@ -260,36 +258,34 @@ export const EXPERIENCE_TIMELINE_V2 = [
             </div>
           </div>
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4">
-            <BentoGridItem
-              title="Danawatch CN2 - 294 Lý Thường Kiệt, Hội An"
-              header={
-                <a href="https://www.facebook.com/danawatch.vn.cn2" target="_blank" rel="noopener noreferrer">
-                  <BlurImage
-                    src="/images/danawatch/danawatch-page-1.png"
-                    alt="startup template"
-                    width={500}
-                    height={500}
-                    className="rounded-lg object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                  />
-                </a>
-              }
-              className={cn("[&>p:text-lg] text-center")}
-            />
-            <BentoGridItem
-              title="Danawatch Hội An - 294 Lý Thường Kiệt"
-              header={
-                <a href="https://www.facebook.com/danawatchbaohanh10nam" target="_blank" rel="noopener noreferrer">
-                  <BlurImage
-                    src="/images/danawatch/danawatch-page-2.png"
-                    alt="startup template"
-                    width={500}
-                    height={500}
-                    className="rounded-lg object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                  />
-                </a>
-              }
-              className={cn("[&>p:text-lg] text-center")}
-            />
+            <div className="flex flex-col gap-3 text-center">
+              <a href="https://www.facebook.com/danawatch.vn.cn2" target="_blank" rel="noopener noreferrer">
+                <BlurImage
+                  src="/images/danawatch/danawatch-page-1.png"
+                  alt="Danawatch CN2"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </a>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base lg:text-lg font-semibold">
+                Danawatch CN2 - 294 Lý Thường Kiệt, Hội An
+              </p>
+            </div>
+            <div className="flex flex-col gap-3 text-center">
+              <a href="https://www.facebook.com/danawatchbaohanh10nam" target="_blank" rel="noopener noreferrer">
+                <BlurImage
+                  src="/images/danawatch/danawatch-page-2.png"
+                  alt="Danawatch Hội An"
+                  width={500}
+                  height={500}
+                  className="rounded-lg object-cover h-full w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                />
+              </a>
+              <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base lg:text-lg font-semibold">
+                Danawatch Hội An - 294 Lý Thường Kiệt
+              </p>
+            </div>
           </div>
         </div>
 
