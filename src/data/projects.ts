@@ -1,0 +1,48 @@
+export const PROJECTS = [
+  {
+    category: "Booking System",
+    title: "Booking Star",
+    src: "/images/mockup/booking-star.png",
+    techStack: ["Next.js", "TailwindCSS", "Prisma", "SWR", "NextAuth"],
+    repo: "https://github.com/github-nqvnlc/booking-star",
+    website: "https://booking-star.vercel.app",
+  },
+  {
+    category: "Ecommerce",
+    title: "DayGlory",
+    src: "/images/mockup/dayglory.png",
+    techStack: ["HTML", "CSS", "JavaScript", "JQuery", "Liquid", "Shopify"],
+    website: "https://regarocrew.com",
+  },
+  {
+    category: "Ecommerce",
+    title: "Tonitomi",
+    src: "/images/mockup/tonitomi.png",
+    techStack: [
+      "Liquid",
+      "Shopify",
+      "Shopify App",
+      "Next.js",
+      "Nest.js",
+      "TailwindCSS",
+      "CosmosDB",
+      "GraphQL",
+    ],
+    website: "https://tonitomi.com",
+  },
+  {
+    category: "Mobile App",
+    title: "Chumly",
+    src: "/images/mockup/chumly.png",
+    techStack: [
+      "React Native",
+      "Expo",
+      "TailwindCSS",
+      "Stream Chat",
+      "Firebase",
+    ],
+    website: "https://chumly.me",
+    appStore: "https://apps.apple.com/jp/app/チャムリー/id1641095449",
+    playStore: "https://play.google.com/store/apps/details?id=jp.co.desamis.UFeed",
+  },
+];
