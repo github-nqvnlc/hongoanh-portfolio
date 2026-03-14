@@ -30,17 +30,25 @@ const links = [
     href: "/",
   },
   {
-    title: "Experience",
-    href: "/experience",
+    title: "Về tôi",
+    href: "#about",
   },
   {
-    title: "Projects",
-    href: "/projects",
+    title: "Kinh nghiệm làm việc",
+    href: "#experience",
   },
   {
-    title: "About",
-    href: "/about",
+    title: "Events & Leadership",
+    href: "#events",
     isComingSoon: true,
+  },
+  {
+    title: "Giải thưởng",
+    href: "#awards",
+  },
+  {
+    title: "Liên hệ",
+    href: "#contact",
   },
   // {
   //   title: "Sponsors",
@@ -59,7 +67,7 @@ export const Header = () => {
   const pathname = usePathname()
 
   const isDisableHeaderScroll = pathNameDisableHeaderScroll.includes(pathname)
-  
+
   // Determine current theme
   const currentTheme = theme === "system" ? systemTheme : theme
 
@@ -108,12 +116,12 @@ export const Header = () => {
         >
           <div className="flex items-center gap-2">
             {/* <Logo className="size-14" /> */}
-            <Image 
+            {/* <Image 
               src={currentTheme === "light" ? "/images/logo-locnv-light.png" : "/images/logo-locnv.png"} 
               alt="logo" 
               width={50} 
               height={50} 
-            />
+            /> */}
           </div>
           <div className="flex-1 items-center gap-3 justify-center hidden sm:flex">
             {links.map((link) => (
@@ -157,11 +165,11 @@ export const Header = () => {
               <DrawerContent className="min-h-dvh">
                 <DrawerHeader className="flex justify-between">
                   <DrawerTitle className="flex items-center gap-2">
-                    <Image 
-                      src={currentTheme === "dark" ? "/images/logo-locnv.png" : "/images/logo-locnv-light.png"} 
-                      alt="logo" 
-                      width={56} 
-                      height={56} 
+                    <Image
+                      src={currentTheme === "dark" ? "/images/logo-locnv.png" : "/images/logo-locnv-light.png"}
+                      alt="logo"
+                      width={56}
+                      height={56}
                     />
                     locnv.vercel.app
                   </DrawerTitle>

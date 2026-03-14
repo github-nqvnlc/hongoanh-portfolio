@@ -78,13 +78,13 @@ export function EventsSection({ events }: { events: EventItem[] }) {
         <Dialog.Portal>
           <Dialog.Overlay className="fixed inset-0 z-50 bg-main/15 backdrop-blur-sm" />
           <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[94vw] h-[95vh] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-main/15 bg-background/95 p-6 shadow-2xl outline-none md:p-8">
-            <Dialog.Close className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-full border border-main/10 bg-background/70 text-main transition hover:border-main/40 hover:bg-main/10 dark:text-sub">
+            <Dialog.Close className="absolute right-4 top-4 z-50 inline-flex h-10 w-10 items-center justify-center rounded-full border border-main/10 bg-background/70 text-main transition hover:border-main/40 hover:bg-main/10 dark:text-sub">
               <IconX className="h-5 w-5" />
               <span className="sr-only">Đóng</span>
             </Dialog.Close>
 
             {selectedEvent && (
-              <div className="grid gap-6 lg:grid-cols-[minmax(0,calc(100%-520px))_minmax(0,520px)]">
+              <div className="flex h-full min-h-0 flex-col gap-6 lg:grid lg:grid-cols-[minmax(0,calc(100%-520px))_minmax(0,520px)]">
                 <div className="flex flex-col gap-4">
                   <div ref={activeImageRef} className="group relative w-full overflow-hidden rounded-2xl border border-main/10 bg-main/5">
                     {activeImage ? (
@@ -93,17 +93,17 @@ export function EventsSection({ events }: { events: EventItem[] }) {
                         alt={selectedEvent.title}
                         width={1400}
                         height={900}
-                        className="h-full max-h-[calc(100vh-7rem)] w-full object-contain transition-transform duration-300 group-hover:scale-101"
+                        className="h-full max-h-[40vh] w-full object-contain transition-transform duration-300 group-hover:scale-101 lg:max-h-[calc(100vh-7rem)]"
                       />
                     ) : (
-                      <div className="flex h-[320px] w-full items-center justify-center text-xs text-main/60 dark:text-sub/70">
+                      <div className="flex h-[240px] w-full items-center justify-center text-xs text-main/60 dark:text-sub/70 md:h-[320px]">
                         Chưa có hình ảnh
                       </div>
                     )}
                   </div>
                 </div>
 
-                <div className="flex flex-col gap-6 pr-2 overflow-y-scroll max-h-[calc(100vh-7rem)]">
+                <div className="flex min-h-0 flex-1 flex-col gap-6 pr-2 overflow-y-auto lg:max-h-[calc(100vh-7rem)]">
                   <div className="space-y-2">
                     <p className="text-xs uppercase w-fit px-2 py-1 rounded-full border border-main/10 bg-main/5 text-main/60 dark:text-sub/70">
                       {selectedEvent.role}

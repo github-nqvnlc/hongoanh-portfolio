@@ -15,6 +15,13 @@ import {
 export function ModeToggle() {
   const { setTheme } = useTheme()
 
+  React.useEffect(() => {
+    if (typeof window === "undefined") return
+    if (!localStorage.getItem("theme")) {
+      setTheme("light")
+    }
+  }, [setTheme])
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

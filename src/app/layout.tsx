@@ -16,48 +16,40 @@ const exo2 = Exo_2({
 })
 
 export const metadata: Metadata = {
-  title: "Van Loc | Frontend Developer Portfolio",
+  title: "Hồng Oanh | Digital Marketing & Content Specialist",
   description:
-    "Explore Van Loc's portfolio - a skilled Frontend Developer specializing in Next.js, React, and modern web technologies. Showcasing innovative projects, UI/UX expertise, and high-performance web applications.",
+    "Explore Hồng Oanh's portfolio - a skilled Digital Marketing & Content Specialist specializing in Content SEO & Website Management, Fanpage Management, and Marketing in-house. Showcasing innovative projects, UI/UX expertise, and high-performance web applications.",
   keywords: [
-    "Frontend Developer",
-    "Next.js Developer",
-    "React Developer",
-    "Svelte Developer",
-    "SvelteKit Developer",
-    "Van Loc Portfolio",
-    "Web Development",
-    "UI/UX Design",
-    "JavaScript",
-    "TypeScript",
-    "Svelte",
-    "SvelteKit",
-    "Tailwind CSS",
-    "Shadcn UI",
-    "Modern Web Technologies",
+    "Digital Marketing",
+    "Content Specialist",
+    "Content SEO",
+    "Website Management",
+    "Fanpage Management",
+    "Marketing in-house",
+    "Hồng Oanh Portfolio",
   ],
   openGraph: {
-    title: "Van Loc | Frontend Developer Portfolio",
+    title: "Hồng Oanh | Digital Marketing & Content Specialist",
     description:
-      "Discover Van Loc's expertise in Frontend Development, React, and Next.js. View projects, case studies, and technical skills.",
-    url: "https://locnv.vercel.app",
+      "Discover Hồng Oanh's expertise in Digital Marketing & Content Specialist. View projects, case studies, and technical skills.",
+    url: "https://hongoanh.vercel.app",
     type: "website",
     images: [
       {
-        url: "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/me/screenshot_1753153309.png",
+        url: "https://raw.githubusercontent.com/github-nqvnlc/hongoanh-portfolio/e1a0bcfdb38bbef5cdeeb3eaf08f6e882c8a26ed/public/images/bdv/bdv-2.jpg",
         width: 1200,
         height: 630,
-        alt: "Van Loc - Frontend Developer Portfolio",
+        alt: "Hồng Oanh - Digital Marketing & Content Specialist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Van Loc | Frontend Developer Portfolio",
+    title: "Hồng Oanh | Digital Marketing & Content Specialist",
     description:
-      "Explore Van Loc's frontend projects and expertise in React, Next.js, and modern web development.",
+      "Explore Hồng Oanh's digital marketing & content specialist projects and expertise in Content SEO & Website Management, Fanpage Management, and Marketing in-house.",
     images: [
-      "https://lxbsypbe5na5ujep.public.blob.vercel-storage.com/me/screenshot_1753153309.png",
+      "https://raw.githubusercontent.com/github-nqvnlc/hongoanh-portfolio/e1a0bcfdb38bbef5cdeeb3eaf08f6e882c8a26ed/public/images/bdv/bdv-2.jpg",
     ],
   },
   icons: {
