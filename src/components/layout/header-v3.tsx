@@ -6,18 +6,20 @@ import { ModeToggle } from "../mode-toggle"
 import { IconMenu2 } from "@tabler/icons-react"
 import { Button } from "../ui/button"
 import Image from "next/image"
+import { useI18n } from "@/lib/i18n"
 
 const links = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Events", href: "#events" },
-  { label: "Awards", href: "#awards" },
-  { label: "Contact", href: "#contact" },
+  { key: "nav.home", href: "#home" },
+  { key: "nav.about", href: "#about" },
+  { key: "nav.experience", href: "#experience" },
+  { key: "nav.portfolio", href: "#portfolio" },
+  { key: "nav.events", href: "#events" },
+  { key: "nav.awards", href: "#awards" },
+  { key: "nav.contact", href: "#contact" },
 ]
 
 export const HeaderV3 = () => {
+  const { t, locale, setLocale } = useI18n()
   const headerRef = useRef<HTMLElement | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
@@ -35,7 +37,7 @@ export const HeaderV3 = () => {
     event.preventDefault()
     setIsMobileMenuOpen(false)
     const headerHeight = headerRef.current?.offsetHeight ?? 0
-    const targetTop = target.getBoundingClientRect().top + window.scrollY - 60
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight
 
     window.scrollTo({ top: Math.max(targetTop, 0), behavior: "smooth" })
   }, [])
@@ -73,12 +75,28 @@ export const HeaderV3 = () => {
               onClick={(event) => handleAnchorClick(event, link.href)}
               className="transition hover:text-main dark:hover:text-sub"
             >
-              {link.label}
+              {t(link.key)}
             </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-2">
+          <div className="flex items-center rounded-full border border-main/10 bg-background/70 p-1 text-xs font-semibold uppercase text-main/70 dark:text-sub/70">
+            <button
+              type="button"
+              onClick={() => setLocale("vi")}
+              className={`rounded-full px-2 py-1 transition ${locale === "vi" ? "bg-main/10 text-main dark:text-sub" : "hover:text-main dark:hover:text-sub"}`}
+            >
+              {t("language.vi")}
+            </button>
+            <button
+              type="button"
+              onClick={() => setLocale("en")}
+              className={`rounded-full px-2 py-1 transition ${locale === "en" ? "bg-main/10 text-main dark:text-sub" : "hover:text-main dark:hover:text-sub"}`}
+            >
+              {t("language.en")}
+            </button>
+          </div>
           <Button
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             variant="outline"
@@ -101,7 +119,7 @@ export const HeaderV3 = () => {
                 onClick={(event) => handleAnchorClick(event, link.href)}
                 className="rounded-xl border border-transparent px-3 py-2 transition hover:border-main/20 hover:bg-main/5"
               >
-                {link.label}
+                {t(link.key)}
               </Link>
             ))}
           </nav>

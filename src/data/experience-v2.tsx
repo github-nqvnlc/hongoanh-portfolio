@@ -1,5 +1,5 @@
-import ButtonVisit from "@/components/button-visit";
-import { BlurImage } from "@/components/ui/apple-cards-carousel";
+import ButtonVisit from "@/components/button-visit"
+import { BlurImage } from "@/components/ui/apple-cards-carousel"
 import {
   IconHexagonNumber1,
   IconHexagonNumber2,
@@ -7,44 +7,44 @@ import {
   IconHexagonNumber4,
   IconLocationCheck,
   IconSquareCheck,
-} from "@tabler/icons-react";
+} from "@tabler/icons-react"
 
-export const EXPERIENCE_TIMELINE_V2 = [
+export const getExperienceTimelineV2 = (t: (key: string) => string) => [
   {
-    title: "T10/2021 – T8/2024",
+    title: t("experience.timeline.0.title"),
     content: (
       <div className="space-y-4 lg:space-y-6 xl:space-y-8">
         <h1 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal">
           <span className="text-pink-400 text-xl lg:text-2xl xl:text-4xl font-extrabold">
-            Ban Đoàn vụ – Đoàn Trường Đại học Kinh tế – ĐHĐN
+            {t("experience.timeline.0.orgTitle")}
           </span>
           <span className="text-slate-700 dark:text-slate-300 text-xs md:text-base lg:text-lg xl:text-2xl mb-1 block">
-            Tôi bắt đầu hành trình marketing bằng việc xây nền tảng truyền thông chính thống cho một tổ chức sinh viên quy mô lớn.
+            {t("experience.timeline.0.orgSubtitle")}
           </span>
         </h1>
 
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            Tôi đã làm gì?
+            {t("experience.timeline.0.section1.title")}
           </h3>
 
           <div className="space-y-2 md:pl-4 pl-1">
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Viết & biên tập nội dung cho các hoạt động Đoàn – Hội quy mô toàn trường.
+                {t("experience.timeline.0.section1.items.0")}
               </p>
             </div>
             <div className=" grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Trực tiếp hỗ trợ media tại sự kiện, cập nhật nội dung realtime.
+                {t("experience.timeline.0.section1.items.1")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Đề xuất ý tưởng nội dung giúp fanpage tăng tương tác và duy trì sự chuyên nghiệp.
+                {t("experience.timeline.0.section1.items.2")}
               </p>
             </div>
           </div>
@@ -52,26 +52,26 @@ export const EXPERIENCE_TIMELINE_V2 = [
 
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            Dấu ấn để lại:
+            {t("experience.timeline.0.section2.title")}
           </h3>
 
           <div className="space-y-2 md:pl-4 pl-1">
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Góp phần đưa fanpage đạt 10.000+ lượt thích.
+                {t("experience.timeline.0.section2.items.0")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Duy trì nội dung đều đặn, chuẩn mực suốt 3 năm.
+                {t("experience.timeline.0.section2.items.1")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Trở thành thành viên nòng cốt của đội truyền thông.
+                {t("experience.timeline.0.section2.items.2")}
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export const EXPERIENCE_TIMELINE_V2 = [
 
         <div className="space-y-2 lg:space-y-4 md:pl-8 pl-1">
           <ButtonVisit href="https://www.facebook.com/bandoanvu.dhkt">
-            Truy cập fanpage
+            {t("experience.timeline.0.cta")}
           </ButtonVisit>
         </div>
 
@@ -110,40 +110,40 @@ export const EXPERIENCE_TIMELINE_V2 = [
     ),
   },
   {
-    title: "T2/2022 – T1/2023",
+    title: t("experience.timeline.1.title"),
     content: (
       <div className="space-y-4 lg:space-y-6 xl:space-y-8">
         <h1 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal">
           <span className="text-orange-400 text-xl lg:text-2xl xl:text-4xl font-extrabold">
-            BRANDO Agency
+            {t("experience.timeline.1.orgTitle")}
           </span>
           <span className="text-slate-700 dark:text-slate-300 text-xs md:text-base lg:text-lg xl:text-2xl mb-1 block">
-            Đây là nơi tôi rèn tư duy SEO và khả năng viết theo mục tiêu chuyển đổi.
+            {t("experience.timeline.1.orgSubtitle")}
           </span>
         </h1>
 
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            Kinh nghiệm thực chiến:
+            {t("experience.timeline.1.section1.title")}
           </h3>
 
           <div className="space-y-2 md:pl-4 pl-1">
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Viết bài chuẩn SEO đa lĩnh vực: du lịch, F&B, giáo dục, phần mềm, xây dựng…
+                {t("experience.timeline.1.section1.items.0")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Thành thạo các format: Toplist, Báo giá dịch vụ, Bài chia sẻ kiến thức.
+                {t("experience.timeline.1.section1.items.1")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Phối hợp tối ưu heading, meta description, internal link cùng Leader
+                {t("experience.timeline.1.section1.items.2")}
               </p>
             </div>
           </div>
@@ -151,26 +151,26 @@ export const EXPERIENCE_TIMELINE_V2 = [
 
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            Kết quả:
+            {t("experience.timeline.1.section2.title")}
           </h3>
 
           <div className="space-y-2 md:pl-4 pl-1">
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                100% bài viết được duyệt & đăng tải.
+                {t("experience.timeline.1.section2.items.0")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="size-4 text-green-500" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Đảm bảo chuẩn SEO – đúng deadline – đúng intent tìm kiếm.
+                {t("experience.timeline.1.section2.items.1")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Được đánh giá cao về thái độ và chất lượng nội dung.
+                {t("experience.timeline.1.section2.items.2")}
               </p>
             </div>
           </div>
@@ -196,64 +196,64 @@ export const EXPERIENCE_TIMELINE_V2 = [
     ),
   },
   {
-    title: "T3/2023 – Nay",
+    title: t("experience.timeline.2.title"),
     content: (
       <div className="space-y-4 lg:space-y-6 xl:space-y-8">
         <h1 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base font-normal">
           <span className="text-yellow-400 text-xl lg:text-2xl xl:text-4xl font-extrabold">
-            Marketing Executive (Part-time → Full-time) DANAWATCH
+            {t("experience.timeline.2.orgTitle")}
           </span>
           <span className="text-slate-700 dark:text-slate-300 text-xs md:text-base lg:text-lg xl:text-2xl mb-1 block">
-            Tại đây, tôi không chỉ viết content — tôi vận hành hệ thống marketing online & offline cho thương hiệu
+            {t("experience.timeline.2.orgSubtitle")}
           </span>
         </h1>
 
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            1️⃣ Fanpage Management & Campaign Execution
+            {t("experience.timeline.2.section1.title")}
           </h3>
 
           <div className="space-y-2 md:pl-4 pl-1">
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Lên kế hoạch nội dung theo từng BST (Casio, Seiko, Orient…) và chiến dịch theo mùa (Tết, 8/3, Trung Thu…).
+                {t("experience.timeline.2.section1.items.0")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Viết caption theo insight khách hàng, kết hợp storytelling & CTA thúc đẩy chuyển đổi.
+                {t("experience.timeline.2.section1.items.1")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Viết Facebook Ads đa thông điệp.
+                {t("experience.timeline.2.section1.items.2")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Thiết kế bài đăng bằng Canva & Photoshop.
+                {t("experience.timeline.2.section1.items.3")}
               </p>
             </div>
             <div className="flex items-center gap-2 mt-5 -ml-4">
               <IconLocationCheck className="md:size-4 size-3.5 text-blue-500" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-bold">
-                Hiện tại phụ trách 2 fanpage, trung bình:
+                {t("experience.timeline.2.section1.highlight")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Đăng tải 12-16 bài/ngày
+                {t("experience.timeline.2.section1.items.4")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Duy trì tương tác ổn định và đồng đều giữa các kênh.
+                {t("experience.timeline.2.section1.items.5")}
               </p>
             </div>
           </div>
@@ -269,7 +269,7 @@ export const EXPERIENCE_TIMELINE_V2 = [
                 />
               </a>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base lg:text-lg font-semibold">
-                Danawatch CN2 - 294 Lý Thường Kiệt, Hội An
+                {t("experience.timeline.2.section1.pages.0")}
               </p>
             </div>
             <div className="flex flex-col gap-3 text-center">
@@ -283,7 +283,7 @@ export const EXPERIENCE_TIMELINE_V2 = [
                 />
               </a>
               <p className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base lg:text-lg font-semibold">
-                Danawatch Hội An - 294 Lý Thường Kiệt
+                {t("experience.timeline.2.section1.pages.1")}
               </p>
             </div>
           </div>
@@ -291,32 +291,32 @@ export const EXPERIENCE_TIMELINE_V2 = [
 
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            2️⃣ Website & SEO Growth
+            {t("experience.timeline.2.section2.title")}
           </h3>
 
           <div className="space-y-2 md:pl-4 pl-1">
             <div className="flex items-center gap-2">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Nghiên cứu từ khóa, xây dựng kế hoạch SEO.
+                {t("experience.timeline.2.section2.items.0")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Viết & tối ưu bài cho danh mục sản phẩm và blog kiến thức.
+                {t("experience.timeline.2.section2.items.1")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Tối ưu Onpage: heading, meta, internal link, cấu trúc nội dung.
+                {t("experience.timeline.2.section2.items.2")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Đóng góp <span className="font-bold">100+ bài SEO chất lượng</span>, giúp tăng trưởng traffic organic đáng kể.
+                {t("experience.timeline.2.section2.items.3")}
               </p>
             </div>
           </div>
@@ -324,32 +324,32 @@ export const EXPERIENCE_TIMELINE_V2 = [
 
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            3️⃣ Team Leadership & Offline Branding
+            {t("experience.timeline.2.section3.title")}
           </h3>
 
           <div className="space-y-2 md:pl-4 pl-1">
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Quản lý đội SEO 3 CTV: giao keyword, brief, kiểm soát chất lượng & deadline.
+                {t("experience.timeline.2.section3.items.0")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Thiết kế & triển khai ấn phẩm offline: poster, banner, standee, bảng quote…
+                {t("experience.timeline.2.section3.items.1")}
               </p>
             </div>
             <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
               <IconSquareCheck className="md:size-4 size-3.5 text-green-500 mt-1" />
               <p className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-normal">
-                Làm việc trực tiếp với bộ phận in ấn đảm bảo đúng kích thước – màu sắc – tiến độ.
+                {t("experience.timeline.2.section3.items.2")}
               </p>
             </div>
           </div>
 
           <h3 className="text-neutral-800 dark:text-neutral-200 text-sm md:text-base xl:text-2xl font-bold">
-            Từ một nhân viên part-time, tôi được tin tưởng trở thành full-time và mở rộng vai trò quản lý đội nhóm.
+            {t("experience.timeline.2.section3.highlight")}
           </h3>
         </div>
 
@@ -374,36 +374,36 @@ export const EXPERIENCE_TIMELINE_V2 = [
     ),
   },
   {
-    title: "WHAT DEFINES ME AS A MARKETER?",
+    title: t("experience.timeline.3.title"),
     content: (
       <div className="space-y-4 lg:space-y-6 xl:space-y-8">
         <div className="space-y-2 lg:space-y-4 md:pl-4 pl-1">
           <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
             <IconHexagonNumber1 className="md:size-10 size-4 text-blue-500" />
             <h3 className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-bold">
-              Tư duy hệ thống: không làm rời rạc từng bài viết, mà xây dựng quy trình.
+              {t("experience.timeline.3.items.0")}
             </h3>
           </div>
           <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
             <IconHexagonNumber2 className="md:size-10 size-4 text-green-500" />
             <h3 className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-bold">
-              Kỷ luật & quản lý thời gian tốt trong môi trường nhiều đầu việc.
+              {t("experience.timeline.3.items.1")}
             </h3>
           </div>
           <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
             <IconHexagonNumber3 className="md:size-10 size-4 text-yellow-500" />
             <h3 className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-bold">
-              Có khả năng làm việc độc lập nhưng vẫn tối ưu hiệu suất đội nhóm.
+              {t("experience.timeline.3.items.2")}
             </h3>
           </div>
           <div className="grid grid-cols-12 md:flex md:gap-2 items-start md:items-center justify-center md:justify-start">
             <IconHexagonNumber4 className="md:size-10 size-4 text-purple-500" />
             <h3 className="col-span-11 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm lg:text-base font-bold">
-              Kết hợp tốt giữa Content – SEO – Fanpage – Thiết kế – Vận hành thực tế.
+              {t("experience.timeline.3.items.3")}
             </h3>
           </div>
         </div>
       </div>
     ),
   },
-];
+]

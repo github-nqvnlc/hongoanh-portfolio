@@ -1,3 +1,5 @@
+'use client'
+
 import { FullScreenV2 } from '@/components/full-screen-v2'
 import { VelocityScroll } from '@/components/magicui/scroll-based-velocity'
 import { GlowingEffect } from '@/components/ui/glowing-effect'
@@ -11,8 +13,11 @@ import { portfolioItems } from '@/data/portfolio-items'
 import { eventsData } from '@/data/event-data'
 import { awardsData } from '@/data/awards-data'
 import { EventsSection } from '@/components/event-section'
+import { useI18n } from '@/lib/i18n'
 
 function HomeH() {
+  const { t } = useI18n()
+
   return (
     <div>
       <div id="home" className="relative">
@@ -34,7 +39,7 @@ function HomeH() {
         numRows={1}
         className="text-xl md:text-3xl opacity-50 my-6 font-normal"
       >
-        - Hồng Oanh - SEO Specialist - Content Writing - Canva Designer
+        {t("hero.velocityScroll")}
       </VelocityScroll>
       <FullScreenV2 id="about" className="max-w-7xl mx-auto px-4 py-6">
         <div className="relative min-h-[calc(100vh-200px)] rounded-2xl border p-2 md:rounded-3xl md:p-3 w-full">
@@ -50,9 +55,11 @@ function HomeH() {
           <div className="border-0.75 relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
             <div className="relative flex flex-1 flex-col gap-12">
               <div className="flex w-full flex-col gap-10 items-center justify-center">
-                <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">Về tôi</h1>
-                <p className="text-base lg:text-xl text-justify">Tôi tốt nghiệp chuyên ngành Digital Marketing và có hơn 3 năm kinh nghiệm thực tế trong mảng viết content, thiết kế Canva và quản lý các kênh mạng xã hội. Điểm mạnh của tôi là xây dựng ý tưởng nội dung theo từng mục tiêu truyền thông, thiết kế ấn phẩm đồng bộ nhận diện thương hiệu, đồng thời theo dõi hiệu quả để tối ưu chất lượng bài đăng theo từng giai đoạn. <br /><br />
-                  Tôi cũng có kinh nghiệm trực tiếp quản lý fanpage, lập kế hoạch nội dung theo tuần/tháng, lên lịch bài đăng đều đặn và phối hợp linh hoạt với các bộ phận liên quan để đảm bảo tiến độ. Ngoài ra, tôi có nền tảng SEO cơ bản đến khá, đặc biệt ở tối ưu nội dung chuẩn SEO, nghiên cứu từ khóa và cải thiện khả năng hiển thị tự nhiên cho bài viết. Bên cạnh đó, tôi làm việc độc lập tốt, quản lý thời gian hiệu quả và thích nghi nhanh với cả môi trường làm việc trực tiếp lẫn trực tuyến.
+                <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">{t("about.title")}</h1>
+                <p className="text-base lg:text-xl text-justify">
+                  {t("about.description.first")}
+                  <br /><br />
+                  {t("about.description.second")}
                 </p>
               </div>
               <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center">
@@ -64,22 +71,31 @@ function HomeH() {
                 />
                 <div className="space-y-10">
                   <div className="space-y-2">
-                    <h3 className="lg:text-4xl text-2xl font-bold">HỌC VẤN:</h3>
+                    <h3 className="lg:text-4xl text-2xl font-bold">{t("about.education.title")}</h3>
                     <div className="flex items-center lg:gap-4 gap-4 lg:pl-4">
                       <IconPoint className="lg:size-8 size-6" />
-                      <p className="lg:text-2xl text-sm"><span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">2021 - 2025:</span>Đại học Kinh tế - Đại học Đà Nẵng</p>
+                      <p className="lg:text-2xl text-sm">
+                        <span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">{t("about.education.years")}</span>
+                        {t("about.education.school")}
+                      </p>
                     </div>
                     <div className="flex items-center gap-4 lg:pl-4">
                       <IconPoint className="lg:size-8 size-6" />
-                      <p className="lg:text-2xl text-sm"><span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">Chuyên ngành:</span>Digital Marketing</p>
+                      <p className="lg:text-2xl text-sm">
+                        <span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">{t("about.education.majorLabel")}</span>
+                        {t("about.education.major")}
+                      </p>
                     </div>
                     <div className="flex items-center gap-4 lg:pl-4">
                       <IconPoint className="lg:size-8 size-6" />
-                      <p className="lg:text-2xl text-sm"><span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">GPA:</span>3.4/4.0</p>
+                      <p className="lg:text-2xl text-sm">
+                        <span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">{t("about.education.gpaLabel")}</span>
+                        {t("about.education.gpa")}
+                      </p>
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <h3 className="lg:text-4xl text-2xl font-bold">KỸ NĂNG:</h3>
+                    <h3 className="lg:text-4xl text-2xl font-bold">{t("about.skills.title")}</h3>
                     <div className="items-center gap-4 lg:pl-4 grid grid-cols-6">
                       <Image className='border border-main/20 rounded-xl hover:scale-120 transition-all duration-300 cursor-pointer' src="/images/skills/adobephotoshop.svg" alt="about" width={60} height={60} />
                       <Image className='border border-main/20 rounded-xl hover:scale-120 transition-all duration-300 cursor-pointer' src="/images/skills/adobeillustrator.svg" alt="about" width={60} height={60} />
@@ -90,7 +106,7 @@ function HomeH() {
                     </div>
                     <div className="flex items-center gap-4 lg:pl-4">
                       <IconPoint className="lg:size-8 size-6" />
-                      <p className="lg:text-2xl text-sm font-bold">Làm việc nhóm, quản lý thời gian</p>
+                      <p className="lg:text-2xl text-sm font-bold">{t("about.skills.highlight")}</p>
                     </div>
                   </div>
                 </div>
@@ -112,11 +128,11 @@ function HomeH() {
               <div className='space-y-4 mt-4'>
                 <div className='flex flex-col items-center justify-center gap-4'>
                   <div className="font-sans lg:text-xl font-bold text-neutral-600 dark:text-neutral-200">
-                    Content SEO & Website Management
+                    {t("skills.cards.contentSeo.title")}
                   </div>
                 </div>
                 <div className="font-sans text-justify text-xs lg:text-base font-normal text-neutral-600 dark:text-neutral-300">
-                  Có khả năng xây dựng outline, viết và tối ưu bài viết chuẩn SEO trên WordPress, góp phần tăng traffic và hỗ trợ mục tiêu chuyển đổi cho website.
+                  {t("skills.cards.contentSeo.description")}
                 </div>
               </div>
             </div>
@@ -128,11 +144,11 @@ function HomeH() {
               <div className='space-y-4 mt-4'>
                 <div className='flex flex-col items-center justify-center gap-4'>
                   <div className="font-sans lg:text-xl font-bold text-neutral-600 dark:text-neutral-200">
-                    Social Media & Campaign Planning
+                    {t("skills.cards.socialMedia.title")}
                   </div>
                 </div>
                 <div className="font-sans text-justify text-xs lg:text-base font-normal text-neutral-600 dark:text-neutral-300">
-                  Lập kế hoạch và triển khai nội dung cho nhiều fanpage (từ 5.000–13.000+ followers), đảm bảo thông điệp nhất quán theo từng chiến dịch và chương trình khuyến mãi.
+                  {t("skills.cards.socialMedia.description")}
                 </div>
               </div>
             </div>
@@ -144,11 +160,11 @@ function HomeH() {
               <div className='space-y-4 mt-4'>
                 <div className='flex flex-col items-center justify-center gap-4'>
                   <div className="font-sans lg:text-xl font-bold text-neutral-600 dark:text-neutral-200">
-                    Team Coordination & Project Execution
+                    {t("skills.cards.teamCoordination.title")}
                   </div>
                 </div>
                 <div className="font-sans text-justify text-xs lg:text-base font-normal text-neutral-600 dark:text-neutral-300">
-                  Điều phối và quản lý đội nhóm part-time, phân công công việc, theo dõi tiến độ và đảm bảo chất lượng trong môi trường làm việc trực tiếp lẫn từ xa.
+                  {t("skills.cards.teamCoordination.description")}
                 </div>
               </div>
             </div>
@@ -161,7 +177,7 @@ function HomeH() {
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex w-full flex-col gap-10 items-center justify-center">
-              <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">Kinh nghiệm làm việc</h1>
+              <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">{t("experience.title")}</h1>
               <ExperienceTimelineV2 />
             </div>
           </div>
