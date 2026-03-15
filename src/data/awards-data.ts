@@ -34,7 +34,7 @@ export const awardsData = [
       { label: 'Bài đăng', href: 'https://www.facebook.com/share/p/1FQnUzTvV7/' },
       {
         label: 'Bộ nhận diện',
-        href: 'https://www.canva.com/design/DAGvYMHK6rM/YtIgdkSB4XN4x8yc_X72PQ/edit?utm_content=DAGvYMHK6rM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton'
+        href: 'https://drive.google.com/file/d/1HLE5H-g6rKfWXH9xVja-bLhsen02zAk6/view?usp=drive_link'
       }
     ]
   },

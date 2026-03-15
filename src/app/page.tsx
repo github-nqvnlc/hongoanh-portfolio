@@ -1,10 +1,8 @@
 import { FullScreenV2 } from '@/components/full-screen-v2'
 import { VelocityScroll } from '@/components/magicui/scroll-based-velocity'
-import { BentoGrid, BentoGridItem } from '@/components/ui/bento-grid'
 import { GlowingEffect } from '@/components/ui/glowing-effect'
 import { MyUniverseV2 } from '@/containers/my-universe-v2'
 import { SkeletonOne } from '@/containers/personal-interests'
-import { cn } from '@/lib/utils'
 import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconPoint, IconSquareRoundedNumber1, IconSquareRoundedNumber2, IconSquareRoundedNumber3, IconSquareRoundedNumber4 } from '@tabler/icons-react'
 import Image from 'next/image'
 import { PortfolioGallery } from '@/components/portfolio-gallery'
@@ -13,7 +11,6 @@ import { portfolioItems } from '@/data/portfolio-items'
 import { eventsData } from '@/data/event-data'
 import { awardsData } from '@/data/awards-data'
 import { EventsSection } from '@/components/event-section'
-import Footer from '@/components/footer'
 
 function HomeH() {
   return (
@@ -26,7 +23,7 @@ function HomeH() {
           <div className="px-3 py-2 hidden sm:block absolute bottom-0 right-16 sm:right-5 w-max animate-wiggle duration-2000">
             <Image src="/images/element/e8.png" alt="logo" width={200} height={200} />
           </div>
-          <div className="hidden sm:block absolute bottom-0 -left-1 right-0 sm:right-0 w-screen duration-700 animate-float-x">
+          <div className="hidden sm:block absolute bottom-0 -left-5 right-0 sm:right-0 w-screen duration-700 animate-float-x">
             <Image src="/images/element/wavy-line.png" alt="logo" width={1200} height={1200} />
           </div>
           <MyUniverseV2 />
