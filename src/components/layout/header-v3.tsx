@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import { ModeToggle } from "../mode-toggle"
 import { IconMenu2 } from "@tabler/icons-react"
 import { Button } from "../ui/button"
+import Image from "next/image"
 
 const links = [
   { label: "Home", href: "#home" },
@@ -61,7 +62,7 @@ export const HeaderV3 = () => {
           onClick={(event) => handleAnchorClick(event, "#home")}
           className="flex items-center gap-2 text-main dark:text-sub"
         >
-          <span className="text-sm font-semibold uppercase tracking-wide">HO</span>
+          <Image src="/images/logo.png" alt="Logo" width={1000} height={1000} className="w-fit h-12" />
         </Link>
 
         <nav className="hidden items-center gap-6 text-base font-semibold uppercase tracking-wider text-main/70 dark:text-sub/70 md:flex">
