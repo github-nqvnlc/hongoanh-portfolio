@@ -5,7 +5,7 @@ import { GlowingEffect } from '@/components/ui/glowing-effect'
 import { MyUniverseV2 } from '@/containers/my-universe-v2'
 import { SkeletonOne } from '@/containers/personal-interests'
 import { cn } from '@/lib/utils'
-import { IconPoint, IconSquareRoundedNumber1, IconSquareRoundedNumber2, IconSquareRoundedNumber3, IconSquareRoundedNumber4 } from '@tabler/icons-react'
+import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconPoint, IconSquareRoundedNumber1, IconSquareRoundedNumber2, IconSquareRoundedNumber3, IconSquareRoundedNumber4 } from '@tabler/icons-react'
 import Image from 'next/image'
 import { PortfolioGallery } from '@/components/portfolio-gallery'
 import { ExperienceTimelineV2 } from './experience/containers/experience-timeline-v2'
@@ -202,7 +202,7 @@ function HomeH() {
             <div className="rounded-3xl border border-main/10 bg-background/80 p-6 md:p-8">
               <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
                 <h2 className="text-2xl font-semibold text-main dark:text-sub">WHAT THESE EVENTS SHAPED IN ME</h2>
-                <p className="text-xs text-main/60 dark:text-sub/70 md:text-sm">3 điểm nổi bật</p>
+                <p className="text-xs text-main/60 dark:text-sub/70 md:text-sm">4 điểm nổi bật</p>
               </div>
 
               <ul className="mt-6 grid gap-4 text-sm text-main/80 dark:text-sub/80 grid-cols-1">
@@ -213,6 +213,7 @@ function HomeH() {
                     icon: <IconSquareRoundedNumber1 className="size-6 text-blue-500 dark:text-blue-500" />,
                     description: "Tư duy tổ chức & điều phối con người.",
                     color: "blue-500",
+                    animate: "animate-float",
                   },
                   {
                     id: 2,
@@ -220,6 +221,7 @@ function HomeH() {
                     icon: <IconSquareRoundedNumber2 className="size-6 text-green-500 dark:text-green-500" />,
                     description: "Khả năng xây dựng chiến lược truyền thông thực tế.",
                     color: "green-500",
+                    animate: "animate-wiggle",
                   },
                   {
                     id: 3,
@@ -227,6 +229,7 @@ function HomeH() {
                     icon: <IconSquareRoundedNumber3 className="size-6 text-yellow-500 dark:text-yellow-500" />,
                     description: "Kỹ năng lãnh đạo đội nhóm & giữ tinh thần tập thể.",
                     color: "yellow-500",
+                    animate: "animate-float",
                   },
                   {
                     id: 4,
@@ -234,12 +237,13 @@ function HomeH() {
                     icon: <IconSquareRoundedNumber4 className="size-6 text-orange-500 dark:text-orange-500" />,
                     description: "Sự bền bỉ khi làm việc trong môi trường nhiều deadline.",
                     color: "orange-500",
+                    animate: "animate-wiggle",
                   },
                 ].map((item, index) => (
                   <li
                     key={index}
                     style={{ "--offset": `${item.id * 200}px` } as React.CSSProperties}
-                    className={`group flex h-full flex-col rounded-2xl border border-${item.color} bg-${item.color}/5 p-4 w-full transition duration-300 ease-out hover:-translate-y-1 hover:scale-[1.01] hover:border-${item.color}/70 hover:shadow-lg hover:shadow-${item.color}/20 xl:ml-(--offset) xl:w-fit`}
+                    className={`group flex h-full flex-col rounded-2xl border border-${item.color} bg-${item.color}/5 p-4 w-full transition duration-300 ease-out hover:-translate-y-1 hover:scale-[1.01] hover:border-${item.color}/70 hover:shadow-lg hover:shadow-${item.color}/20 xl:ml-(--offset) xl:w-fit ${item.animate}`}
                   >
                     <div className="flex items-start gap-3">
                       {item.icon}
@@ -319,8 +323,9 @@ function HomeH() {
           <div className="relative flex h-full flex-col justify-between gap-12 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6">
             <div className="flex flex-col gap-4 items-center justify-start text-center">
               <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">Contact</h1>
-              <p className="max-w-2xl text-sm md:text-base text-justify">
-                Nếu bạn muốn hợp tác hoặc trao đổi thêm về dự án, hãy để lại thông tin. <br /> Mình sẽ phản hồi sớm nhất.
+              <p className="max-w-2xl text-sm md:text-base text-center">
+                Nếu bạn muốn hợp tác hoặc trao đổi thêm về dự án, hãy để lại thông tin. <br />
+                Mình sẽ phản hồi sớm nhất.
               </p>
             </div>
 
@@ -331,11 +336,17 @@ function HomeH() {
                   Điền nhanh thông tin, mình sẽ liên hệ lại qua email hoặc số điện thoại.
                 </p>
 
-                <div className="mt-6 grid gap-4">
+                <form
+                  action="https://formspree.io/f/xjgaeryo"
+                  method="POST"
+                  className="mt-6 grid gap-4"
+                >
                   <div className="grid gap-2">
                     <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Họ và tên</label>
                     <input
                       type="text"
+                      name="name"
+                      required
                       placeholder="Nhập họ tên"
                       className="h-12 rounded-2xl border border-main/15 bg-transparent px-4 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                     />
@@ -345,6 +356,8 @@ function HomeH() {
                       <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Email</label>
                       <input
                         type="email"
+                        name="email"
+                        required
                         placeholder="you@email.com"
                         className="h-12 rounded-2xl border border-main/15 bg-transparent px-4 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                       />
@@ -353,6 +366,7 @@ function HomeH() {
                       <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Số điện thoại</label>
                       <input
                         type="tel"
+                        name="phone"
                         placeholder="0123 456 789"
                         className="h-12 rounded-2xl border border-main/15 bg-transparent px-4 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                       />
@@ -362,17 +376,19 @@ function HomeH() {
                     <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Nội dung</label>
                     <textarea
                       rows={5}
+                      name="message"
+                      required
                       placeholder="Chia sẻ mong muốn hợp tác hoặc câu hỏi..."
                       className="rounded-2xl border border-main/15 bg-transparent px-4 py-3 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                     />
                   </div>
                   <button
-                    type="button"
+                    type="submit"
                     className="inline-flex h-12 items-center justify-center rounded-full border border-main/20 bg-main text-sm font-semibold uppercase tracking-wide text-background transition hover:bg-main/90 dark:text-white"
                   >
                     Gửi lời nhắn
                   </button>
-                </div>
+                </form>
               </div>
 
               <div className="flex flex-col gap-4">
@@ -399,6 +415,38 @@ function HomeH() {
                   <p className="mt-3 text-sm text-main/70 dark:text-sub/80">
                     Mình thường phản hồi trong vòng 24–48 giờ. Đừng ngại gửi tin nhắn nhé.
                   </p>
+
+                  <div className="mt-6">
+                    <p className="text-xs uppercase text-main/60 dark:text-sub/70">Liên hệ nhanh qua mạng xã hội</p>
+                    <div className="mt-3 flex flex-wrap gap-3">
+                      <a
+                        href="https://www.facebook.com/hihibb19"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full border border-main/15 bg-background p-2 text-xs font-semibold uppercase text-main transition hover:border-main/40 hover:bg-main/5 dark:text-sub"
+                      >
+                        <IconBrandFacebook className="size-6" />
+                      </a>
+                      
+                      <a
+                        href="https://www.instagram.com/oryy._.stb/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full border border-main/15 bg-background p-2 text-xs font-semibold uppercase text-main transition hover:border-main/40 hover:bg-main/5 dark:text-sub"
+                      >
+                        <IconBrandInstagram className="size-6" />
+                      </a>
+
+                      <a
+                        href="https://www.linkedin.com/in/hong-oanh-nguyen-thi-0868b5221/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center rounded-full border border-main/15 bg-background p-2 text-xs font-semibold uppercase text-main transition hover:border-main/40 hover:bg-main/5 dark:text-sub"
+                      >
+                        <IconBrandLinkedin className="size-6" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

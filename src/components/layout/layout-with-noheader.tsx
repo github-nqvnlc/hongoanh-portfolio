@@ -17,6 +17,7 @@ export const LayoutWithNoHeader = ({
           {children}
         </main>
         <Footer />
+        <div className="mt-16 lg:mt-0"></div>
         {/* <footer className="text-sm md:text-lg row-start-3 flex gap-[24px] flex-wrap items-center justify-center text-zinc-600 p-4">
           © {new Date().getFullYear()} Van Loc. All rights reserved.
         </footer> */}

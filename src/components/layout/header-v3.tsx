@@ -34,7 +34,7 @@ export const HeaderV3 = () => {
     event.preventDefault()
     setIsMobileMenuOpen(false)
     const headerHeight = headerRef.current?.offsetHeight ?? 0
-    const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight - 12
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - 60
 
     window.scrollTo({ top: Math.max(targetTop, 0), behavior: "smooth" })
   }, [])
@@ -82,7 +82,7 @@ export const HeaderV3 = () => {
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             variant="outline"
             size="icon"
-            className="border size-10 rounded-xl p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-300"
+            className="border size-10 rounded-xl p-2 hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors duration-300 md:hidden"
           >
             <IconMenu2 className="h-5 w-5" />
           </Button>
