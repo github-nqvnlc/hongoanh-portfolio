@@ -16,10 +16,12 @@ import { EventsSection } from '@/components/event-section'
 import { useI18n } from '@/lib/i18n'
 
 function HomeH() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const portfolioItems = getPortfolioItems(t)
   const awardsData = getAwardsData(t)
   const eventsData = getEventsData(t)
+  const cvFileName = locale === 'vi' ? 'cv-hongoanh-vi.pdf' : 'cv-hongoanh-en.pdf'
+  const cvFilePath = `/files/${cvFileName}`
 
   return (
     <div>
@@ -44,6 +46,8 @@ function HomeH() {
       >
         {t("hero.velocityScroll")}
       </VelocityScroll>
+
+      {/* VỀ TÔI */}
       <FullScreenV2 id="about" className="max-w-7xl mx-auto px-4 py-6">
         <div className="relative min-h-[calc(100vh-200px)] rounded-2xl border p-2 md:rounded-3xl md:p-3 w-full">
           <GlowingEffect
@@ -111,8 +115,29 @@ function HomeH() {
                       <IconPoint className="lg:size-8 size-6" />
                       <p className="lg:text-2xl text-sm font-bold">{t("about.skills.highlight")}</p>
                     </div>
+                    <div className="relative rounded-full">
+                      <GlowingEffect
+                        blur={0}
+                        borderWidth={5}
+                        spread={200}
+                        glow={true}
+                        disabled={false}
+                        proximity={64}
+                        inactiveZone={0.0001}
+                      />
+                      <a
+                        href={cvFilePath}
+                        download={cvFileName}
+                        className="inline-flex w-full h-12 items-center justify-center rounded-full border border-main px-6 text-sm font-semibold uppercase tracking-wide z-10 transition hover:bg-white/30 dark:hover:bg-main/30 dark:text-white text-main"
+                      >
+                        {t("about.downloadCv")}
+                      </a>
+                    </div>
                   </div>
                 </div>
+              </div>
+              <div className="flex justify-center lg:justify-end">
+
               </div>
             </div>
           </div>
@@ -436,7 +461,7 @@ function HomeH() {
                       >
                         <IconBrandFacebook className="size-6" />
                       </a>
-                      
+
                       <a
                         href="https://www.instagram.com/oryy._.stb/"
                         target="_blank"

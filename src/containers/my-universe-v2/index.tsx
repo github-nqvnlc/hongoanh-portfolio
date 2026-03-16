@@ -6,12 +6,13 @@ import {
 } from "@/components/magicui/text-animate"
 import { Compare } from "@/components/ui/compare"
 import { Cover } from "@/components/ui/cover"
-import { ROLE_TITLES_V2 } from "@/data/role-titles-v2"
+import { getRoleTitlesV2 } from "@/data/role-titles-v2"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import { memo, useEffect, useState } from "react"
+import { memo, useEffect, useMemo, useState } from "react"
 import { MY_NETWORKS_V2 } from "@/data/my-networks"
 import Image from "next/image"
+import { useI18n } from "@/lib/i18n"
 
 const animationTypes: AnimationVariant[] = [
   "fadeIn",
@@ -55,25 +56,35 @@ const SocialNetworkV2 = () => {
 };
 
 export const MyUniverseV2 = () => {
-  const [currentText, setCurrentText] = useState(ROLE_TITLES_V2[0])
+  const { t } = useI18n()
+  const roleTitles = useMemo(() => getRoleTitlesV2(t), [t])
+  const [currentText, setCurrentText] = useState(roleTitles[0] ?? "")
   const [currentAnimation, setCurrentAnimation] = useState(animationTypes[0])
 
   useEffect(() => {
+    setCurrentText(roleTitles[0] ?? "")
+  }, [roleTitles])
+
+  useEffect(() => {
+    if (!roleTitles.length) {
+      return
+    }
+
     const interval = setInterval(() => {
       setCurrentText((prev) => {
-        const textIndex = ROLE_TITLES_V2.indexOf(prev)
-        if (textIndex === ROLE_TITLES_V2.length - 1) {
-          return ROLE_TITLES_V2[0]
+        const textIndex = roleTitles.indexOf(prev)
+        if (textIndex === -1 || textIndex === roleTitles.length - 1) {
+          return roleTitles[0]
         }
 
-        return ROLE_TITLES_V2[textIndex + 1]
+        return roleTitles[textIndex + 1]
       })
       setCurrentAnimation(
         animationTypes[Math.floor(Math.random() * animationTypes.length)]
       )
     }, 3000)
     return () => clearInterval(interval)
-  }, [])
+  }, [roleTitles])
 
   return (
     <div className="w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-0 px-2 md:px-6">
