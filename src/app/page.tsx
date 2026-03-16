@@ -9,7 +9,7 @@ import { IconBrandFacebook, IconBrandInstagram, IconBrandLinkedin, IconPoint, Ic
 import Image from 'next/image'
 import { PortfolioGallery } from '@/components/portfolio-gallery'
 import { ExperienceTimelineV2 } from './experience/containers/experience-timeline-v2'
-import { portfolioItems } from '@/data/portfolio-items'
+import { getPortfolioItems } from '@/data/portfolio-items'
 import { eventsData } from '@/data/event-data'
 import { awardsData } from '@/data/awards-data'
 import { EventsSection } from '@/components/event-section'
@@ -17,6 +17,7 @@ import { useI18n } from '@/lib/i18n'
 
 function HomeH() {
   const { t } = useI18n()
+  const portfolioItems = getPortfolioItems(t)
 
   return (
     <div>
@@ -190,8 +191,8 @@ function HomeH() {
           <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex w-full flex-col gap-10 items-center justify-center">
               <div className="flex flex-col gap-2 items-center justify-center">
-                <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">Portfolio</h1>
-                <p className="text-base lg:text-xl text-justify">Những dự án marketing và nội dung tôi đã thực hiện trong quá trình làm việc</p>
+                <h1 className="text-7xl text-main dark:text-sub cherry-bomb-one-regular">{t("portfolio.title")}</h1>
+                <p className="text-base lg:text-xl text-justify">{t("portfolio.subtitle")}</p>
               </div>
               <PortfolioGallery portfolioItems={portfolioItems} />
             </div>

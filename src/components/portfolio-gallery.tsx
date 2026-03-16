@@ -5,6 +5,7 @@ import { IconArrowRight, IconX } from '@tabler/icons-react'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { GlowingEffect } from './ui/glowing-effect'
+import { useI18n } from '@/lib/i18n'
 
 export type PortfolioItem = {
   src?: string
@@ -19,7 +20,7 @@ export type PortfolioItem = {
 }
 
 const TAB_LOADING_DELAY_MS = 1000
-const VIDEO_TAG = 'Video'
+const VIDEO_TAG_KEY = 'portfolio.tags.video'
 
 function getVideoEmbedUrl(videoUrl?: string) {
   if (!videoUrl) {
@@ -60,24 +61,26 @@ function getVideoEmbedUrl(videoUrl?: string) {
   return null
 }
 
-function getItemTitle(item: PortfolioItem) {
-  return item.title || (item.videoUrl ? 'Video portfolio' : '')
+function getItemTitle(item: PortfolioItem, t: (key: string) => string) {
+  return item.title || (item.videoUrl ? t('portfolio.gallery.videoTitleFallback') : '')
 }
 
-function getItemDescription(item: PortfolioItem) {
+function getItemDescription(item: PortfolioItem, t: (key: string) => string) {
   if (item.content) {
     return item.content
   }
 
   if (item.videoUrl) {
-    return 'Video được nhúng trực tiếp để bạn xem chi tiết hơn trong popup này. Bạn có thể mở nguồn gốc từ YouTube hoặc Vimeo qua nút bên dưới.'
+    return t('portfolio.gallery.videoDescription')
   }
 
-  return 'Đây là hạng mục trong portfolio của tôi. Popup này giúp xem hình ảnh ở kích thước lớn hơn và đọc nhanh thông tin chính của dự án.'
+  return t('portfolio.gallery.defaultDescription')
 }
 
 export function PortfolioGallery({ portfolioItems }: { portfolioItems: PortfolioItem[] }) {
-  const portfolioTags = Array.from(new Set([...portfolioItems.map((item) => item.tag), VIDEO_TAG]))
+  const { t } = useI18n()
+  const videoTag = t(VIDEO_TAG_KEY)
+  const portfolioTags = Array.from(new Set([...portfolioItems.map((item) => item.tag), videoTag]))
   const [activeTag, setActiveTag] = useState(() => portfolioTags[0] ?? '')
   const [visibleTag, setVisibleTag] = useState(() => portfolioTags[0] ?? '')
   const [isLoading, setIsLoading] = useState(false)
@@ -131,7 +134,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
   const upcomingItems = portfolioItems.filter((item) => item.tag === activeTag)
   const loadingPlaceholderCount = Math.min(Math.max(upcomingItems.length || 4, 4), 8)
   const selectedEmbedUrl = getVideoEmbedUrl(selectedItem?.videoUrl)
-  const selectedTitle = selectedItem ? getItemTitle(selectedItem) : ''
+  const selectedTitle = selectedItem ? getItemTitle(selectedItem, t) : ''
 
   return (
     <Dialog.Root
@@ -194,11 +197,11 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
             {filteredItems.length === 0 ? (
               <div className="col-span-full rounded-2xl border border-main/15 bg-background/70 p-8 text-center backdrop-blur-sm">
                 <p className="text-xs uppercase tracking-[0.35em] text-main/60">{visibleTag}</p>
-                <h3 className="mt-3 text-2xl font-semibold text-main dark:text-sub">Chưa có nội dung cho tab này</h3>
+                <h3 className="mt-3 text-2xl font-semibold text-main dark:text-sub">{t('portfolio.gallery.emptyTitle')}</h3>
                 <p className="mx-auto mt-3 max-w-2xl text-sm text-main/70 dark:text-sub/80">
-                  {visibleTag === VIDEO_TAG
-                    ? 'Các video đã sẵn sàng. Đợi một chút tôi sẽ cập nhật thêm video vào portfolio.'
-                    : 'Tôi chưa bổ sung nội dung cho tab này.'}
+                  {visibleTag === videoTag
+                    ? t('portfolio.gallery.emptyVideoDescription')
+                    : t('portfolio.gallery.emptyDescription')}
                 </p>
               </div>
             ) : (
@@ -231,7 +234,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                             item.src ? (
                               <Image
                                 src={item.src}
-                                alt={item.title || 'Video preview'}
+                                alt={item.title || t('portfolio.gallery.videoPreviewAlt')}
                                 width={1600}
                                 height={2000}
                                 className="size-full object-cover object-center transition-transform duration-300 group-hover/item:scale-105"
@@ -240,7 +243,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                               <div className={`flex ${item.aspect ? `aspect-[${item.aspect}]` : ''} items-center justify-center px-6 text-center group-hover/item:bg-gradient-to-br group-hover/item:from-main/30 group-hover/item:via-background/70 group-hover/item:to-background`}>
                                 <iframe
                                   src={embedUrl || ''}
-                                  title={item.title || 'Video preview'}
+                                  title={item.title || t('portfolio.gallery.videoPreviewAlt')}
                                   className="absolute inset-0 h-full w-full"
                                   loading="lazy"
                                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -258,8 +261,8 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                               className="size-full object-cover object-center transition-transform duration-300 group-hover/item:scale-105"
                             />
                           ) : (
-                            <div className="flex aspect-[4/5] items-center justify-center px-6 text-center text-sm text-main/70 dark:text-sub/80">
-                              Không có ảnh xem trước cho hạng mục này.
+                            <div className="flex aspect-4/5 items-center justify-center px-6 text-center text-sm text-main/70 dark:text-sub/80">
+                              {t('portfolio.gallery.noPreview')}
                             </div>
                           )}
 
@@ -279,7 +282,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
         <Dialog.Content className={`fixed left-1/2 top-1/2 z-50 grid max-h-[90vh] w-[calc(100vw-1.5rem)]  -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-main/15 bg-background/95 shadow-2xl outline-none ${selectedItem && selectedTitle ? 'lg:grid-cols-[minmax(0,1.35fr)_minmax(320px,0.35fr)]' : 'lg:grid-cols-[minmax(0,1.35fr)]'}`}>
           <Dialog.Close className="absolute right-4 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-black/50 text-white transition-colors duration-300 hover:bg-black/70">
             <IconX className="h-5 w-5" />
-            <span className="sr-only">Đóng</span>
+            <span className="sr-only">{t('portfolio.gallery.close')}</span>
           </Dialog.Close>
 
           <div className={`relative min-h-[320px] ${selectedItem && selectedTitle ? 'bg-black/50' : 'bg-background/95'} lg:min-h-[90vh]`}>
@@ -305,7 +308,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                 />
               ) : (
                 <div className="flex h-full min-h-[320px] items-center justify-center px-6 text-center text-sm text-white/75">
-                  Không có media để hiển thị cho hạng mục này.
+                  {t('portfolio.gallery.noMedia')}
                 </div>
               )
             ) : null}
@@ -323,7 +326,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                       </span>
                       {selectedItem.videoUrl && (
                         <span className="rounded-full border border-main/15 bg-background px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-main/70 dark:text-sub/80">
-                          Video
+                          {t('portfolio.gallery.videoBadge')}
                         </span>
                       )}
 
@@ -334,9 +337,9 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
 
                     {selectedItem.content && (
                       <div className="mt-6 rounded-2xl border border-main/10 bg-main/5 p-5">
-                        <p className="text-xs uppercase tracking-[0.25em] text-main/60 dark:text-sub/70">Nội dung</p>
+                        <p className="text-xs uppercase tracking-[0.25em] text-main/60 dark:text-sub/70">{t('portfolio.gallery.contentLabel')}</p>
                         <p className="mt-3 whitespace-pre-line text-sm leading-7 text-main/80 dark:text-sub/85 lg:text-base">
-                          {getItemDescription(selectedItem)}
+                          {getItemDescription(selectedItem, t)}
                         </p>
                       </div>
                     )}
@@ -350,7 +353,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 rounded-full border border-main/15 bg-background px-4 py-2 text-sm font-medium text-main transition-colors duration-300 hover:border-main/35 hover:bg-main/5 dark:text-sub"
                           >
-                            Xem chi tiết
+                            {t('portfolio.gallery.viewDetails')}
                             <IconArrowRight className="h-4 w-4" />
                           </a>
                         )}
@@ -361,7 +364,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 rounded-full border border-main/15 bg-background px-4 py-2 text-sm font-medium text-main transition-colors duration-300 hover:border-main/35 hover:bg-main/5 dark:text-sub"
                           >
-                            Mở video gốc
+                            {t('portfolio.gallery.openOriginalVideo')}
                             <IconArrowRight className="h-4 w-4" />
                           </a>
                         )}
