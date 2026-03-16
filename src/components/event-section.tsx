@@ -5,6 +5,7 @@ import { IconArrowRight, IconX } from "@tabler/icons-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { GlowingEffect } from "./ui/glowing-effect";
+import { useI18n } from "@/lib/i18n";
 
 export type EventItem = {
   title: string;
@@ -18,6 +19,7 @@ export type EventItem = {
 };
 
 export function EventsSection({ events }: { events: EventItem[] }) {
+  const { t } = useI18n();
   const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
   const [activeImage, setActiveImage] = useState<string | null>(null);
   const activeImageRef = useRef<HTMLDivElement | null>(null);
@@ -59,7 +61,7 @@ export function EventsSection({ events }: { events: EventItem[] }) {
             />
             <div className="flex h-full flex-col gap-4">
               <div className="relative">
-                <Image src={event.thumb || ''} alt={event.title || 'thumbnail'} width={1000} height={1000} className="size-full aspect-video object-cover rounded-2xl" />
+                <Image src={event.thumb || ''} alt={event.title || t("events.media.thumbnailAlt")} width={1000} height={1000} className="size-full aspect-video object-cover rounded-2xl" />
               </div>
               <div className="space-y-2">
                 <p className="text-xs uppercase text-main/60 dark:text-sub/70">{event.role}</p>
@@ -80,7 +82,7 @@ export function EventsSection({ events }: { events: EventItem[] }) {
           <Dialog.Content className="fixed left-1/2 top-1/2 z-50 w-[94vw] h-[95vh] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-3xl border border-main/15 bg-background/95 p-6 shadow-2xl outline-none md:p-8">
             <Dialog.Close className="absolute right-4 top-4 z-50 inline-flex h-10 w-10 items-center justify-center rounded-full border border-main/10 bg-background/70 text-main transition hover:border-main/40 hover:bg-main/10 dark:text-sub">
               <IconX className="h-5 w-5" />
-              <span className="sr-only">Đóng</span>
+              <span className="sr-only">{t("events.actions.close")}</span>
             </Dialog.Close>
 
             {selectedEvent && (
@@ -97,7 +99,7 @@ export function EventsSection({ events }: { events: EventItem[] }) {
                       />
                     ) : (
                       <div className="flex h-[240px] w-full items-center justify-center text-xs text-main/60 dark:text-sub/70 md:h-[320px]">
-                        Chưa có hình ảnh
+                        {t("events.media.noImage")}
                       </div>
                     )}
                   </div>
@@ -115,7 +117,7 @@ export function EventsSection({ events }: { events: EventItem[] }) {
                   </div>
 
                   <div className="rounded-2xl border border-main/10 bg-main/5 p-4">
-                    <p className="text-xs uppercase text-main/60 dark:text-sub/70">Tôi đã làm gì?</p>
+                    <p className="text-xs uppercase text-main/60 dark:text-sub/70">{t("events.details.responsibilitiesTitle")}</p>
                     <ul className="mt-3 space-y-2 text-sm text-main/80 dark:text-sub/85">
                       {selectedEvent.responsibilities.map((item) => (
                         <li key={item} className="flex gap-2">
@@ -127,7 +129,7 @@ export function EventsSection({ events }: { events: EventItem[] }) {
                   </div>
 
                   <div className="space-y-2 rounded-2xl border border-main/10 bg-main/5 p-4">
-                    <p className="text-xs uppercase text-main/60 dark:text-sub/70">Impact</p>
+                    <p className="text-xs uppercase text-main/60 dark:text-sub/70">{t("events.details.impactTitle")}</p>
                     <ul className="space-y-2 text-sm text-main/80 dark:text-sub/85">
                       {selectedEvent.impact.map((item) => (
                         <li key={item} className="flex gap-2">
@@ -166,7 +168,7 @@ export function EventsSection({ events }: { events: EventItem[] }) {
                         >
                           <Image
                             src={image}
-                            alt={`${selectedEvent.title} thumbnail`}
+                            alt={`${selectedEvent.title} ${t("events.media.thumbnailAlt")}`}
                             width={240}
                             height={240}
                             className="h-auto w-full object-contain hover:scale-105 transition-transform duration-300"

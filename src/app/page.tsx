@@ -10,7 +10,7 @@ import Image from 'next/image'
 import { PortfolioGallery } from '@/components/portfolio-gallery'
 import { ExperienceTimelineV2 } from './experience/containers/experience-timeline-v2'
 import { getPortfolioItems } from '@/data/portfolio-items'
-import { eventsData } from '@/data/event-data'
+import { getEventsData } from '@/data/event-data'
 import { awardsData } from '@/data/awards-data'
 import { EventsSection } from '@/components/event-section'
 import { useI18n } from '@/lib/i18n'
@@ -18,6 +18,7 @@ import { useI18n } from '@/lib/i18n'
 function HomeH() {
   const { t } = useI18n()
   const portfolioItems = getPortfolioItems(t)
+  const eventsData = getEventsData(t)
 
   return (
     <div>
@@ -205,9 +206,9 @@ function HomeH() {
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-12 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex w-full flex-col gap-4 items-center justify-start text-center">
-              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">Events & Leadership</h1>
+              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">{t("events.title")}</h1>
               <p className="max-w-3xl text-sm md:text-base lg:text-lg">
-                Những sự kiện tiêu biểu tôi tham gia tổ chức, cùng vai trò và ảnh hưởng cụ thể ở từng dự án.
+                {t("events.subtitle")}
               </p>
             </div>
 
@@ -215,41 +216,37 @@ function HomeH() {
 
             <div className="rounded-3xl border border-main/10 bg-background/80 p-6 md:p-8">
               <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-                <h2 className="text-2xl font-semibold text-main dark:text-sub">WHAT THESE EVENTS SHAPED IN ME</h2>
-                <p className="text-xs text-main/60 dark:text-sub/70 md:text-sm">4 điểm nổi bật</p>
+                <h2 className="text-2xl font-semibold text-main dark:text-sub">{t("events.highlights.title")}</h2>
+                <p className="text-xs text-main/60 dark:text-sub/70 md:text-sm">{t("events.highlights.count")}</p>
               </div>
 
               <ul className="mt-6 grid gap-4 text-sm text-main/80 dark:text-sub/80 grid-cols-1">
                 {[
                   {
                     id: 1,
-                    title: "Làm đến nơi đến chốn",
                     icon: <IconSquareRoundedNumber1 className="size-6 text-blue-500 dark:text-blue-500" />,
-                    description: "Tư duy tổ chức & điều phối con người.",
+                    description: t("events.highlights.items.0.description"),
                     color: "blue-500",
                     animate: "animate-float",
                   },
                   {
                     id: 2,
-                    title: "Sáng tạo có chiến lược",
                     icon: <IconSquareRoundedNumber2 className="size-6 text-green-500 dark:text-green-500" />,
-                    description: "Khả năng xây dựng chiến lược truyền thông thực tế.",
+                    description: t("events.highlights.items.1.description"),
                     color: "green-500",
                     animate: "animate-wiggle",
                   },
                   {
                     id: 3,
-                    title: "Tạo giá trị, được ghi nhận",
                     icon: <IconSquareRoundedNumber3 className="size-6 text-yellow-500 dark:text-yellow-500" />,
-                    description: "Kỹ năng lãnh đạo đội nhóm & giữ tinh thần tập thể.",
+                    description: t("events.highlights.items.2.description"),
                     color: "yellow-500",
                     animate: "animate-float",
                   },
                   {
                     id: 4,
-                    title: "Tạo giá trị, được ghi nhận",
                     icon: <IconSquareRoundedNumber4 className="size-6 text-orange-500 dark:text-orange-500" />,
-                    description: "Sự bền bỉ khi làm việc trong môi trường nhiều deadline.",
+                    description: t("events.highlights.items.3.description"),
                     color: "orange-500",
                     animate: "animate-wiggle",
                   },
