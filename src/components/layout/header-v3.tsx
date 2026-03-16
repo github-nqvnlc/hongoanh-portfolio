@@ -36,8 +36,9 @@ export const HeaderV3 = () => {
 
     event.preventDefault()
     setIsMobileMenuOpen(false)
-    const headerHeight = headerRef.current?.offsetHeight ?? 0
-    const targetTop = target.getBoundingClientRect().top + window.scrollY - headerHeight
+    const isMobile = window.matchMedia("(max-width: 767px)").matches
+    const offset = isMobile ? 70 : (headerRef.current?.offsetHeight ?? 0)
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - offset
 
     window.scrollTo({ top: Math.max(targetTop, 0), behavior: "smooth" })
   }, [])

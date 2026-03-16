@@ -53,7 +53,7 @@ export const SkeletonOne = ({ src }: { src?: string }) => {
       <EvervaultCard
         text={
           <div className='h-full flex items-center justify-center'>
-            <Image src={src || ""} alt="about" width={400} height={400} />
+            <Image src={src || ""} alt="about" width={500} height={500} />
           </div>
         }
       />
@@ -100,7 +100,7 @@ const SkeletonTwo = () => {
       initial="initial"
       animate="animate"
       whileHover="hover"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 "
+      className="flex flex-1 w-full h-full min-h-24 dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 "
     >
       <div className="relative flex h-full w-full flex-col items-center justify-center">
         <StackCloud />
