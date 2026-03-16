@@ -11,13 +11,14 @@ import { PortfolioGallery } from '@/components/portfolio-gallery'
 import { ExperienceTimelineV2 } from './experience/containers/experience-timeline-v2'
 import { getPortfolioItems } from '@/data/portfolio-items'
 import { getEventsData } from '@/data/event-data'
-import { awardsData } from '@/data/awards-data'
+import { getAwardsData } from '@/data/awards-data'
 import { EventsSection } from '@/components/event-section'
 import { useI18n } from '@/lib/i18n'
 
 function HomeH() {
   const { t } = useI18n()
   const portfolioItems = getPortfolioItems(t)
+  const awardsData = getAwardsData(t)
   const eventsData = getEventsData(t)
 
   return (
@@ -273,9 +274,9 @@ function HomeH() {
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-12 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6 ">
             <div className="flex flex-col gap-4 items-center justify-start text-center">
-              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">Awards & Recognition</h1>
+              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">{t("awards.title")}</h1>
               <p className="max-w-3xl text-sm md:text-base lg:text-lg ">
-                Những thành tựu nổi bật thể hiện tư duy chiến lược, khả năng sáng tạo và đóng góp bền bỉ.
+                {t("awards.subtitle")}
               </p>
             </div>
 
@@ -283,31 +284,28 @@ function HomeH() {
 
             <div className="rounded-3xl border border-main/10 bg-background/80 p-6 md:p-8">
               <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-                <h2 className="text-2xl font-semibold text-main dark:text-sub">What these achievements represent</h2>
-                <p className="text-xs text-main/60 dark:text-sub/70 md:text-sm">3 điểm nổi bật</p>
+                <h2 className="text-2xl font-semibold text-main dark:text-sub">{t("awards.highlights.title")}</h2>
+                <p className="text-xs text-main/60 dark:text-sub/70 md:text-sm">{t("awards.highlights.count")}</p>
               </div>
 
               <ul className="mt-6 grid gap-4 text-sm text-main/80 dark:text-sub/80 grid-cols-1">
                 {[
                   {
                     id: 1,
-                    title: "Làm đến nơi đến chốn",
                     icon: <IconSquareRoundedNumber1 className="size-6 text-blue-500 dark:text-blue-500" />,
-                    description: "Tôi không chỉ làm Marketing — tôi làm đến nơi đến chốn.",
+                    description: t("awards.highlights.items.0.description"),
                     color: "blue-500",
                   },
                   {
                     id: 2,
-                    title: "Sáng tạo có chiến lược",
                     icon: <IconSquareRoundedNumber2 className="size-6 text-green-500 dark:text-green-500" />,
-                    description: "Tôi không chỉ sáng tạo — tôi sáng tạo có chiến lược.",
+                    description: t("awards.highlights.items.1.description"),
                     color: "green-500",
                   },
                   {
                     id: 3,
-                    title: "Tạo giá trị, được ghi nhận",
                     icon: <IconSquareRoundedNumber3 className="size-6 text-yellow-500 dark:text-yellow-500" />,
-                    description: "Tôi không chỉ tham gia — tôi tạo ra giá trị và được ghi nhận.",
+                    description: t("awards.highlights.items.2.description"),
                     color: "yellow-500",
                   },
                 ].map((item, index) => (
@@ -333,18 +331,18 @@ function HomeH() {
         <div className="relative min-h-[calc(100vh-100px)] rounded-2xl p-2 md:rounded-3xl md:p-3 w-full">
           <div className="relative flex h-full flex-col justify-between gap-12 overflow-hidden rounded-xl lg:p-6 p-2 md:p-6">
             <div className="flex flex-col gap-4 items-center justify-start text-center">
-              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">Contact</h1>
+              <h1 className="text-6xl md:text-7xl text-main dark:text-sub cherry-bomb-one-regular">{t("contact.title")}</h1>
               <p className="max-w-2xl text-sm md:text-base text-center">
-                Nếu bạn muốn hợp tác hoặc trao đổi thêm về dự án, hãy để lại thông tin. <br />
-                Mình sẽ phản hồi sớm nhất.
+                {t("contact.subtitle.line1")} <br />
+                {t("contact.subtitle.line2")}
               </p>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)]">
               <div className="rounded-3xl border border-main/10 bg-background/80 p-6 md:p-8">
-                <h2 className="text-2xl font-semibold text-main dark:text-sub">Gửi lời nhắn</h2>
+                <h2 className="text-2xl font-semibold text-main dark:text-sub">{t("contact.form.title")}</h2>
                 <p className="mt-2 text-sm text-main/60 dark:text-sub/70">
-                  Điền nhanh thông tin, mình sẽ liên hệ lại qua email hoặc số điện thoại.
+                  {t("contact.form.description")}
                 </p>
 
                 <form
@@ -353,43 +351,43 @@ function HomeH() {
                   className="mt-6 grid gap-4"
                 >
                   <div className="grid gap-2">
-                    <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Họ và tên</label>
+                    <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">{t("contact.form.fields.name")}</label>
                     <input
                       type="text"
                       name="name"
                       required
-                      placeholder="Nhập họ tên"
+                      placeholder={t("contact.form.fields.namePlaceholder")}
                       className="h-12 rounded-2xl border border-main/15 bg-transparent px-4 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                     />
                   </div>
                   <div className="grid gap-2 md:grid-cols-2">
                     <div className="grid gap-2">
-                      <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Email</label>
+                      <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">{t("contact.form.fields.email")}</label>
                       <input
                         type="email"
                         name="email"
                         required
-                        placeholder="you@email.com"
+                        placeholder={t("contact.form.fields.emailPlaceholder")}
                         className="h-12 rounded-2xl border border-main/15 bg-transparent px-4 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                       />
                     </div>
                     <div className="grid gap-2">
-                      <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Số điện thoại</label>
+                      <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">{t("contact.form.fields.phone")}</label>
                       <input
                         type="tel"
                         name="phone"
-                        placeholder="0123 456 789"
+                        placeholder={t("contact.form.fields.phonePlaceholder")}
                         className="h-12 rounded-2xl border border-main/15 bg-transparent px-4 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                       />
                     </div>
                   </div>
                   <div className="grid gap-2">
-                    <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">Nội dung</label>
+                    <label className="text-xs font-semibold uppercase text-main/60 dark:text-sub/70">{t("contact.form.fields.message")}</label>
                     <textarea
                       rows={5}
                       name="message"
                       required
-                      placeholder="Chia sẻ mong muốn hợp tác hoặc câu hỏi..."
+                      placeholder={t("contact.form.fields.messagePlaceholder")}
                       className="rounded-2xl border border-main/15 bg-transparent px-4 py-3 text-sm text-main placeholder:text-main/40 focus:outline-none focus:ring-2 focus:ring-main/20 dark:text-sub dark:placeholder:text-sub/40"
                     />
                   </div>
@@ -397,38 +395,38 @@ function HomeH() {
                     type="submit"
                     className="inline-flex h-12 items-center justify-center rounded-full border border-main/20 bg-main text-sm font-semibold uppercase tracking-wide text-background transition hover:bg-main/90 dark:text-white"
                   >
-                    Gửi lời nhắn
+                    {t("contact.form.submit")}
                   </button>
                 </form>
               </div>
 
               <div className="flex flex-col gap-4">
                 <div className="rounded-3xl border border-main/10 bg-white dark:bg-black p-6 md:p-8">
-                  <p className="text-xs uppercase text-main/60 dark:text-sub/70">Thông tin liên hệ</p>
+                  <p className="text-xs uppercase text-main/60 dark:text-sub/70">{t("contact.info.title")}</p>
                   <ul className="mt-4 space-y-3 text-sm text-main/80 dark:text-sub/80">
                     <li className="flex items-start justify-between gap-4">
-                      <span className="text-main/60 dark:text-sub/70">Email</span>
+                      <span className="text-main/60 dark:text-sub/70">{t("contact.info.emailLabel")}</span>
                       <span className="font-semibold">nguyenthihongoanh03@gmail.com </span>
                     </li>
                     <li className="flex items-start justify-between gap-4">
-                      <span className="text-main/60 dark:text-sub/70">Số điện thoại</span>
+                      <span className="text-main/60 dark:text-sub/70">{t("contact.info.phoneLabel")}</span>
                       <span className="font-semibold">(+84) 916 513 203</span>
                     </li>
                     <li className="flex items-start justify-between gap-4">
-                      <span className="text-main/60 dark:text-sub/70">Địa điểm</span>
-                      <span className="font-semibold">Đà Nẵng, Việt Nam</span>
+                      <span className="text-main/60 dark:text-sub/70">{t("contact.info.locationLabel")}</span>
+                      <span className="font-semibold">{t("contact.info.locationValue")}</span>
                     </li>
                   </ul>
                 </div>
 
                 <div className="rounded-3xl border border-main/10 bg-background/80 p-6 md:p-8">
-                  <p className="text-xs uppercase text-main/60 dark:text-sub/70">Thời gian phản hồi</p>
+                  <p className="text-xs uppercase text-main/60 dark:text-sub/70">{t("contact.responseTime.title")}</p>
                   <p className="mt-3 text-sm text-main/70 dark:text-sub/80">
-                    Mình thường phản hồi trong vòng 24–48 giờ. Đừng ngại gửi tin nhắn nhé.
+                    {t("contact.responseTime.description")}
                   </p>
 
                   <div className="mt-6">
-                    <p className="text-xs uppercase text-main/60 dark:text-sub/70">Liên hệ nhanh qua mạng xã hội</p>
+                    <p className="text-xs uppercase text-main/60 dark:text-sub/70">{t("contact.social.title")}</p>
                     <div className="mt-3 flex flex-wrap gap-3">
                       <a
                         href="https://www.facebook.com/hihibb19"

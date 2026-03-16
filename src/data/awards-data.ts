@@ -1,108 +1,128 @@
-export const awardsData = [
+type Translator = (key: string) => string
+
+type AwardLink = {
+  label: string
+  href: string
+}
+
+type AwardItem = {
+  title: string
+  role: string
+  thumb: string
+  images: string[]
+  summary: string
+  responsibilities: string[]
+  impact: string[]
+  links: AwardLink[]
+}
+
+export const getAwardsData = (t: Translator): AwardItem[] => [
   {
-    title: 'Talent Team 2023 – Nhóm 5 AM',
-    role: 'Công cụ truyền thông trực tuyến',
+    title: t('awards.data.0.title'),
+    role: t('awards.data.0.role'),
     thumb: '/images/awards/tlt/thumb.jpg',
-    images: [
-      '/images/awards/tlt/1.jpg',
-    ],
-    summary: 'Chiến dịch truyền thông sáng tạo dựa trên nền tảng số.',
+    images: ['/images/awards/tlt/1.jpg'],
+    summary: t('awards.data.0.summary'),
     responsibilities: [
-      'Tham gia xây dựng concept chiến dịch.',
-      'Triển khai truyền thông bằng Facebook Ads và TikTok.',
-      'Tối ưu thông điệp theo từng nền tảng.'
+      t('awards.data.0.responsibilities.0'),
+      t('awards.data.0.responsibilities.1'),
+      t('awards.data.0.responsibilities.2'),
     ],
-    impact: ['Thể hiện tư duy Digital-first và khả năng phối hợp sáng tạo với quảng cáo trả phí.'],
-    links: [{ label: 'Bài đăng', href: 'https://www.facebook.com/share/p/19JyTew6gS/' }]
+    impact: [t('awards.data.0.impact.0')],
+    links: [{ label: t('awards.data.0.links.0.label'), href: 'https://www.facebook.com/share/p/19JyTew6gS/' }],
   },
   {
-    title: 'Third Place – Multimedia Communication Design 2023',
-    role: 'Nhóm DynamiX',
+    title: t('awards.data.1.title'),
+    role: t('awards.data.1.role'),
     thumb: '/images/awards/3th/thumb.jpg',
-    images: [
-      '/images/awards/3th/1.jpg',
-      '/images/awards/3th/2.jpg',
-    ],
-    summary: 'Dự án mô phỏng doanh nghiệp thực tế, xây dựng thương hiệu từ con số 0.',
+    images: ['/images/awards/3th/1.jpg', '/images/awards/3th/2.jpg'],
+    summary: t('awards.data.1.summary'),
     responsibilities: [
-      'Tham gia xây dựng ý tưởng & định vị thương hiệu.',
-      'Phát triển bộ nhận diện và chiến dịch truyền thông đa nền tảng.',
-      'Thiết kế ấn phẩm bằng Photoshop, phối hợp dựng video quảng bá.'
+      t('awards.data.1.responsibilities.0'),
+      t('awards.data.1.responsibilities.1'),
+      t('awards.data.1.responsibilities.2'),
     ],
-    impact: ['Rèn tư duy branding hệ thống và kỹ năng trình bày ý tưởng.'],
+    impact: [t('awards.data.1.impact.0')],
     links: [
-      { label: 'Bài đăng', href: 'https://www.facebook.com/share/p/1FQnUzTvV7/' },
+      { label: t('awards.data.1.links.0.label'), href: 'https://www.facebook.com/share/p/1FQnUzTvV7/' },
       {
-        label: 'Bộ nhận diện',
-        href: 'https://drive.google.com/file/d/1HLE5H-g6rKfWXH9xVja-bLhsen02zAk6/view?usp=drive_link'
-      }
-    ]
+        label: t('awards.data.1.links.1.label'),
+        href: 'https://drive.google.com/file/d/1HLE5H-g6rKfWXH9xVja-bLhsen02zAk6/view?usp=drive_link',
+      },
+    ],
   },
   {
-    title: 'Eternity Finalist – Branding Contest 2024',
-    role: 'Nhóm 1CONIC – “Trình Cà Phê”',
+    title: t('awards.data.2.title'),
+    role: t('awards.data.2.role'),
     thumb: '/images/awards/ef/thumb.jpg',
-    images: [
-      '/images/awards/ef/1.jpg',
-      '/images/awards/ef/2.jpg',
-    ],
-    summary: 'Dự án branding toàn diện từ concept đến truyền thông.',
+    images: ['/images/awards/ef/1.jpg', '/images/awards/ef/2.jpg'],
+    summary: t('awards.data.2.summary'),
     responsibilities: [
-      'Định hình thông điệp thương hiệu & sáng tác slogan.',
-      'Viết bài giới thiệu thương hiệu.',
-      'Xây dựng kịch bản video quảng bá.'
+      t('awards.data.2.responsibilities.0'),
+      t('awards.data.2.responsibilities.1'),
+      t('awards.data.2.responsibilities.2'),
     ],
-    impact: ['Phát triển câu chuyện thương hiệu gần gũi với giới trẻ.'],
+    impact: [t('awards.data.2.impact.0')],
     links: [
-      { label: 'Bài đăng', href: 'https://www.facebook.com/share/p/1AkwvLeRCV/' },
-      { label: 'Video TVC', href: 'https://www.facebook.com/BrandingContestDUE/videos/1254842885766074' }
-    ]
+      { label: t('awards.data.2.links.0.label'), href: 'https://www.facebook.com/share/p/1AkwvLeRCV/' },
+      {
+        label: t('awards.data.2.links.1.label'),
+        href: 'https://www.facebook.com/BrandingContestDUE/videos/1254842885766074',
+      },
+    ],
   },
   {
-    title: 'Most Loved TVC Award – 5 AM “Trình Cà Phê”',
-    role: 'Đồng xây dựng kịch bản TVC',
+    title: t('awards.data.3.title'),
+    role: t('awards.data.3.role'),
     thumb: '/images/awards/tvc/thumb.jpg',
-    images: [
-    ],
-    summary: 'Giải thưởng cho TVC được yêu thích nhất.',
+    images: [],
+    summary: t('awards.data.3.summary'),
     responsibilities: [
-      'Đồng xây dựng kịch bản theo hướng storytelling cảm xúc.',
-      'Tham gia quay dựng & định hướng hình ảnh.',
-      'Phối hợp lan tỏa TVC trên mạng xã hội để thu hút bình chọn.'
+      t('awards.data.3.responsibilities.0'),
+      t('awards.data.3.responsibilities.1'),
+      t('awards.data.3.responsibilities.2'),
     ],
-    impact: ['Biến thương hiệu giả định thành câu chuyện có cảm xúc thật.'],
+    impact: [t('awards.data.3.impact.0')],
     links: [
-      { label: 'Bài đăng', href: 'https://www.facebook.com/share/p/1G1rK8HUs9/' },
-      { label: 'Video TVC', href: 'https://www.facebook.com/lophocimc/videos/2418322998351946/' }
-    ]
+      { label: t('awards.data.3.links.0.label'), href: 'https://www.facebook.com/share/p/1G1rK8HUs9/' },
+      {
+        label: t('awards.data.3.links.1.label'),
+        href: 'https://www.facebook.com/lophocimc/videos/2418322998351946/',
+      },
+    ],
   },
   {
-    title: 'Sinh viên 5 tốt (2021–2024)',
-    role: '3 năm liên tiếp',
+    title: t('awards.data.4.title'),
+    role: t('awards.data.4.role'),
     thumb: '/images/awards/sv5t/thumb.jpg',
-    images: [
-      '/images/awards/sv5t/1.jpg',
-    ],
-    summary: 'Danh hiệu ghi nhận toàn diện 5 tiêu chí: đạo đức, học tập, thể lực, tình nguyện, hội nhập.',
-    responsibilities: ['Đạt thành tích xuất sắc trong Công tác Đoàn & phong trào thanh niên.'],
-    impact: ['Khẳng định tính kỷ luật và khả năng duy trì hiệu suất cao.'],
+    images: ['/images/awards/sv5t/1.jpg'],
+    summary: t('awards.data.4.summary'),
+    responsibilities: [t('awards.data.4.responsibilities.0')],
+    impact: [t('awards.data.4.impact.0')],
     links: [
-      { label: 'Hình ảnh', href: 'https://drive.google.com/drive/folders/1kphkoKTcNDxxnGo74FLnq7xSuNv0rRiX?usp=drive_link' },
-      { label: 'Công tác Đoàn', href: 'https://drive.google.com/drive/folders/1eEF-SVMso3JU5sdGmLgqQxC9tpBaoOTV?usp=drive_link' }
-    ]
+      // {
+      //   label: t('awards.data.4.links.0.label'),
+      //   href: 'https://drive.google.com/drive/folders/1kphkoKTcNDxxnGo74FLnq7xSuNv0rRiX?usp=drive_link',
+      // },
+      // {
+      //   label: t('awards.data.4.links.1.label'),
+      //   href: 'https://drive.google.com/drive/folders/1eEF-SVMso3JU5sdGmLgqQxC9tpBaoOTV?usp=drive_link',
+      // },
+    ],
   },
   {
-    title: 'Employee of the Year – Danawatch (2024 & 2025)',
-    role: 'Nhân viên xuất sắc phòng Marketing',
+    title: t('awards.data.5.title'),
+    role: t('awards.data.5.role'),
     thumb: '/images/awards/nvxs/thumb.jpg',
-    images: [
-      '/images/awards/nvxs/1.jpg',
-    ],
-    summary: 'Danh hiệu ghi nhận đóng góp nổi bật trong SEO, fanpage và vận hành đội nhóm.',
-    responsibilities: ['Đảm nhận khối lượng công việc lớn với tinh thần chủ động & trách nhiệm cao.'],
-    impact: ['Khẳng định năng lực bền bỉ và hiệu quả làm việc.'],
+    images: ['/images/awards/nvxs/1.jpg'],
+    summary: t('awards.data.5.summary'),
+    responsibilities: [t('awards.data.5.responsibilities.0')],
+    impact: [t('awards.data.5.impact.0')],
     links: [
-      { label: 'Hình ảnh', href: 'https://drive.google.com/drive/folders/11ztBXsVxQ1rg2Ef_9XugZ8Gdfs50AaaQ?usp=drive_link' }
-    ]
-  }
+      // {
+      //   label: t('awards.data.5.links.0.label'),
+      //   href: 'https://drive.google.com/drive/folders/11ztBXsVxQ1rg2Ef_9XugZ8Gdfs50AaaQ?usp=drive_link',
+      // },
+    ],
+  },
 ]
