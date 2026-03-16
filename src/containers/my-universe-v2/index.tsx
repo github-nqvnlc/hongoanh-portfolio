@@ -99,7 +99,7 @@ export const MyUniverseV2 = () => {
             Content Writing
           </div>
 
-          <div className="pacifico-regular px-3 py-2 sm:block absolute bottom-10 right-2 sm:right-40 bg-yellow-500/20 rounded-[6px] w-max font-medium dark:text-yellow-300 text-yellow-500 border border-yellow-500/20 animate-float-x duration-1000">
+          <div className="pacifico-regular px-3 py-2 sm:block absolute bottom-16 right-2 sm:right-40 bg-yellow-500/20 rounded-[6px] w-max font-medium dark:text-yellow-300 text-yellow-500 border border-yellow-500/20 animate-float-x duration-1000">
             Canva Designer
           </div>
 
