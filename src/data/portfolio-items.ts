@@ -396,10 +396,10 @@ export const getPortfolioItems = (t: Translator): PortfolioItem[] => [
     column: 1,
     aspect: "9/16"
   },
-  {
-    tag: "Video",
-    videoUrl: "https://player.vimeo.com/video/1172468312",
-    column: 1,
-    aspect: "9/16"
-  },
+  // {
+  //   tag: "Video",
+  //   videoUrl: "https://player.vimeo.com/video/1172468312",
+  //   column: 1,
+  //   aspect: "9/16"
+  // },
 ]
