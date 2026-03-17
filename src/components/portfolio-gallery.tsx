@@ -181,7 +181,7 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                 key={`loading-${index}`}
                 className="overflow-hidden rounded-sm border border-main/10 bg-background/50 backdrop-blur-md animate-pulse"
               >
-                <div className="aspect-[4/5] w-full bg-main/10 blur-sm" />
+                <div className="aspect-4/5 w-full bg-main/10 blur-sm" />
                 <div className="space-y-3 p-3">
                   <div className="h-3 w-24 rounded-full bg-main/10 blur-[1px]" />
                   <div className="h-4 w-3/4 rounded-full bg-main/10 blur-[1px]" />
@@ -240,7 +240,10 @@ export function PortfolioGallery({ portfolioItems }: { portfolioItems: Portfolio
                                 className="size-full object-cover object-center transition-transform duration-300 group-hover/item:scale-105"
                               />
                             ) : (
-                              <div className={`flex ${item.aspect ? `aspect-[${item.aspect}]` : ''} items-center justify-center px-6 text-center group-hover/item:bg-gradient-to-br group-hover/item:from-main/30 group-hover/item:via-background/70 group-hover/item:to-background`}>
+                              <div
+                                className="relative w-full overflow-hidden group-hover/item:bg-linear-to-br group-hover/item:from-main/30 group-hover/item:via-background/70 group-hover/item:to-background"
+                                style={{ aspectRatio: item?.aspect || '16 / 9' }}
+                              >
                                 <iframe
                                   src={embedUrl || ''}
                                   title={item.title || t('portfolio.gallery.videoPreviewAlt')}

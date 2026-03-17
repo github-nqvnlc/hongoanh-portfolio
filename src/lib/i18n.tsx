@@ -22,7 +22,7 @@ const dictionaries: Record<Locale, Messages> = {
 const I18nContext = createContext<I18nContextValue | null>(null)
 
 export function I18nProvider({ children }: { children: React.ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('vi')
+  const [locale, setLocaleState] = useState<Locale>('en')
 
   useEffect(() => {
     const storedLocale = window.localStorage.getItem('locale') as Locale | null
