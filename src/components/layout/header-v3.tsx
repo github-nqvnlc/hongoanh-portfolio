@@ -7,6 +7,7 @@ import { IconMenu2 } from "@tabler/icons-react"
 import { Button } from "../ui/button"
 import Image from "next/image"
 import { useI18n } from "@/lib/i18n"
+import { useTheme } from "next-themes"
 
 const links = [
   { key: "nav.home", href: "#home" },
@@ -20,9 +21,35 @@ const links = [
 
 export const HeaderV3 = () => {
   const { t, locale, setLocale } = useI18n()
+  const { theme, systemTheme } = useTheme()
   const headerRef = useRef<HTMLElement | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+
+  const resolvedTheme = theme === "system" ? systemTheme : theme
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return
+    }
+
+    const mediaQuery = window.matchMedia("(max-width: 767px)")
+    const updateIsMobile = () => setIsMobile(mediaQuery.matches)
+
+    updateIsMobile()
+    mediaQuery.addEventListener("change", updateIsMobile)
+
+    return () => mediaQuery.removeEventListener("change", updateIsMobile)
+  }, [])
+
+  const logoSrc = isMobile
+    ? resolvedTheme === "dark"
+      ? "/images/logo/logo-dark.png"
+      : "/images/logo/logo-light.png"
+    : resolvedTheme === "dark"
+      ? "/images/logo/logo-pc-dark.png"
+      : "/images/logo/logo-pc-light.png"
 
   const handleAnchorClick = useCallback((event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.startsWith("#")) {
@@ -36,8 +63,8 @@ export const HeaderV3 = () => {
 
     event.preventDefault()
     setIsMobileMenuOpen(false)
-    const isMobile = window.matchMedia("(max-width: 767px)").matches
-    const offset = isMobile ? 70 : (headerRef.current?.offsetHeight ?? 0)
+    const isMobileViewport = window.matchMedia("(max-width: 767px)").matches
+    const offset = isMobileViewport ? 70 : (headerRef.current?.offsetHeight ?? 0)
     const targetTop = target.getBoundingClientRect().top + window.scrollY - offset
 
     window.scrollTo({ top: Math.max(targetTop, 0), behavior: "smooth" })
@@ -65,7 +92,7 @@ export const HeaderV3 = () => {
           onClick={(event) => handleAnchorClick(event, "#home")}
           className="flex items-center gap-2 text-main dark:text-sub"
         >
-          <Image src="/images/logo.png" alt="Logo" width={1000} height={1000} className="w-fit h-12" />
+          <Image src={logoSrc} alt="Logo" width={1000} height={1000} className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-6 text-base font-semibold uppercase tracking-wider text-main/70 dark:text-sub/70 md:flex">
