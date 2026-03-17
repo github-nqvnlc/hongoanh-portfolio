@@ -81,19 +81,19 @@ function HomeH() {
                     <h3 className="lg:text-4xl text-2xl font-bold">{t("about.education.title")}</h3>
                     <div className="flex items-center lg:gap-4 gap-4 lg:pl-4">
                       <IconPoint className="lg:size-8 size-6" />
-                      <p className="lg:text-2xl text-sm">
+                      <p className="lg:text-2xl text-sm flex-1">
                         <span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">{t("about.education.years")}</span>
                         {t("about.education.school")}
                       </p>
                     </div>
-                    <div className="flex items-center gap-4 lg:pl-4">
+                    <div className="flex items-center gap-4 lg:pl-4 flex-1">
                       <IconPoint className="lg:size-8 size-6" />
                       <p className="lg:text-2xl text-sm">
                         <span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">{t("about.education.majorLabel")}</span>
                         {t("about.education.major")}
                       </p>
                     </div>
-                    <div className="flex items-center gap-4 lg:pl-4">
+                    <div className="flex items-center gap-4 lg:pl-4 flex-1">
                       <IconPoint className="lg:size-8 size-6" />
                       <p className="lg:text-2xl text-sm">
                         <span className="lg:text-2xl text-sm font-bold lg:pr-4 pr-2">{t("about.education.gpaLabel")}</span>
@@ -111,7 +111,7 @@ function HomeH() {
                       <Image className='border border-transparent p-0.5 rounded-full hover:scale-120 transition-all duration-300 cursor-pointer' src="/images/skills/google.webp" alt="about" width={60} height={60} />
                       <Image className='border border-transparent p-0.5 hover:scale-120 transition-all duration-300 cursor-pointer' src="/images/skills/microsoft.ico" alt="about" width={60} height={60} />
                     </div>
-                    <div className="flex items-center gap-4 lg:pl-4">
+                    <div className="flex items-center gap-4 lg:pl-4 flex-1">
                       <IconPoint className="lg:size-8 size-6" />
                       <p className="lg:text-2xl text-sm font-bold">{t("about.skills.highlight")}</p>
                     </div>
