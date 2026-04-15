@@ -371,7 +371,7 @@ function HomeH() {
                 </p>
 
                 <form
-                  action="https://formspree.io/f/xjgaeryo"
+                  action="https://formspree.io/f/mgorvbra"
                   method="POST"
                   className="mt-6 grid gap-4"
                 >
